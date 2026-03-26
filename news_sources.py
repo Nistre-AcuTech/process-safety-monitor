@@ -92,6 +92,80 @@ def _match_keywords(text: str) -> list[str]:
     return matched
 
 
+# US states for location detection
+_US_STATES = {
+    "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+    "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
+    "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+    "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+    "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+    "New Hampshire", "New Jersey", "New Mexico", "New York",
+    "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+    "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+    "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+    "West Virginia", "Wisconsin", "Wyoming",
+}
+
+_US_STATE_ABBREVS = {
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+    "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+    "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+    "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+    "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
+}
+
+_ABBREV_TO_STATE = {
+    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
+    "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware",
+    "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
+    "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas",
+    "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
+    "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
+    "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada",
+    "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
+    "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma",
+    "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina",
+    "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
+    "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
+    "WI": "Wisconsin", "WY": "Wyoming",
+}
+
+# Countries commonly in process safety news
+_COUNTRIES = {
+    "United States", "United Kingdom", "Canada", "Australia", "Germany",
+    "France", "India", "China", "Japan", "South Korea", "Brazil", "Mexico",
+    "Nigeria", "Saudi Arabia", "Russia", "Indonesia", "Netherlands",
+    "Belgium", "Italy", "Spain", "Norway", "Sweden", "Singapore",
+    "Malaysia", "Thailand", "Qatar", "Kuwait", "Iraq", "Iran",
+}
+
+
+def _detect_location(title: str, text: str) -> str:
+    """Try to detect country/state from title and article text."""
+    # Check title first (most reliable), then first 500 chars of text
+    search_text = title + " " + text[:500]
+
+    # Check for US state names (full names)
+    for state in sorted(_US_STATES, key=len, reverse=True):
+        pattern = r'\b' + re.escape(state) + r'\b'
+        if re.search(pattern, search_text):
+            return f"United States ({state})"
+
+    # Check for US state abbreviations like "Port Arthur, TX" or "LUBBOCK, Texas"
+    abbrev_match = re.search(r',\s*([A-Z]{2})\b', search_text)
+    if abbrev_match and abbrev_match.group(1) in _US_STATE_ABBREVS:
+        state = _ABBREV_TO_STATE[abbrev_match.group(1)]
+        return f"United States ({state})"
+
+    # Check for country names
+    for country in sorted(_COUNTRIES, key=len, reverse=True):
+        pattern = r'\b' + re.escape(country) + r'\b'
+        if re.search(pattern, search_text, re.IGNORECASE):
+            return country
+
+    return ""
+
+
 def _resolve_google_news_url(url: str) -> str:
     """Resolve a Google News redirect URL to the actual article URL."""
     if "news.google.com" not in url:
@@ -149,6 +223,9 @@ def fetch_article_texts(articles: list[NewsArticle], max_workers: int = 8):
             # Update URL to the real article URL
             if real_url != article.url:
                 article.url = real_url
+            # Detect location if not already set
+            if not article.country:
+                article.country = _detect_location(article.title, text or "")
             if text:
                 article.full_text = text
                 # First 300 chars as display snippet, break at sentence/word
