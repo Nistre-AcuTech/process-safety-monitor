@@ -93,11 +93,13 @@ def main():
     client_matches: dict[str, str | None] = {}
 
     if clients:
-        logger.info("Checking %d client names against headlines + descriptions", len(clients))
+        logger.info("Checking %d client names against article text", len(clients))
         for article in articles:
-            # Check title first, then description
+            # Search title + full article text for client names
             search_text = article.title
-            if article.description:
+            if article.full_text:
+                search_text += " " + article.full_text
+            elif article.description:
                 search_text += " " + article.description
             match = find_client_match(search_text, clients)
             client_matches[article.url] = match
