@@ -153,6 +153,14 @@
         .pagination button:disabled { opacity: 0.4; cursor: default; }
         .page-buttons { display: flex; gap: 4px; }
 
+        .new-badge {
+            display: inline-block; background: #ef4444; color: #fff;
+            font-size: 9px; font-weight: 700; text-transform: uppercase;
+            padding: 1px 5px; border-radius: 3px; margin-left: 6px;
+            vertical-align: middle; letter-spacing: 0.5px;
+        }
+        .event-card .new-badge { margin-left: 0; margin-bottom: 4px; }
+
         .loading { text-align: center; padding: 60px 20px; color: #9ca3af; font-size: 16px; }
         .error { text-align: center; padding: 60px 20px; color: #dc2626; }
 
@@ -165,7 +173,7 @@
             .container { padding: 8px; padding-bottom: 72px; }
 
             /* Hide desktop stats/filters, show mobile panels */
-            .stats, .filters { display: none !important; }
+            .container > .stats, .container > .filters { display: none !important; }
             .mobile-panel-wrap { display: block; }
 
             .table-wrap { display: none; }
@@ -219,6 +227,7 @@
 <div class="container">
     <!-- Desktop: always-visible stats & filters -->
     <div class="stats">
+        <div class="stat-card stat-new" style="display:none;"><div class="value" id="stat-new" style="color:#ef4444;">-</div><div class="label">New</div></div>
         <div class="stat-card"><div class="value" id="stat-total">-</div><div class="label">Total Events</div></div>
         <div class="stat-card"><div class="value" id="stat-week">-</div><div class="label">This Week</div></div>
         <div class="stat-card"><div class="value" id="stat-today">-</div><div class="label">Today</div></div>
@@ -250,19 +259,13 @@
 
     <!-- Mobile: collapsible panels -->
     <div class="mobile-panel-wrap">
-        <!-- Search always visible on mobile -->
-        <div style="margin-bottom:8px;">
-            <div class="filter-group" style="width:100%">
-                <input type="text" id="search-mobile" placeholder="Search headlines, sources..."
-                       style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:16px;background:#fff;">
-            </div>
-        </div>
         <!-- Active filter chips -->
         <div class="active-filters-bar" id="active-filters"></div>
         <!-- Stats panel -->
         <div class="mobile-panel" id="panel-stats">
             <div class="mobile-panel-body" id="panel-stats-body">
                 <div class="stats" style="grid-template-columns:repeat(2,1fr);margin-bottom:0;">
+                    <div class="stat-card stat-new" style="display:none;"><div class="value" id="stat-new-m" style="color:#ef4444;">-</div><div class="label">New</div></div>
                     <div class="stat-card"><div class="value" id="stat-total-m">-</div><div class="label">Total</div></div>
                     <div class="stat-card"><div class="value" id="stat-week-m">-</div><div class="label">This Week</div></div>
                     <div class="stat-card"><div class="value" id="stat-today-m">-</div><div class="label">Today</div></div>
@@ -270,9 +273,13 @@
                 </div>
             </div>
         </div>
-        <!-- Filter panel -->
+        <!-- Filter panel (includes search) -->
         <div class="mobile-panel" id="panel-filters">
             <div class="mobile-panel-body" id="panel-filters-body">
+                <div class="filter-group">
+                    <label>Search</label>
+                    <input type="text" id="search-mobile" placeholder="Search headlines, sources..." style="width:100%;">
+                </div>
                 <div class="filter-group">
                     <label>Keyword</label>
                     <select id="filter-keyword-m"><option value="">All keywords</option></select>
@@ -364,6 +371,7 @@ let filtered = [];
 let currentPage = 1;
 let sortCol = 'date';
 let sortAsc = false;
+let lastVisit = null; // timestamp of previous visit
 
 async function loadData() {
     try {
@@ -381,6 +389,12 @@ async function loadData() {
 }
 
 function init() {
+    // Track last visit for "NEW" badges
+    const stored = localStorage.getItem('psm_last_visit');
+    lastVisit = stored ? new Date(stored) : null;
+    // Update last visit to now (so next visit sees new items from this point)
+    localStorage.setItem('psm_last_visit', new Date().toISOString());
+
     populateFilters();
     applyFilters();
     updateStats();
@@ -419,18 +433,24 @@ function populateFilters() {
     });
 }
 
+function isNew(e) {
+    if (!lastVisit || !e.date) return false;
+    return new Date(e.date) > lastVisit;
+}
+
 function updateStats() {
     const now = new Date();
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const weekStart = new Date(todayStart);
     weekStart.setDate(weekStart.getDate() - 7);
 
-    let today = 0, week = 0, crm = 0;
+    let today = 0, week = 0, crm = 0, newCount = 0;
     allEvents.forEach(e => {
         const d = e.date ? new Date(e.date) : null;
         if (d && d >= todayStart) today++;
         if (d && d >= weekStart) week++;
         if (e.client) crm++;
+        if (isNew(e)) newCount++;
     });
 
     // Desktop
@@ -438,11 +458,18 @@ function updateStats() {
     document.getElementById('stat-today').textContent = today;
     document.getElementById('stat-week').textContent = week;
     document.getElementById('stat-crm').textContent = crm;
+    document.getElementById('stat-new').textContent = newCount;
     // Mobile
     document.getElementById('stat-total-m').textContent = allEvents.length;
     document.getElementById('stat-today-m').textContent = today;
     document.getElementById('stat-week-m').textContent = week;
     document.getElementById('stat-crm-m').textContent = crm;
+    document.getElementById('stat-new-m').textContent = newCount;
+
+    // Show/hide new stat card based on whether there are new items
+    document.querySelectorAll('.stat-new').forEach(el => {
+        el.style.display = (lastVisit && newCount > 0) ? '' : 'none';
+    });
 }
 
 function getFilterValues() {
@@ -484,6 +511,7 @@ function applyFilters() {
 function updateFilterBadge() {
     const f = getFilterValues();
     let count = 0;
+    if (f.search) count++;
     if (f.keyword) count++;
     if (f.country) count++;
     if (f.crm) count++;
@@ -494,6 +522,7 @@ function updateActiveFilters() {
     const f = getFilterValues();
     const bar = document.getElementById('active-filters');
     let chips = '';
+    if (f.search) chips += `<span class="active-filter-chip">"${esc(f.search)}"<button onclick="clearFilter('search')">&times;</button></span>`;
     if (f.keyword) chips += `<span class="active-filter-chip">${esc(f.keyword)}<button onclick="clearFilter('keyword')">&times;</button></span>`;
     if (f.country) chips += `<span class="active-filter-chip">${esc(f.country)}<button onclick="clearFilter('country')">&times;</button></span>`;
     if (f.crm === 'yes') chips += `<span class="active-filter-chip">Clients only<button onclick="clearFilter('crm')">&times;</button></span>`;
@@ -502,7 +531,10 @@ function updateActiveFilters() {
 }
 
 function clearFilter(type) {
-    if (type === 'keyword') {
+    if (type === 'search') {
+        document.getElementById('search').value = '';
+        document.getElementById('search-mobile').value = '';
+    } else if (type === 'keyword') {
         document.getElementById('filter-keyword').value = '';
         document.getElementById('filter-keyword-m').value = '';
     } else if (type === 'country') {
@@ -550,6 +582,7 @@ function renderTable() {
                 ? `<span class="crm-yes">${esc(e.client)}</span>`
                 : `<span class="crm-no">&mdash;</span>`;
             const rowClass = e.client ? ' class="crm-match"' : '';
+            const newBadge = isNew(e) ? '<span class="new-badge">NEW</span>' : '';
             const hasDesc = e.description && e.description.trim();
             const expandBtn = hasDesc
                 ? `<button class="expand-btn" onclick="toggleDesc('desc-${i}')" title="Show summary">&#9654;</button> `
@@ -559,7 +592,7 @@ function renderTable() {
                 : '';
             return `<tr${rowClass}>
                 <td style="white-space:nowrap">${date}</td>
-                <td>${expandBtn}<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></td>
+                <td>${expandBtn}<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>${newBadge}</td>
                 <td>${esc(e.source)}</td>
                 <td>${esc(e.country)}</td>
                 <td>${kws}</td>
@@ -598,8 +631,9 @@ function renderCards() {
             ? `<div class="card-desc" id="card-desc-${i}">${esc(e.description)}</div>`
             : '';
 
+        const newBadge = isNew(e) ? '<span class="new-badge">NEW</span> ' : '';
         return `<div class="event-card${e.client ? ' crm-match' : ''}">
-            <div class="card-date">${date}</div>
+            <div class="card-date">${newBadge}${date}</div>
             <div class="card-title"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></div>
             <div class="card-meta">
                 ${e.source ? `<span class="card-meta-item">${esc(e.source)}</span>` : ''}
