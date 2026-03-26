@@ -39,6 +39,34 @@
         .search-box { flex: 1; min-width: 200px; }
         .search-box input { width: 100%; }
 
+        /* Mobile panels (stats + filters collapsible) */
+        .mobile-panel-wrap { display: none; }
+        .mobile-panel {
+            background: #fff; border-radius: 8px; margin-bottom: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden;
+        }
+        .mobile-panel-body { display: none; padding: 12px; }
+        .mobile-panel-body.open { display: block; }
+        .mobile-panel-body .stats {
+            margin-bottom: 0; gap: 6px;
+        }
+        .mobile-panel-body .filter-group { width: 100%; }
+        .mobile-panel-body .filter-group + .filter-group { margin-top: 6px; }
+        .mobile-panel-body .filter-group select,
+        .mobile-panel-body .filter-group input { width: 100%; }
+        .active-filters-bar {
+            display: flex; gap: 6px; flex-wrap: wrap; padding: 6px 0;
+        }
+        .active-filter-chip {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: #dbeafe; color: #1e40af; padding: 4px 10px;
+            border-radius: 12px; font-size: 12px;
+        }
+        .active-filter-chip button {
+            background: none; border: none; color: #1e40af; cursor: pointer;
+            font-size: 14px; padding: 0; line-height: 1;
+        }
+
         /* Desktop table */
         .table-wrap {
             background: #fff; border-radius: 8px; overflow: hidden;
@@ -128,20 +156,45 @@
         .loading { text-align: center; padding: 60px 20px; color: #9ca3af; font-size: 16px; }
         .error { text-align: center; padding: 60px 20px; color: #dc2626; }
 
+        /* Bottom toolbar (mobile only) */
+        .bottom-bar { display: none; }
+
         /* Mobile breakpoint */
         @media (max-width: 768px) {
-            .header { padding: 14px 12px; }
-            .container { padding: 8px; }
-            .stats { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-            .stat-card { padding: 10px; }
-            .stat-card .value { font-size: 22px; }
-            .filters { flex-direction: column; gap: 8px; padding: 10px; }
-            .filter-group { width: 100%; }
-            .search-box { min-width: 100%; }
-            .filter-group select { width: 100%; }
+            .header { padding: 12px; }
+            .container { padding: 8px; padding-bottom: 72px; }
+
+            /* Hide desktop stats/filters, show mobile panels */
+            .stats, .filters { display: none !important; }
+            .mobile-panel-wrap { display: block; }
 
             .table-wrap { display: none; }
             .cards-wrap { display: block; }
+
+            /* Bottom toolbar */
+            .bottom-bar {
+                display: flex; position: fixed; bottom: 0; left: 0; right: 0;
+                background: #fff; border-top: 1px solid #d1d5db;
+                padding: 0; z-index: 100;
+                box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+            }
+            .bottom-bar button {
+                flex: 1; display: flex; flex-direction: column; align-items: center;
+                justify-content: center; gap: 2px;
+                background: none; border: none; cursor: pointer;
+                padding: 10px 4px; color: #6b7280; font-size: 10px;
+                min-height: 56px; position: relative;
+            }
+            .bottom-bar button.active { color: #1e3a5f; }
+            .bottom-bar button svg { width: 22px; height: 22px; }
+            .bottom-bar .badge {
+                position: absolute; top: 6px; right: calc(50% - 18px);
+                background: #ef4444; color: #fff; font-size: 9px; font-weight: 700;
+                min-width: 16px; height: 16px; border-radius: 8px;
+                display: flex; align-items: center; justify-content: center;
+                padding: 0 4px;
+            }
+            .bottom-bar .badge:empty { display: none; }
         }
 
         @media (min-width: 769px) {
@@ -164,6 +217,7 @@
 </div>
 
 <div class="container">
+    <!-- Desktop: always-visible stats & filters -->
     <div class="stats">
         <div class="stat-card"><div class="value" id="stat-total">-</div><div class="label">Total Events</div></div>
         <div class="stat-card"><div class="value" id="stat-week">-</div><div class="label">This Week</div></div>
@@ -191,6 +245,51 @@
                 <option value="yes">Known clients only</option>
                 <option value="no">Unknown companies</option>
             </select>
+        </div>
+    </div>
+
+    <!-- Mobile: collapsible panels -->
+    <div class="mobile-panel-wrap">
+        <!-- Search always visible on mobile -->
+        <div style="margin-bottom:8px;">
+            <div class="filter-group" style="width:100%">
+                <input type="text" id="search-mobile" placeholder="Search headlines, sources..."
+                       style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:16px;background:#fff;">
+            </div>
+        </div>
+        <!-- Active filter chips -->
+        <div class="active-filters-bar" id="active-filters"></div>
+        <!-- Stats panel -->
+        <div class="mobile-panel" id="panel-stats">
+            <div class="mobile-panel-body" id="panel-stats-body">
+                <div class="stats" style="grid-template-columns:repeat(2,1fr);margin-bottom:0;">
+                    <div class="stat-card"><div class="value" id="stat-total-m">-</div><div class="label">Total</div></div>
+                    <div class="stat-card"><div class="value" id="stat-week-m">-</div><div class="label">This Week</div></div>
+                    <div class="stat-card"><div class="value" id="stat-today-m">-</div><div class="label">Today</div></div>
+                    <div class="stat-card"><div class="value" id="stat-crm-m">-</div><div class="label">Clients</div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Filter panel -->
+        <div class="mobile-panel" id="panel-filters">
+            <div class="mobile-panel-body" id="panel-filters-body">
+                <div class="filter-group">
+                    <label>Keyword</label>
+                    <select id="filter-keyword-m"><option value="">All keywords</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>Country</label>
+                    <select id="filter-country-m"><option value="">All countries</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>Client</label>
+                    <select id="filter-crm-m">
+                        <option value="">All</option>
+                        <option value="yes">Known clients only</option>
+                        <option value="no">Unknown companies</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -231,6 +330,31 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Mobile bottom toolbar -->
+<div class="bottom-bar">
+    <button id="bar-stats" onclick="togglePanel('stats')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
+        Stats
+    </button>
+    <button id="bar-filter" onclick="togglePanel('filters')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+        <span class="badge" id="filter-badge"></span>
+        Filter
+    </button>
+    <button onclick="prevPage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Prev
+    </button>
+    <button onclick="nextPage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+        Next
+    </button>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        Top
+    </button>
 </div>
 
 <script>
@@ -275,18 +399,23 @@ function populateFilters() {
         if (e.country) countries.add(e.country);
     });
 
-    const kwSelect = document.getElementById('filter-keyword');
-    [...keywords].sort().forEach(k => {
-        const opt = document.createElement('option');
-        opt.value = k; opt.textContent = k;
-        kwSelect.appendChild(opt);
+    // Populate both desktop and mobile filter selects
+    ['filter-keyword', 'filter-keyword-m'].forEach(id => {
+        const sel = document.getElementById(id);
+        [...keywords].sort().forEach(k => {
+            const opt = document.createElement('option');
+            opt.value = k; opt.textContent = k;
+            sel.appendChild(opt);
+        });
     });
 
-    const countrySelect = document.getElementById('filter-country');
-    [...countries].sort().forEach(c => {
-        const opt = document.createElement('option');
-        opt.value = c; opt.textContent = c;
-        countrySelect.appendChild(opt);
+    ['filter-country', 'filter-country-m'].forEach(id => {
+        const sel = document.getElementById(id);
+        [...countries].sort().forEach(c => {
+            const opt = document.createElement('option');
+            opt.value = c; opt.textContent = c;
+            sel.appendChild(opt);
+        });
     });
 }
 
@@ -304,33 +433,86 @@ function updateStats() {
         if (e.client) crm++;
     });
 
+    // Desktop
     document.getElementById('stat-total').textContent = allEvents.length;
     document.getElementById('stat-today').textContent = today;
     document.getElementById('stat-week').textContent = week;
     document.getElementById('stat-crm').textContent = crm;
+    // Mobile
+    document.getElementById('stat-total-m').textContent = allEvents.length;
+    document.getElementById('stat-today-m').textContent = today;
+    document.getElementById('stat-week-m').textContent = week;
+    document.getElementById('stat-crm-m').textContent = crm;
+}
+
+function getFilterValues() {
+    // Use desktop or mobile inputs depending on which has a value
+    const isMobile = window.innerWidth <= 768;
+    return {
+        search: (isMobile
+            ? document.getElementById('search-mobile').value
+            : document.getElementById('search').value
+        ).toLowerCase(),
+        keyword: document.getElementById(isMobile ? 'filter-keyword-m' : 'filter-keyword').value,
+        country: document.getElementById(isMobile ? 'filter-country-m' : 'filter-country').value,
+        crm: document.getElementById(isMobile ? 'filter-crm-m' : 'filter-crm').value,
+    };
 }
 
 function applyFilters() {
-    const search = document.getElementById('search').value.toLowerCase();
-    const kwFilter = document.getElementById('filter-keyword').value;
-    const countryFilter = document.getElementById('filter-country').value;
-    const crmFilter = document.getElementById('filter-crm').value;
+    const f = getFilterValues();
 
     filtered = allEvents.filter(e => {
-        if (search) {
+        if (f.search) {
             const haystack = `${e.title} ${e.source} ${e.country} ${(e.keywords||[]).join(' ')} ${e.client || ''} ${e.description || ''}`.toLowerCase();
-            if (!haystack.includes(search)) return false;
+            if (!haystack.includes(f.search)) return false;
         }
-        if (kwFilter && !(e.keywords || []).includes(kwFilter)) return false;
-        if (countryFilter && e.country !== countryFilter) return false;
-        if (crmFilter === 'yes' && !e.client) return false;
-        if (crmFilter === 'no' && e.client) return false;
+        if (f.keyword && !(e.keywords || []).includes(f.keyword)) return false;
+        if (f.country && e.country !== f.country) return false;
+        if (f.crm === 'yes' && !e.client) return false;
+        if (f.crm === 'no' && e.client) return false;
         return true;
     });
 
     sortData();
     currentPage = 1;
     render();
+    updateFilterBadge();
+    updateActiveFilters();
+}
+
+function updateFilterBadge() {
+    const f = getFilterValues();
+    let count = 0;
+    if (f.keyword) count++;
+    if (f.country) count++;
+    if (f.crm) count++;
+    document.getElementById('filter-badge').textContent = count || '';
+}
+
+function updateActiveFilters() {
+    const f = getFilterValues();
+    const bar = document.getElementById('active-filters');
+    let chips = '';
+    if (f.keyword) chips += `<span class="active-filter-chip">${esc(f.keyword)}<button onclick="clearFilter('keyword')">&times;</button></span>`;
+    if (f.country) chips += `<span class="active-filter-chip">${esc(f.country)}<button onclick="clearFilter('country')">&times;</button></span>`;
+    if (f.crm === 'yes') chips += `<span class="active-filter-chip">Clients only<button onclick="clearFilter('crm')">&times;</button></span>`;
+    if (f.crm === 'no') chips += `<span class="active-filter-chip">Unknown only<button onclick="clearFilter('crm')">&times;</button></span>`;
+    bar.innerHTML = chips;
+}
+
+function clearFilter(type) {
+    if (type === 'keyword') {
+        document.getElementById('filter-keyword').value = '';
+        document.getElementById('filter-keyword-m').value = '';
+    } else if (type === 'country') {
+        document.getElementById('filter-country').value = '';
+        document.getElementById('filter-country-m').value = '';
+    } else if (type === 'crm') {
+        document.getElementById('filter-crm').value = '';
+        document.getElementById('filter-crm-m').value = '';
+    }
+    applyFilters();
 }
 
 function sortData() {
@@ -386,7 +568,6 @@ function renderTable() {
         }).join('');
     }
 
-    // Update sort arrows
     document.querySelectorAll('thead th').forEach(th => {
         th.classList.toggle('sorted', th.dataset.col === sortCol);
         const arrow = th.querySelector('.sort-arrow');
@@ -436,7 +617,7 @@ function updatePagination() {
     const start = (currentPage - 1) * PER_PAGE;
     const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
     const info = filtered.length > 0
-        ? `Showing ${start + 1}-${Math.min(start + PER_PAGE, filtered.length)} of ${filtered.length}`
+        ? `${start + 1}-${Math.min(start + PER_PAGE, filtered.length)} of ${filtered.length}`
         : '';
 
     document.getElementById('page-info').textContent = info;
@@ -475,19 +656,55 @@ function toggleCardDesc(btn, id) {
     btn.textContent = desc.classList.contains('open') ? 'Hide summary' : 'Show summary';
 }
 
-// Event listeners
+// Mobile panel toggle
+function togglePanel(name) {
+    const body = document.getElementById(`panel-${name}-body`);
+    const btn = document.getElementById(`bar-${name === 'stats' ? 'stats' : 'filter'}`);
+    const isOpen = body.classList.contains('open');
+
+    // Close all panels first
+    document.querySelectorAll('.mobile-panel-body').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.bottom-bar button').forEach(b => b.classList.remove('active'));
+
+    if (!isOpen) {
+        body.classList.add('open');
+        btn.classList.add('active');
+        // Scroll the panel into view
+        document.getElementById(`panel-${name}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) { currentPage--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+}
+function nextPage() {
+    const totalPages = Math.ceil(filtered.length / PER_PAGE);
+    if (currentPage < totalPages) { currentPage++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+}
+
+// Event listeners — desktop
 document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
 document.getElementById('filter-keyword').addEventListener('change', applyFilters);
 document.getElementById('filter-country').addEventListener('change', applyFilters);
 document.getElementById('filter-crm').addEventListener('change', applyFilters);
-
-// Table pagination
 document.getElementById('btn-prev').addEventListener('click', () => { currentPage--; render(); });
 document.getElementById('btn-next').addEventListener('click', () => { currentPage++; render(); });
 
-// Card pagination
-document.getElementById('cards-btn-prev').addEventListener('click', () => { currentPage--; render(); window.scrollTo(0, 0); });
-document.getElementById('cards-btn-next').addEventListener('click', () => { currentPage++; render(); window.scrollTo(0, 0); });
+// Event listeners — mobile
+document.getElementById('search-mobile').addEventListener('input', debounce(applyFilters, 200));
+document.getElementById('filter-keyword-m').addEventListener('change', applyFilters);
+document.getElementById('filter-country-m').addEventListener('change', applyFilters);
+document.getElementById('filter-crm-m').addEventListener('change', applyFilters);
+document.getElementById('cards-btn-prev').addEventListener('click', () => { prevPage(); });
+document.getElementById('cards-btn-next').addEventListener('click', () => { nextPage(); });
+
+// Sync search between desktop and mobile
+document.getElementById('search').addEventListener('input', () => {
+    document.getElementById('search-mobile').value = document.getElementById('search').value;
+});
+document.getElementById('search-mobile').addEventListener('input', () => {
+    document.getElementById('search').value = document.getElementById('search-mobile').value;
+});
 
 document.querySelectorAll('thead th[data-col]').forEach(th => {
     th.addEventListener('click', () => {
