@@ -1,5 +1,7 @@
 import logging
+import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from urllib.parse import urlparse, quote
@@ -11,6 +13,12 @@ import config
 
 logger = logging.getLogger(__name__)
 
+_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
+
 
 @dataclass
 class NewsArticle:
@@ -20,6 +28,7 @@ class NewsArticle:
     date: datetime | None
     country: str
     keywords_matched: list[str] = field(default_factory=list)
+    description: str = ""
 
 
 def _normalize_url(url: str) -> str:
@@ -32,6 +41,65 @@ def _match_keywords(text: str) -> list[str]:
     """Return list of keywords found in text (case-insensitive)."""
     text_lower = text.lower()
     return [kw for kw in config.KEYWORDS if kw.lower() in text_lower]
+
+
+def _fetch_meta_description(url: str) -> str:
+    """Fetch a URL and extract the meta description tag."""
+    try:
+        resp = requests.get(url, headers=_HEADERS, timeout=5, stream=True)
+        # Read only the first 15KB to find meta tags (they're in <head>)
+        content = resp.raw.read(15000).decode("utf-8", errors="ignore")
+        resp.close()
+
+        # Try og:description first (usually more detailed)
+        match = re.search(
+            r'<meta\s+(?:property|name)=["\']og:description["\']\s+content=["\']([^"\']+)["\']',
+            content, re.IGNORECASE
+        )
+        if not match:
+            match = re.search(
+                r'<meta\s+content=["\']([^"\']+)["\']\s+(?:property|name)=["\']og:description["\']',
+                content, re.IGNORECASE
+            )
+        if not match:
+            match = re.search(
+                r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']',
+                content, re.IGNORECASE
+            )
+        if not match:
+            match = re.search(
+                r'<meta\s+content=["\']([^"\']+)["\']\s+name=["\']description["\']',
+                content, re.IGNORECASE
+            )
+
+        if match:
+            desc = match.group(1).strip()
+            # Clean up HTML entities
+            desc = desc.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">").replace("&#x27;", "'").replace("&quot;", '"')
+            return desc[:500]  # Cap at 500 chars
+    except Exception:
+        pass
+    return ""
+
+
+def fetch_descriptions(articles: list[NewsArticle], max_workers: int = 10):
+    """Fetch meta descriptions for all articles concurrently."""
+    logger.info("Fetching descriptions for %d articles...", len(articles))
+    count = 0
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        future_to_article = {
+            pool.submit(_fetch_meta_description, a.url): a
+            for a in articles if not a.description
+        }
+        for future in as_completed(future_to_article):
+            article = future_to_article[future]
+            desc = future.result()
+            if desc:
+                article.description = desc
+                count += 1
+
+    logger.info("Fetched %d descriptions out of %d articles", count, len(articles))
 
 
 def fetch_gdelt(lookback_hours: int) -> list[NewsArticle]:
@@ -148,6 +216,14 @@ def fetch_google_news(lookback_hours: int) -> list[NewsArticle]:
 
         source = entry.get("source", {}).get("title", "") if hasattr(entry, "source") else ""
 
+        # Google News RSS sometimes has a summary field
+        desc = ""
+        if hasattr(entry, "summary") and entry.summary:
+            # Strip HTML tags and clean up entities
+            desc = re.sub(r'<[^>]+>', '', entry.summary)
+            desc = desc.replace("&nbsp;", " ").replace("&#160;", " ").strip()
+            desc = re.sub(r'\s{2,}', ' ', desc)[:500]
+
         articles.append(
             NewsArticle(
                 title=title,
@@ -156,6 +232,7 @@ def fetch_google_news(lookback_hours: int) -> list[NewsArticle]:
                 date=date,
                 country="",  # Google News RSS doesn't provide country
                 keywords_matched=matched,
+                description=desc,
             )
         )
 
@@ -164,7 +241,7 @@ def fetch_google_news(lookback_hours: int) -> list[NewsArticle]:
 
 
 def fetch_all_news(lookback_hours: int | None = None) -> list[NewsArticle]:
-    """Fetch from all sources, deduplicate, and sort by date."""
+    """Fetch from all sources, deduplicate, sort by date, and fetch descriptions."""
     if lookback_hours is None:
         lookback_hours = config.LOOKBACK_HOURS
 
@@ -183,6 +260,9 @@ def fetch_all_news(lookback_hours: int | None = None) -> list[NewsArticle]:
 
     # Sort by date descending (None dates last)
     unique.sort(key=lambda a: a.date or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
+
+    # Fetch descriptions from article URLs
+    fetch_descriptions(unique)
 
     logger.info("Total unique articles: %d", len(unique))
     return unique

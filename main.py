@@ -41,6 +41,7 @@ def _article_to_dict(article: NewsArticle, client_match: str | None) -> dict:
         "country": article.country,
         "keywords": article.keywords_matched,
         "client": client_match,
+        "description": article.description,
     }
 
 
@@ -92,9 +93,13 @@ def main():
     client_matches: dict[str, str | None] = {}
 
     if clients:
-        logger.info("Checking %d client names against headlines", len(clients))
+        logger.info("Checking %d client names against headlines + descriptions", len(clients))
         for article in articles:
-            match = find_client_match(article.title, clients)
+            # Check title first, then description
+            search_text = article.title
+            if article.description:
+                search_text += " " + article.description
+            match = find_client_match(search_text, clients)
             client_matches[article.url] = match
     else:
         logger.info("No client list found — skipping client matching")
