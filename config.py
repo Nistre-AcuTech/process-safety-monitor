@@ -4,23 +4,50 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Process safety keywords for news filtering
+# These are matched against article titles — keep them specific enough
+# to avoid false positives (no bare "fire", "leak", "chemical", etc.)
 KEYWORDS = [
-    "leak",
-    "spill",
-    "flammable",
-    "fire",
+    # Explosions & blasts
     "explosion",
-    "dust",
-    "propagation",
     "detonation",
-    "toxic",
-    "vapor cloud",
-    "chemical",
-    "refinery",
-    "incident",
-    "release",
+    "dust explosion",
+    "vapor cloud explosion",
+    "BLEVE",
+    # Fires (industry-specific)
+    "refinery fire",
+    "plant fire",
+    "chemical fire",
+    "industrial fire",
+    "factory fire",
+    "warehouse fire",
+    "tank fire",
+    "pipeline fire",
+    # Leaks & spills (industry-specific)
+    "chemical spill",
+    "chemical leak",
+    "gas leak",
+    "oil spill",
+    "toxic release",
+    "hazardous release",
+    "pipeline leak",
+    # Hazmat & toxic
     "hazmat",
-    "combustible",
+    "toxic cloud",
+    "vapor cloud",
+    "chemical release",
+    # Industry terms
+    "refinery incident",
+    "plant incident",
+    "industrial incident",
+    "process safety",
+    "chemical plant",
+    "refinery explosion",
+    "shelter in place",
+    # Regulatory / investigations
+    "CSB investigation",
+    "OSHA citation",
+    "OSHA fine",
+    "EPA violation",
 ]
 
 # How far back to search (hours)

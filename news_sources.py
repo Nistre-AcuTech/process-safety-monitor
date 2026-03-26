@@ -40,10 +40,56 @@ def _normalize_url(url: str) -> str:
     return f"{parsed.scheme}://{parsed.netloc}{parsed.path}".rstrip("/").lower()
 
 
+# Keywords that are specific enough to stand alone
+_STRONG_KEYWORDS = {
+    "refinery fire", "chemical fire", "industrial fire", "plant fire",
+    "factory fire", "tank fire", "pipeline fire", "warehouse fire",
+    "chemical spill", "chemical leak", "gas leak", "oil spill",
+    "pipeline leak", "toxic release", "hazardous release", "chemical release",
+    "refinery explosion", "dust explosion", "vapor cloud explosion",
+    "hazmat", "toxic cloud", "vapor cloud", "BLEVE",
+    "refinery incident", "plant incident", "industrial incident",
+    "process safety", "chemical plant", "shelter in place",
+    "CSB investigation", "OSHA citation", "OSHA fine", "EPA violation",
+}
+
+# Generic keywords that need industrial context to be relevant
+_WEAK_KEYWORDS = {"explosion", "detonation"}
+
+# Context words that confirm an article is about industrial/process safety
+_INDUSTRY_CONTEXT = {
+    "plant", "refinery", "factory", "facility", "pipeline", "terminal",
+    "chemical", "industrial", "warehouse", "storage", "tank", "reactor",
+    "petrochemical", "manufacturing", "processing", "osha", "epa",
+    "hazardous", "flammable", "combustible", "evacuate", "evacuation",
+    "shelter in place", "workers", "injuries", "safety", "leak",
+}
+
+
 def _match_keywords(text: str) -> list[str]:
-    """Return list of keywords found in text (case-insensitive)."""
+    """Return list of keywords found in text (case-insensitive).
+
+    Strong keywords match directly. Weak keywords (like bare 'explosion')
+    only match if industrial context words are also present in the title.
+    """
     text_lower = text.lower()
-    return [kw for kw in config.KEYWORDS if kw.lower() in text_lower]
+    matched = []
+
+    for kw in config.KEYWORDS:
+        if kw.lower() in text_lower:
+            matched.append(kw)
+
+    if not matched:
+        return []
+
+    # If all matches are weak keywords, require industrial context
+    has_strong = any(m.lower() in _STRONG_KEYWORDS for m in matched)
+    if not has_strong:
+        has_context = any(ctx in text_lower for ctx in _INDUSTRY_CONTEXT)
+        if not has_context:
+            return []
+
+    return matched
 
 
 def _resolve_google_news_url(url: str) -> str:
@@ -127,8 +173,15 @@ def fetch_article_texts(articles: list[NewsArticle], max_workers: int = 8):
 
 def fetch_gdelt(lookback_hours: int) -> list[NewsArticle]:
     """Fetch articles from GDELT DOC API."""
+    # Use a shorter keyword set for GDELT (has query length limit)
+    gdelt_keywords = [
+        "refinery explosion", "chemical plant", "chemical spill",
+        "chemical leak", "industrial explosion", "hazmat",
+        "vapor cloud", "refinery fire", "process safety",
+        "shelter in place", "OSHA fine", "industrial fire",
+    ]
     query_parts = []
-    for kw in config.KEYWORDS:
+    for kw in gdelt_keywords:
         if " " in kw:
             query_parts.append(f'"{kw}"')
         else:
@@ -205,10 +258,12 @@ def fetch_gdelt(lookback_hours: int) -> list[NewsArticle]:
 
 def fetch_google_news(lookback_hours: int) -> list[NewsArticle]:
     """Fetch articles from Google News RSS."""
-    # Build a query with the most distinctive keywords (avoid overly generic ones)
+    # Build a query with the most distinctive process-safety keywords
     priority_keywords = [
-        "explosion", "detonation", "toxic", "vapor cloud", "hazmat",
-        "chemical spill", "refinery fire", "chemical leak",
+        "refinery explosion", "chemical plant explosion", "industrial explosion",
+        "refinery fire", "chemical fire", "chemical spill", "chemical leak",
+        "vapor cloud", "hazmat", "shelter in place",
+        "process safety", "OSHA fine", "CSB investigation",
     ]
     query = " OR ".join(
         f'"{kw}"' if " " in kw else kw for kw in priority_keywords
