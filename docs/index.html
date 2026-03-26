@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Safety Events Monitor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f4f6; color: #1f2937; }
+
+        .header { background: #1e3a5f; color: #fff; padding: 20px 24px; }
+        .header h1 { font-size: 22px; font-weight: 600; }
+        .header p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+
+        .stats { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+        .stat-card {
+            background: #fff; border-radius: 8px; padding: 16px 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); flex: 1; min-width: 140px;
+        }
+        .stat-card .value { font-size: 28px; font-weight: 700; color: #1e3a5f; }
+        .stat-card .label { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+        .filters {
+            background: #fff; border-radius: 8px; padding: 16px 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 16px;
+            display: flex; gap: 12px; flex-wrap: wrap; align-items: end;
+        }
+        .filter-group { display: flex; flex-direction: column; gap: 4px; }
+        .filter-group label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .filter-group input, .filter-group select {
+            padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px;
+            font-size: 14px; background: #fff; color: #1f2937;
+        }
+        .filter-group input:focus, .filter-group select:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
+        .search-box { flex: 1; min-width: 200px; }
+        .search-box input { width: 100%; }
+
+        .table-wrap {
+            background: #fff; border-radius: 8px; overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead th {
+            padding: 10px 12px; text-align: left; background: #f1f5f9;
+            border-bottom: 2px solid #cbd5e1; font-weight: 600; color: #475569;
+            cursor: pointer; user-select: none; white-space: nowrap;
+        }
+        thead th:hover { background: #e2e8f0; }
+        thead th .sort-arrow { font-size: 10px; margin-left: 4px; opacity: 0.4; }
+        thead th.sorted .sort-arrow { opacity: 1; }
+        tbody td { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; }
+        tbody tr:hover { background: #f8fafc; }
+        tbody tr.crm-match { background: #f0fdf4; }
+        tbody tr.crm-match:hover { background: #dcfce7; }
+        td a { color: #1d4ed8; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .kw-tag {
+            display: inline-block; background: #e5e7eb; color: #4b5563;
+            padding: 1px 6px; border-radius: 3px; font-size: 11px; margin: 1px 2px;
+        }
+        .crm-yes { color: #15803d; font-weight: 600; }
+        .crm-no { color: #9ca3af; }
+
+        .pagination {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 16px; background: #f8fafc; border-top: 1px solid #e5e7eb;
+            font-size: 13px; color: #6b7280;
+        }
+        .pagination button {
+            padding: 6px 14px; border: 1px solid #d1d5db; border-radius: 6px;
+            background: #fff; cursor: pointer; font-size: 13px; color: #374151;
+        }
+        .pagination button:hover:not(:disabled) { background: #f3f4f6; }
+        .pagination button:disabled { opacity: 0.4; cursor: default; }
+        .page-buttons { display: flex; gap: 4px; }
+
+        .loading { text-align: center; padding: 60px 20px; color: #9ca3af; font-size: 16px; }
+        .error { text-align: center; padding: 60px 20px; color: #dc2626; }
+
+        @media (max-width: 768px) {
+            .filters { flex-direction: column; }
+            .search-box { min-width: 100%; }
+            table { font-size: 13px; }
+            thead th, tbody td { padding: 6px 8px; }
+            .stats { gap: 8px; }
+            .stat-card { padding: 12px 14px; }
+            .stat-card .value { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Process Safety Events Monitor</h1>
+    <p id="last-updated">Loading...</p>
+</div>
+
+<div class="container">
+    <div class="stats">
+        <div class="stat-card"><div class="value" id="stat-total">-</div><div class="label">Total Events</div></div>
+        <div class="stat-card"><div class="value" id="stat-week">-</div><div class="label">This Week</div></div>
+        <div class="stat-card"><div class="value" id="stat-today">-</div><div class="label">Today</div></div>
+        <div class="stat-card"><div class="value" id="stat-crm">-</div><div class="label">CRM Matches</div></div>
+    </div>
+
+    <div class="filters">
+        <div class="filter-group search-box">
+            <label>Search</label>
+            <input type="text" id="search" placeholder="Search headlines, sources, countries...">
+        </div>
+        <div class="filter-group">
+            <label>Keyword</label>
+            <select id="filter-keyword"><option value="">All keywords</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Country</label>
+            <select id="filter-country"><option value="">All countries</option></select>
+        </div>
+        <div class="filter-group">
+            <label>CRM</label>
+            <select id="filter-crm">
+                <option value="">All</option>
+                <option value="yes">CRM match only</option>
+                <option value="no">No CRM match</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th data-col="date" class="sorted">Date <span class="sort-arrow">&#9660;</span></th>
+                    <th data-col="title">Headline <span class="sort-arrow">&#9660;</span></th>
+                    <th data-col="source">Source <span class="sort-arrow">&#9660;</span></th>
+                    <th data-col="country">Country <span class="sort-arrow">&#9660;</span></th>
+                    <th>Keywords</th>
+                    <th data-col="crm">CRM <span class="sort-arrow">&#9660;</span></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr><td colspan="6" class="loading">Loading events...</td></tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <span id="page-info"></span>
+            <div class="page-buttons">
+                <button id="btn-prev" disabled>&laquo; Prev</button>
+                <button id="btn-next" disabled>Next &raquo;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const PER_PAGE = 50;
+let allEvents = [];
+let filtered = [];
+let currentPage = 1;
+let sortCol = 'date';
+let sortAsc = false;
+
+async function loadData() {
+    try {
+        const resp = await fetch('../data/events.json');
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        allEvents = await resp.json();
+        init();
+    } catch (e) {
+        document.getElementById('table-body').innerHTML =
+            `<tr><td colspan="6" class="error">Could not load data. Run <code>python main.py</code> first to generate events.json</td></tr>`;
+        document.getElementById('last-updated').textContent = 'Data unavailable';
+    }
+}
+
+function init() {
+    populateFilters();
+    applyFilters();
+    updateStats();
+
+    if (allEvents.length > 0 && allEvents[0].date) {
+        const d = new Date(allEvents[0].date);
+        document.getElementById('last-updated').textContent = `Last updated: ${d.toLocaleString()}`;
+    }
+}
+
+function populateFilters() {
+    const keywords = new Set();
+    const countries = new Set();
+    allEvents.forEach(e => {
+        (e.keywords || []).forEach(k => keywords.add(k));
+        if (e.country) countries.add(e.country);
+    });
+
+    const kwSelect = document.getElementById('filter-keyword');
+    [...keywords].sort().forEach(k => {
+        const opt = document.createElement('option');
+        opt.value = k; opt.textContent = k;
+        kwSelect.appendChild(opt);
+    });
+
+    const countrySelect = document.getElementById('filter-country');
+    [...countries].sort().forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        countrySelect.appendChild(opt);
+    });
+}
+
+function updateStats() {
+    const now = new Date();
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const weekStart = new Date(todayStart);
+    weekStart.setDate(weekStart.getDate() - 7);
+
+    let today = 0, week = 0, crm = 0;
+    allEvents.forEach(e => {
+        const d = e.date ? new Date(e.date) : null;
+        if (d && d >= todayStart) today++;
+        if (d && d >= weekStart) week++;
+        if (e.zoho_account) crm++;
+    });
+
+    document.getElementById('stat-total').textContent = allEvents.length;
+    document.getElementById('stat-today').textContent = today;
+    document.getElementById('stat-week').textContent = week;
+    document.getElementById('stat-crm').textContent = crm;
+}
+
+function applyFilters() {
+    const search = document.getElementById('search').value.toLowerCase();
+    const kwFilter = document.getElementById('filter-keyword').value;
+    const countryFilter = document.getElementById('filter-country').value;
+    const crmFilter = document.getElementById('filter-crm').value;
+
+    filtered = allEvents.filter(e => {
+        if (search) {
+            const haystack = `${e.title} ${e.source} ${e.country} ${(e.keywords||[]).join(' ')} ${e.zoho_account || ''}`.toLowerCase();
+            if (!haystack.includes(search)) return false;
+        }
+        if (kwFilter && !(e.keywords || []).includes(kwFilter)) return false;
+        if (countryFilter && e.country !== countryFilter) return false;
+        if (crmFilter === 'yes' && !e.zoho_account) return false;
+        if (crmFilter === 'no' && e.zoho_account) return false;
+        return true;
+    });
+
+    sortData();
+    currentPage = 1;
+    render();
+}
+
+function sortData() {
+    filtered.sort((a, b) => {
+        let va = '', vb = '';
+        if (sortCol === 'date') { va = a.date || ''; vb = b.date || ''; }
+        else if (sortCol === 'title') { va = a.title || ''; vb = b.title || ''; }
+        else if (sortCol === 'source') { va = a.source || ''; vb = b.source || ''; }
+        else if (sortCol === 'country') { va = a.country || ''; vb = b.country || ''; }
+        else if (sortCol === 'crm') { va = a.zoho_account || ''; vb = b.zoho_account || ''; }
+        if (va < vb) return sortAsc ? -1 : 1;
+        if (va > vb) return sortAsc ? 1 : -1;
+        return 0;
+    });
+}
+
+function render() {
+    const tbody = document.getElementById('table-body');
+    const start = (currentPage - 1) * PER_PAGE;
+    const page = filtered.slice(start, start + PER_PAGE);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+
+    if (page.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="loading">No events match your filters.</td></tr>';
+    } else {
+        tbody.innerHTML = page.map(e => {
+            const date = e.date ? new Date(e.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'N/A';
+            const kws = (e.keywords || []).map(k => `<span class="kw-tag">${esc(k)}</span>`).join('');
+            const crm = e.zoho_account
+                ? `<span class="crm-yes">${esc(e.zoho_account)}</span>`
+                : `<span class="crm-no">&mdash;</span>`;
+            const rowClass = e.zoho_account ? ' class="crm-match"' : '';
+            return `<tr${rowClass}>
+                <td style="white-space:nowrap">${date}</td>
+                <td><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></td>
+                <td>${esc(e.source)}</td>
+                <td>${esc(e.country)}</td>
+                <td>${kws}</td>
+                <td style="text-align:center">${crm}</td>
+            </tr>`;
+        }).join('');
+    }
+
+    document.getElementById('page-info').textContent =
+        `Showing ${start + 1}-${Math.min(start + PER_PAGE, filtered.length)} of ${filtered.length}`;
+    document.getElementById('btn-prev').disabled = currentPage <= 1;
+    document.getElementById('btn-next').disabled = currentPage >= totalPages;
+
+    // Update sort arrows
+    document.querySelectorAll('thead th').forEach(th => {
+        th.classList.toggle('sorted', th.dataset.col === sortCol);
+        const arrow = th.querySelector('.sort-arrow');
+        if (arrow) arrow.innerHTML = (th.dataset.col === sortCol && sortAsc) ? '&#9650;' : '&#9660;';
+    });
+}
+
+function esc(s) {
+    if (!s) return '';
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+}
+
+// Event listeners
+document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
+document.getElementById('filter-keyword').addEventListener('change', applyFilters);
+document.getElementById('filter-country').addEventListener('change', applyFilters);
+document.getElementById('filter-crm').addEventListener('change', applyFilters);
+document.getElementById('btn-prev').addEventListener('click', () => { currentPage--; render(); });
+document.getElementById('btn-next').addEventListener('click', () => { currentPage++; render(); });
+
+document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        if (sortCol === col) sortAsc = !sortAsc;
+        else { sortCol = col; sortAsc = col !== 'date'; }
+        sortData();
+        currentPage = 1;
+        render();
+    });
+});
+
+function debounce(fn, ms) {
+    let t;
+    return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+
+loadData();
+</script>
+
+</body>
+</html>
