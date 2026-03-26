@@ -2,8 +2,8 @@ name: Process Safety Monitor
 
 on:
   schedule:
-    # Every 4 hours
-    - cron: "0 */4 * * *"
+    # Every 2 hours
+    - cron: "0 */2 * * *"
   workflow_dispatch: {}  # Manual trigger for testing
 
 jobs:
