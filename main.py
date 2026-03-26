@@ -127,6 +127,21 @@ def main():
         for a in articles
     ]
     existing_events = load_existing_events()
+
+    # Re-match existing events against client list (picks up title+description matches)
+    if clients:
+        rematch_count = 0
+        for event in existing_events:
+            search_text = event.get("title", "")
+            if event.get("description"):
+                search_text += " " + event["description"]
+            match = find_client_match(search_text, clients)
+            if match and not event.get("client"):
+                event["client"] = match
+                rematch_count += 1
+        if rematch_count:
+            logger.info("Re-matched %d existing events to clients", rematch_count)
+
     merged = merge_events(existing_events, new_events)
     save_events(merged)
     logger.info(
