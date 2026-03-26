@@ -6,37 +6,40 @@
     <title>Process Safety Events Monitor</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f4f6; color: #1f2937; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f4f6; color: #1f2937; -webkit-text-size-adjust: 100%; }
 
-        .header { background: #1e3a5f; color: #fff; padding: 20px 24px; }
-        .header h1 { font-size: 22px; font-weight: 600; }
-        .header p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+        .header { background: #1e3a5f; color: #fff; padding: 16px 16px; }
+        .header h1 { font-size: 18px; font-weight: 600; }
+        .header p { font-size: 12px; opacity: 0.8; margin-top: 2px; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 12px; }
 
-        .stats { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+        /* Stats */
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
         .stat-card {
-            background: #fff; border-radius: 8px; padding: 16px 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08); flex: 1; min-width: 140px;
+            background: #fff; border-radius: 8px; padding: 12px 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); text-align: center;
         }
-        .stat-card .value { font-size: 28px; font-weight: 700; color: #1e3a5f; }
-        .stat-card .label { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+        .stat-card .value { font-size: 24px; font-weight: 700; color: #1e3a5f; }
+        .stat-card .label { font-size: 10px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
+        /* Filters */
         .filters {
-            background: #fff; border-radius: 8px; padding: 16px 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 16px;
-            display: flex; gap: 12px; flex-wrap: wrap; align-items: end;
+            background: #fff; border-radius: 8px; padding: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 12px;
+            display: flex; gap: 8px; flex-wrap: wrap; align-items: end;
         }
         .filter-group { display: flex; flex-direction: column; gap: 4px; }
         .filter-group label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
         .filter-group input, .filter-group select {
-            padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px;
-            font-size: 14px; background: #fff; color: #1f2937;
+            padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px;
+            font-size: 16px; background: #fff; color: #1f2937;
         }
         .filter-group input:focus, .filter-group select:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
         .search-box { flex: 1; min-width: 200px; }
         .search-box input { width: 100%; }
 
+        /* Desktop table */
         .table-wrap {
             background: #fff; border-radius: 8px; overflow: hidden;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
@@ -65,7 +68,7 @@
 
         .desc-row td { padding: 0 !important; border-bottom: 1px solid #e5e7eb; }
         .desc-content {
-            padding: 0 12px 10px 12px; font-size: 13px; color: #4b5563;
+            padding: 4px 12px 10px 12px; font-size: 13px; color: #4b5563;
             line-height: 1.5; max-width: 900px;
         }
         .expand-btn {
@@ -74,14 +77,49 @@
         }
         .expand-btn:hover { color: #1d4ed8; }
 
+        /* Mobile cards */
+        .cards-wrap { display: none; }
+        .event-card {
+            background: #fff; border-radius: 8px; padding: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 8px;
+        }
+        .event-card.crm-match { border-left: 3px solid #15803d; }
+        .event-card .card-date { font-size: 12px; color: #6b7280; margin-bottom: 4px; }
+        .event-card .card-title { font-size: 15px; line-height: 1.4; margin-bottom: 8px; }
+        .event-card .card-title a { color: #1d4ed8; text-decoration: none; }
+        .event-card .card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: #6b7280; }
+        .event-card .card-meta-item { display: flex; align-items: center; gap: 3px; }
+        .event-card .card-desc {
+            margin-top: 8px; padding-top: 8px; border-top: 1px solid #e5e7eb;
+            font-size: 13px; color: #4b5563; line-height: 1.5; display: none;
+        }
+        .event-card .card-desc.open { display: block; }
+        .event-card .card-expand {
+            background: none; border: none; color: #3b82f6; cursor: pointer;
+            font-size: 12px; padding: 4px 0; margin-top: 4px;
+        }
+        .event-card .card-client {
+            display: inline-block; background: #dcfce7; color: #15803d;
+            padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;
+        }
+        .event-card .card-country {
+            display: inline-block; background: #e5e7eb; color: #4b5563;
+            padding: 1px 6px; border-radius: 3px; font-size: 11px;
+        }
+
+        /* Pagination */
         .pagination {
             display: flex; justify-content: space-between; align-items: center;
             padding: 12px 16px; background: #f8fafc; border-top: 1px solid #e5e7eb;
             font-size: 13px; color: #6b7280;
         }
+        .pagination.card-pagination {
+            background: transparent; border-top: none; padding: 8px 0;
+        }
         .pagination button {
-            padding: 6px 14px; border: 1px solid #d1d5db; border-radius: 6px;
-            background: #fff; cursor: pointer; font-size: 13px; color: #374151;
+            padding: 10px 18px; border: 1px solid #d1d5db; border-radius: 6px;
+            background: #fff; cursor: pointer; font-size: 14px; color: #374151;
+            min-height: 44px;
         }
         .pagination button:hover:not(:disabled) { background: #f3f4f6; }
         .pagination button:disabled { opacity: 0.4; cursor: default; }
@@ -90,14 +128,31 @@
         .loading { text-align: center; padding: 60px 20px; color: #9ca3af; font-size: 16px; }
         .error { text-align: center; padding: 60px 20px; color: #dc2626; }
 
+        /* Mobile breakpoint */
         @media (max-width: 768px) {
-            .filters { flex-direction: column; }
-            .search-box { min-width: 100%; }
-            table { font-size: 13px; }
-            thead th, tbody td { padding: 6px 8px; }
-            .stats { gap: 8px; }
-            .stat-card { padding: 12px 14px; }
+            .header { padding: 14px 12px; }
+            .container { padding: 8px; }
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+            .stat-card { padding: 10px; }
             .stat-card .value { font-size: 22px; }
+            .filters { flex-direction: column; gap: 8px; padding: 10px; }
+            .filter-group { width: 100%; }
+            .search-box { min-width: 100%; }
+            .filter-group select { width: 100%; }
+
+            .table-wrap { display: none; }
+            .cards-wrap { display: block; }
+        }
+
+        @media (min-width: 769px) {
+            .header { padding: 20px 24px; }
+            .header h1 { font-size: 22px; }
+            .container { padding: 16px; }
+            .stats { gap: 12px; }
+            .stat-card { padding: 16px 20px; }
+            .stat-card .value { font-size: 28px; }
+            .stat-card .label { font-size: 12px; }
+            .filters { padding: 16px 20px; gap: 12px; }
         }
     </style>
 </head>
@@ -139,6 +194,7 @@
         </div>
     </div>
 
+    <!-- Desktop: table -->
     <div class="table-wrap">
         <table>
             <thead>
@@ -155,11 +211,23 @@
                 <tr><td colspan="6" class="loading">Loading events...</td></tr>
             </tbody>
         </table>
-        <div class="pagination">
+        <div class="pagination" id="table-pagination">
             <span id="page-info"></span>
             <div class="page-buttons">
                 <button id="btn-prev" disabled>&laquo; Prev</button>
                 <button id="btn-next" disabled>Next &raquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile: cards -->
+    <div class="cards-wrap">
+        <div id="cards-body"></div>
+        <div class="pagination card-pagination" id="cards-pagination">
+            <span id="cards-page-info"></span>
+            <div class="page-buttons">
+                <button id="cards-btn-prev" disabled>&laquo; Prev</button>
+                <button id="cards-btn-next" disabled>Next &raquo;</button>
             </div>
         </div>
     </div>
@@ -182,6 +250,8 @@ async function loadData() {
     } catch (e) {
         document.getElementById('table-body').innerHTML =
             `<tr><td colspan="6" class="error">Could not load data. Run <code>python main.py</code> first to generate events.json</td></tr>`;
+        document.getElementById('cards-body').innerHTML =
+            `<div class="error">Could not load data.</div>`;
         document.getElementById('last-updated').textContent = 'Data unavailable';
     }
 }
@@ -278,10 +348,15 @@ function sortData() {
 }
 
 function render() {
+    renderTable();
+    renderCards();
+    updatePagination();
+}
+
+function renderTable() {
     const tbody = document.getElementById('table-body');
     const start = (currentPage - 1) * PER_PAGE;
     const page = filtered.slice(start, start + PER_PAGE);
-    const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
 
     if (page.length === 0) {
         tbody.innerHTML = '<tr><td colspan="6" class="loading">No events match your filters.</td></tr>';
@@ -311,11 +386,6 @@ function render() {
         }).join('');
     }
 
-    document.getElementById('page-info').textContent =
-        `Showing ${start + 1}-${Math.min(start + PER_PAGE, filtered.length)} of ${filtered.length}`;
-    document.getElementById('btn-prev').disabled = currentPage <= 1;
-    document.getElementById('btn-next').disabled = currentPage >= totalPages;
-
     // Update sort arrows
     document.querySelectorAll('thead th').forEach(th => {
         th.classList.toggle('sorted', th.dataset.col === sortCol);
@@ -324,31 +394,66 @@ function render() {
     });
 }
 
+function renderCards() {
+    const container = document.getElementById('cards-body');
+    const start = (currentPage - 1) * PER_PAGE;
+    const page = filtered.slice(start, start + PER_PAGE);
+
+    if (page.length === 0) {
+        container.innerHTML = '<div class="loading">No events match your filters.</div>';
+        return;
+    }
+
+    container.innerHTML = page.map((e, i) => {
+        const date = e.date ? new Date(e.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
+        const kws = (e.keywords || []).map(k => `<span class="kw-tag">${esc(k)}</span>`).join(' ');
+        const clientBadge = e.client ? `<span class="card-client">${esc(e.client)}</span>` : '';
+        const countryBadge = e.country ? `<span class="card-country">${esc(e.country)}</span>` : '';
+        const hasDesc = e.description && e.description.trim();
+        const expandBtn = hasDesc
+            ? `<button class="card-expand" onclick="toggleCardDesc(this, 'card-desc-${i}')">Show summary</button>`
+            : '';
+        const descDiv = hasDesc
+            ? `<div class="card-desc" id="card-desc-${i}">${esc(e.description)}</div>`
+            : '';
+
+        return `<div class="event-card${e.client ? ' crm-match' : ''}">
+            <div class="card-date">${date}</div>
+            <div class="card-title"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></div>
+            <div class="card-meta">
+                ${e.source ? `<span class="card-meta-item">${esc(e.source)}</span>` : ''}
+                ${countryBadge}
+                ${clientBadge}
+                ${kws}
+            </div>
+            ${expandBtn}
+            ${descDiv}
+        </div>`;
+    }).join('');
+}
+
+function updatePagination() {
+    const start = (currentPage - 1) * PER_PAGE;
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+    const info = filtered.length > 0
+        ? `Showing ${start + 1}-${Math.min(start + PER_PAGE, filtered.length)} of ${filtered.length}`
+        : '';
+
+    document.getElementById('page-info').textContent = info;
+    document.getElementById('btn-prev').disabled = currentPage <= 1;
+    document.getElementById('btn-next').disabled = currentPage >= totalPages;
+
+    document.getElementById('cards-page-info').textContent = info;
+    document.getElementById('cards-btn-prev').disabled = currentPage <= 1;
+    document.getElementById('cards-btn-next').disabled = currentPage >= totalPages;
+}
+
 function esc(s) {
     if (!s) return '';
     const d = document.createElement('div');
     d.textContent = s;
     return d.innerHTML;
 }
-
-// Event listeners
-document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
-document.getElementById('filter-keyword').addEventListener('change', applyFilters);
-document.getElementById('filter-country').addEventListener('change', applyFilters);
-document.getElementById('filter-crm').addEventListener('change', applyFilters);
-document.getElementById('btn-prev').addEventListener('click', () => { currentPage--; render(); });
-document.getElementById('btn-next').addEventListener('click', () => { currentPage++; render(); });
-
-document.querySelectorAll('thead th[data-col]').forEach(th => {
-    th.addEventListener('click', () => {
-        const col = th.dataset.col;
-        if (sortCol === col) sortAsc = !sortAsc;
-        else { sortCol = col; sortAsc = col !== 'date'; }
-        sortData();
-        currentPage = 1;
-        render();
-    });
-});
 
 function toggleDesc(id) {
     const row = document.getElementById(id);
@@ -362,6 +467,38 @@ function toggleDesc(id) {
         if (btn) btn.innerHTML = '&#9654;';
     }
 }
+
+function toggleCardDesc(btn, id) {
+    const desc = document.getElementById(id);
+    if (!desc) return;
+    desc.classList.toggle('open');
+    btn.textContent = desc.classList.contains('open') ? 'Hide summary' : 'Show summary';
+}
+
+// Event listeners
+document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
+document.getElementById('filter-keyword').addEventListener('change', applyFilters);
+document.getElementById('filter-country').addEventListener('change', applyFilters);
+document.getElementById('filter-crm').addEventListener('change', applyFilters);
+
+// Table pagination
+document.getElementById('btn-prev').addEventListener('click', () => { currentPage--; render(); });
+document.getElementById('btn-next').addEventListener('click', () => { currentPage++; render(); });
+
+// Card pagination
+document.getElementById('cards-btn-prev').addEventListener('click', () => { currentPage--; render(); window.scrollTo(0, 0); });
+document.getElementById('cards-btn-next').addEventListener('click', () => { currentPage++; render(); window.scrollTo(0, 0); });
+
+document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        if (sortCol === col) sortAsc = !sortAsc;
+        else { sortCol = col; sortAsc = col !== 'date'; }
+        sortData();
+        currentPage = 1;
+        render();
+    });
+});
 
 function debounce(fn, ms) {
     let t;
