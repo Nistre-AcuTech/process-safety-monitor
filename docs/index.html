@@ -164,7 +164,7 @@ let sortAsc = false;
 
 async function loadData() {
     try {
-        const resp = await fetch('../data/events.json');
+        const resp = await fetch('data/events.json');
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         allEvents = await resp.json();
         init();

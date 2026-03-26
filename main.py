@@ -21,7 +21,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "docs", "data")
 EVENTS_FILE = os.path.join(DATA_DIR, "events.json")
 MAX_EVENTS = 2000
 
