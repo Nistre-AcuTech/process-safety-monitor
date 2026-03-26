@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Process Safety News Monitor — scans global news for process safety events,
-cross-references against Zoho CRM, and maintains a JSON data file for the
-GitHub Pages dashboard."""
+cross-references against client list (from Egnyte) and optionally Zoho CRM,
+and maintains a JSON data file for the GitHub Pages dashboard."""
 
 import json
 import logging
@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 import config
+from client_matcher import find_client_match, load_clients
 from email_sender import send_report
 from news_sources import NewsArticle, fetch_all_news
 from report import generate_html_report
@@ -31,7 +32,7 @@ def _normalize_url(url: str) -> str:
     return f"{parsed.scheme}://{parsed.netloc}{parsed.path}".rstrip("/").lower()
 
 
-def _article_to_dict(article: NewsArticle, zoho_account: str | None) -> dict:
+def _article_to_dict(article: NewsArticle, client_match: str | None) -> dict:
     return {
         "title": article.title,
         "url": article.url,
@@ -39,7 +40,7 @@ def _article_to_dict(article: NewsArticle, zoho_account: str | None) -> dict:
         "date": article.date.isoformat() if article.date else None,
         "country": article.country,
         "keywords": article.keywords_matched,
-        "zoho_account": zoho_account,
+        "client": client_match,
     }
 
 
@@ -55,7 +56,7 @@ def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
     seen: set[str] = set()
     merged: list[dict] = []
 
-    # New events take priority (they may have updated CRM info)
+    # New events take priority (they may have updated client info)
     for event in new + existing:
         norm = _normalize_url(event.get("url", ""))
         if norm and norm not in seen:
@@ -86,29 +87,38 @@ def main():
         logger.info("No articles found — nothing to report")
         return
 
-    # 2. Check Zoho CRM for matching accounts
-    zoho = ZohoClient()
-    zoho_matches: dict[str, str | None] = {}
+    # 2. Check client list (from Egnyte project folders)
+    clients = load_clients()
+    client_matches: dict[str, str | None] = {}
 
+    if clients:
+        logger.info("Checking %d client names against headlines", len(clients))
+        for article in articles:
+            match = find_client_match(article.title, clients)
+            client_matches[article.url] = match
+    else:
+        logger.info("No client list found — skipping client matching")
+        client_matches = {a.url: None for a in articles}
+
+    # 2b. Also check Zoho CRM if configured
+    zoho = ZohoClient()
     if zoho.configured:
-        logger.info("Zoho CRM configured — checking for matching accounts")
+        logger.info("Zoho CRM configured — checking for additional matches")
         try:
             for article in articles:
-                match = zoho.find_matching_account(article.title)
-                zoho_matches[article.url] = match
+                if client_matches.get(article.url) is None:
+                    match = zoho.find_matching_account(article.title)
+                    if match:
+                        client_matches[article.url] = match
         except Exception as e:
             logger.error("Zoho CRM check failed: %s", e)
-            zoho_matches = {a.url: None for a in articles}
-    else:
-        logger.info("Zoho CRM not configured — skipping account check")
-        zoho_matches = {a.url: None for a in articles}
 
-    crm_hits = sum(1 for v in zoho_matches.values() if v)
-    logger.info("CRM matches: %d out of %d articles", crm_hits, len(articles))
+    hits = sum(1 for v in client_matches.values() if v)
+    logger.info("Client matches: %d out of %d articles", hits, len(articles))
 
     # 3. Update JSON data file for dashboard
     new_events = [
-        _article_to_dict(a, zoho_matches.get(a.url))
+        _article_to_dict(a, client_matches.get(a.url))
         for a in articles
     ]
     existing_events = load_existing_events()
@@ -120,7 +130,7 @@ def main():
     )
 
     # 4. Generate HTML email report + send (optional)
-    html = generate_html_report(articles, zoho_matches, config.LOOKBACK_HOURS)
+    html = generate_html_report(articles, client_matches, config.LOOKBACK_HOURS)
 
     report_dir = os.path.join(os.path.dirname(__file__), "reports")
     os.makedirs(report_dir, exist_ok=True)

@@ -102,7 +102,7 @@
         <div class="stat-card"><div class="value" id="stat-total">-</div><div class="label">Total Events</div></div>
         <div class="stat-card"><div class="value" id="stat-week">-</div><div class="label">This Week</div></div>
         <div class="stat-card"><div class="value" id="stat-today">-</div><div class="label">Today</div></div>
-        <div class="stat-card"><div class="value" id="stat-crm">-</div><div class="label">CRM Matches</div></div>
+        <div class="stat-card"><div class="value" id="stat-crm">-</div><div class="label">Client Matches</div></div>
     </div>
 
     <div class="filters">
@@ -119,11 +119,11 @@
             <select id="filter-country"><option value="">All countries</option></select>
         </div>
         <div class="filter-group">
-            <label>CRM</label>
+            <label>Client</label>
             <select id="filter-crm">
                 <option value="">All</option>
-                <option value="yes">CRM match only</option>
-                <option value="no">No CRM match</option>
+                <option value="yes">Known clients only</option>
+                <option value="no">Unknown companies</option>
             </select>
         </div>
     </div>
@@ -137,7 +137,7 @@
                     <th data-col="source">Source <span class="sort-arrow">&#9660;</span></th>
                     <th data-col="country">Country <span class="sort-arrow">&#9660;</span></th>
                     <th>Keywords</th>
-                    <th data-col="crm">CRM <span class="sort-arrow">&#9660;</span></th>
+                    <th data-col="client">Client <span class="sort-arrow">&#9660;</span></th>
                 </tr>
             </thead>
             <tbody id="table-body">
@@ -220,7 +220,7 @@ function updateStats() {
         const d = e.date ? new Date(e.date) : null;
         if (d && d >= todayStart) today++;
         if (d && d >= weekStart) week++;
-        if (e.zoho_account) crm++;
+        if (e.client) crm++;
     });
 
     document.getElementById('stat-total').textContent = allEvents.length;
@@ -237,13 +237,13 @@ function applyFilters() {
 
     filtered = allEvents.filter(e => {
         if (search) {
-            const haystack = `${e.title} ${e.source} ${e.country} ${(e.keywords||[]).join(' ')} ${e.zoho_account || ''}`.toLowerCase();
+            const haystack = `${e.title} ${e.source} ${e.country} ${(e.keywords||[]).join(' ')} ${e.client || ''}`.toLowerCase();
             if (!haystack.includes(search)) return false;
         }
         if (kwFilter && !(e.keywords || []).includes(kwFilter)) return false;
         if (countryFilter && e.country !== countryFilter) return false;
-        if (crmFilter === 'yes' && !e.zoho_account) return false;
-        if (crmFilter === 'no' && e.zoho_account) return false;
+        if (crmFilter === 'yes' && !e.client) return false;
+        if (crmFilter === 'no' && e.client) return false;
         return true;
     });
 
@@ -259,7 +259,7 @@ function sortData() {
         else if (sortCol === 'title') { va = a.title || ''; vb = b.title || ''; }
         else if (sortCol === 'source') { va = a.source || ''; vb = b.source || ''; }
         else if (sortCol === 'country') { va = a.country || ''; vb = b.country || ''; }
-        else if (sortCol === 'crm') { va = a.zoho_account || ''; vb = b.zoho_account || ''; }
+        else if (sortCol === 'client') { va = a.client || ''; vb = b.client || ''; }
         if (va < vb) return sortAsc ? -1 : 1;
         if (va > vb) return sortAsc ? 1 : -1;
         return 0;
@@ -278,10 +278,10 @@ function render() {
         tbody.innerHTML = page.map(e => {
             const date = e.date ? new Date(e.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'N/A';
             const kws = (e.keywords || []).map(k => `<span class="kw-tag">${esc(k)}</span>`).join('');
-            const crm = e.zoho_account
-                ? `<span class="crm-yes">${esc(e.zoho_account)}</span>`
+            const crm = e.client
+                ? `<span class="crm-yes">${esc(e.client)}</span>`
                 : `<span class="crm-no">&mdash;</span>`;
-            const rowClass = e.zoho_account ? ' class="crm-match"' : '';
+            const rowClass = e.client ? ' class="crm-match"' : '';
             return `<tr${rowClass}>
                 <td style="white-space:nowrap">${date}</td>
                 <td><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></td>
