@@ -49,7 +49,11 @@ def load_existing_events() -> list[dict]:
     if not os.path.exists(EVENTS_FILE):
         return []
     with open(EVENTS_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    # Support both old format (plain array) and new format (object with events key)
+    if isinstance(data, list):
+        return data
+    return data.get("events", [])
 
 
 def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
@@ -73,8 +77,12 @@ def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
 
 def save_events(events: list[dict]):
     os.makedirs(DATA_DIR, exist_ok=True)
+    data = {
+        "last_updated": datetime.now(timezone.utc).isoformat(),
+        "events": events,
+    }
     with open(EVENTS_FILE, "w", encoding="utf-8") as f:
-        json.dump(events, f, indent=2, ensure_ascii=False)
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def main():

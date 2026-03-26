@@ -377,7 +377,17 @@ async function loadData() {
     try {
         const resp = await fetch('data/events.json');
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        allEvents = await resp.json();
+        const data = await resp.json();
+        // Support both old format (array) and new format (object with events + last_updated)
+        if (Array.isArray(data)) {
+            allEvents = data;
+        } else {
+            allEvents = data.events || [];
+            if (data.last_updated) {
+                const d = new Date(data.last_updated);
+                document.getElementById('last-updated').textContent = `Last updated: ${d.toLocaleString()}`;
+            }
+        }
         init();
     } catch (e) {
         document.getElementById('table-body').innerHTML =
@@ -398,11 +408,6 @@ function init() {
     populateFilters();
     applyFilters();
     updateStats();
-
-    if (allEvents.length > 0 && allEvents[0].date) {
-        const d = new Date(allEvents[0].date);
-        document.getElementById('last-updated').textContent = `Last updated: ${d.toLocaleString()}`;
-    }
 }
 
 function populateFilters() {
