@@ -68,6 +68,9 @@
             font-size: 16px; background: #fff; color: #1f2937;
         }
         .filter-group input:focus, .filter-group select:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
+        .filter-group select[multiple] { padding: 4px; }
+        .filter-group select[multiple] option { padding: 4px 8px; border-radius: 3px; margin: 1px 0; }
+        .filter-group select[multiple] option:checked { background: #1e3a5f; color: #fff; }
         .search-box { flex: 1; min-width: 200px; }
         .search-box input { width: 100%; }
 
@@ -362,8 +365,8 @@
             <select id="filter-keyword"><option value="">All keywords</option></select>
         </div>
         <div class="filter-group">
-            <label>Country</label>
-            <select id="filter-country"><option value="">All countries</option></select>
+            <label>Country <span style="font-weight:400;text-transform:none;letter-spacing:0;">(Ctrl+click for multiple)</span></label>
+            <select id="filter-country" multiple size="4" style="min-width:180px;"><option value="" selected>All countries</option></select>
         </div>
         <div class="filter-group">
             <label>Client</label>
@@ -403,8 +406,8 @@
                     <select id="filter-keyword-m"><option value="">All keywords</option></select>
                 </div>
                 <div class="filter-group">
-                    <label>Country</label>
-                    <select id="filter-country-m"><option value="">All countries</option></select>
+                    <label>Country (hold to multi-select)</label>
+                    <select id="filter-country-m" multiple size="5" style="width:100%;"><option value="" selected>All countries</option></select>
                 </div>
                 <div class="filter-group">
                     <label>Client</label>
@@ -644,13 +647,15 @@ function updateStats() {
 
 function getFilterValues() {
     const isMobile = window.innerWidth <= 768;
+    const countrySel = document.getElementById(isMobile ? 'filter-country-m' : 'filter-country');
+    const countries = [...countrySel.selectedOptions].map(o => o.value).filter(v => v !== '');
     return {
         search: (isMobile
             ? document.getElementById('search-mobile').value
             : document.getElementById('search').value
         ).toLowerCase(),
         keyword: document.getElementById(isMobile ? 'filter-keyword-m' : 'filter-keyword').value,
-        country: document.getElementById(isMobile ? 'filter-country-m' : 'filter-country').value,
+        countries: countries,
         crm: document.getElementById(isMobile ? 'filter-crm-m' : 'filter-crm').value,
     };
 }
@@ -673,7 +678,7 @@ function applyFilters() {
             const hasKeyword = sources.some(s => (s.keywords || []).includes(f.keyword));
             if (!hasKeyword) return false;
         }
-        if (f.country && e.country !== f.country) return false;
+        if (f.countries.length > 0 && !f.countries.includes(e.country)) return false;
         if (f.crm === 'yes' && !e.client) return false;
         if (f.crm === 'no' && e.client) return false;
         return true;
@@ -691,7 +696,7 @@ function updateFilterBadge() {
     let count = 0;
     if (f.search) count++;
     if (f.keyword) count++;
-    if (f.country) count++;
+    if (f.countries.length > 0) count++;
     if (f.crm) count++;
     document.getElementById('filter-badge').textContent = count || '';
 }
@@ -702,7 +707,9 @@ function updateActiveFilters() {
     let chips = '';
     if (f.search) chips += `<span class="active-filter-chip">"${esc(f.search)}"<button onclick="clearFilter('search')">&times;</button></span>`;
     if (f.keyword) chips += `<span class="active-filter-chip">${esc(f.keyword)}<button onclick="clearFilter('keyword')">&times;</button></span>`;
-    if (f.country) chips += `<span class="active-filter-chip">${esc(f.country)}<button onclick="clearFilter('country')">&times;</button></span>`;
+    f.countries.forEach(c => {
+        chips += `<span class="active-filter-chip">${esc(c)}<button onclick="clearCountry('${esc(c)}')">&times;</button></span>`;
+    });
     if (f.crm === 'yes') chips += `<span class="active-filter-chip">Clients only<button onclick="clearFilter('crm')">&times;</button></span>`;
     if (f.crm === 'no') chips += `<span class="active-filter-chip">Unknown only<button onclick="clearFilter('crm')">&times;</button></span>`;
     bar.innerHTML = chips;
@@ -716,12 +723,28 @@ function clearFilter(type) {
         document.getElementById('filter-keyword').value = '';
         document.getElementById('filter-keyword-m').value = '';
     } else if (type === 'country') {
-        document.getElementById('filter-country').value = '';
-        document.getElementById('filter-country-m').value = '';
+        ['filter-country', 'filter-country-m'].forEach(id => {
+            const sel = document.getElementById(id);
+            [...sel.options].forEach(o => o.selected = (o.value === ''));
+        });
     } else if (type === 'crm') {
         document.getElementById('filter-crm').value = '';
         document.getElementById('filter-crm-m').value = '';
     }
+    applyFilters();
+}
+
+function clearCountry(country) {
+    ['filter-country', 'filter-country-m'].forEach(id => {
+        const sel = document.getElementById(id);
+        [...sel.options].forEach(o => {
+            if (o.value === country) o.selected = false;
+        });
+        // If nothing selected, select "All"
+        if ([...sel.selectedOptions].filter(o => o.value !== '').length === 0) {
+            sel.options[0].selected = true;
+        }
+    });
     applyFilters();
 }
 
@@ -933,10 +956,30 @@ function nextPage() {
     if (currentPage < totalPages) { currentPage++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
 }
 
+// Country multi-select: deselect "All" when a country is picked, reselect "All" when none picked
+function handleCountryChange(sel) {
+    const selected = [...sel.selectedOptions].map(o => o.value);
+    if (selected.includes('') && selected.length > 1) {
+        // "All" was already selected, user clicked a country — deselect "All"
+        sel.options[0].selected = false;
+    } else if (selected.length === 0 || (selected.length === 1 && selected[0] === '')) {
+        // Nothing or only "All" selected — select "All"
+        sel.options[0].selected = true;
+    }
+    // Sync to the other select
+    const otherId = sel.id === 'filter-country' ? 'filter-country-m' : 'filter-country';
+    const other = document.getElementById(otherId);
+    [...other.options].forEach(o => {
+        const match = [...sel.options].find(s => s.value === o.value);
+        o.selected = match ? match.selected : false;
+    });
+    applyFilters();
+}
+
 // Event listeners — desktop
 document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
 document.getElementById('filter-keyword').addEventListener('change', applyFilters);
-document.getElementById('filter-country').addEventListener('change', applyFilters);
+document.getElementById('filter-country').addEventListener('change', function() { handleCountryChange(this); });
 document.getElementById('filter-crm').addEventListener('change', applyFilters);
 document.getElementById('btn-prev').addEventListener('click', () => { currentPage--; render(); });
 document.getElementById('btn-next').addEventListener('click', () => { currentPage++; render(); });
@@ -944,7 +987,7 @@ document.getElementById('btn-next').addEventListener('click', () => { currentPag
 // Event listeners — mobile
 document.getElementById('search-mobile').addEventListener('input', debounce(applyFilters, 200));
 document.getElementById('filter-keyword-m').addEventListener('change', applyFilters);
-document.getElementById('filter-country-m').addEventListener('change', applyFilters);
+document.getElementById('filter-country-m').addEventListener('change', function() { handleCountryChange(this); });
 document.getElementById('filter-crm-m').addEventListener('change', applyFilters);
 document.getElementById('cards-btn-prev').addEventListener('click', () => { prevPage(); });
 document.getElementById('cards-btn-next').addEventListener('click', () => { nextPage(); });
