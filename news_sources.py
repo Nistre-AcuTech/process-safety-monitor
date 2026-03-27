@@ -137,6 +137,8 @@ _COUNTRIES = {
     "Nigeria", "Saudi Arabia", "Russia", "Indonesia", "Netherlands",
     "Belgium", "Italy", "Spain", "Norway", "Sweden", "Singapore",
     "Malaysia", "Thailand", "Qatar", "Kuwait", "Iraq", "Iran",
+    "United Arab Emirates", "UAE", "Bahrain", "Oman", "Egypt", "Jordan",
+    "Abu Dhabi", "Dubai",
 }
 
 

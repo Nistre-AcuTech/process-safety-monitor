@@ -111,6 +111,20 @@ GOOGLE_NEWS_REGIONS = [
         "materiali pericolosi", "nube tossica", "impianto chimico",
         "sicurezza di processo", "incidente rilevante",
     ]},
+    # Middle East — English editions (English widely used in Gulf industry)
+    {"gl": "AE", "hl": "en", "ceid": "AE:en", "label": "UAE"},
+    {"gl": "SA", "hl": "en", "ceid": "SA:en", "label": "Saudi Arabia"},
+    {"gl": "QA", "hl": "en", "ceid": "QA:en", "label": "Qatar"},
+    {"gl": "KW", "hl": "en", "ceid": "KW:en", "label": "Kuwait"},
+    {"gl": "BH", "hl": "en", "ceid": "BH:en", "label": "Bahrain"},
+    {"gl": "EG", "hl": "en", "ceid": "EG:en", "label": "Egypt"},
+    # Middle East — Arabic edition (broader coverage)
+    {"gl": "SA", "hl": "ar", "ceid": "SA:ar", "label": "Middle East", "keywords": [
+        "انفجار مصفاة", "حريق مصنع", "انفجار صناعي",
+        "تسرب كيميائي", "تسرب غاز", "تسرب نفطي",
+        "مواد خطرة", "سحابة سامة", "مصنع كيميائي",
+        "سلامة العمليات", "حادث صناعي",
+    ]},
 ]
 
 # Direct RSS feeds from international outlets (filtered by English keyword matching)
@@ -118,4 +132,8 @@ DIRECT_RSS_FEEDS = [
     {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "source": "BBC World News"},
     {"url": "https://www.france24.com/en/rss", "source": "France 24"},
     {"url": "https://rss.dw.com/rdf/rss-en-all", "source": "Deutsche Welle"},
+    # Middle East
+    {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera English"},
+    {"url": "https://gulfnews.com/rss", "source": "Gulf News"},
+    {"url": "https://www.arabnews.com/rss.xml", "source": "Arab News"},
 ]
