@@ -44,35 +44,73 @@ def _normalize_url(url: str) -> str:
 _STRONG_KEYWORDS = {
     "refinery fire", "chemical fire", "industrial fire", "plant fire",
     "factory fire", "tank fire", "pipeline fire", "warehouse fire",
-    "chemical spill", "chemical leak", "gas leak", "oil spill",
+    "chemical spill", "chemical leak", "oil spill",
     "pipeline leak", "toxic release", "hazardous release", "chemical release",
     "refinery explosion", "dust explosion", "vapor cloud explosion",
-    "hazmat", "toxic cloud", "vapor cloud", "BLEVE",
+    "toxic cloud", "vapor cloud", "BLEVE",
     "refinery incident", "plant incident", "industrial incident",
     "process safety", "chemical plant", "shelter in place",
     "CSB investigation", "OSHA citation", "OSHA fine", "EPA violation",
 }
 
 # Generic keywords that need industrial context to be relevant
-_WEAK_KEYWORDS = {"explosion", "detonation"}
+_WEAK_KEYWORDS = {"explosion", "detonation", "hazmat", "gas leak"}
 
 # Context words that confirm an article is about industrial/process safety
 _INDUSTRY_CONTEXT = {
     "plant", "refinery", "factory", "facility", "pipeline", "terminal",
     "chemical", "industrial", "warehouse", "storage", "tank", "reactor",
     "petrochemical", "manufacturing", "processing", "osha", "epa",
-    "hazardous", "flammable", "combustible", "evacuate", "evacuation",
-    "shelter in place", "workers", "injuries", "safety", "leak",
+    "hazardous", "flammable", "combustible",
+    "shelter in place", "workers", "injuries",
+    "spill", "release", "emission",
 }
+
+# Title patterns that indicate non-process-safety articles — always exclude
+_EXCLUDE_PATTERNS = [
+    # Residential / domestic
+    "inside an apartment", "inside apartment", "inside his home",
+    "inside their apartment", "inside her home", "inside a property",
+    "kitchen fire", "stove",
+    "home evacuation", "sewer smell", "suffocation",
+    # Traffic / transport accidents (not process safety)
+    "big-rig", "big rig", "truck crash", "highway crash", "traffic accident",
+    "collision on", "crash on i-", "crash on us-",
+    # Exercises / drills / training (not actual incidents)
+    "exercise", "drill", "rehearse", "rehearsal", "training scenario",
+    "preparing for upcoming",
+    # Non-industrial
+    "homeless", "encampment", "storm drain",
+    "missing ashes", "teddy bears",
+    # Historical / remembrance (not current events)
+    "nurses remember", "anniversary of",
+    # Regulatory / investment news (not incidents)
+    "new rules for", "neue regeln", "invests in safety",
+    "new regulations", "schulung",
+    # Residential / non-industrial gas leaks (caught via translated titles)
+    "gas leak in house", "gas leak at home", "gas leak in building",
+    "gas leak in school", "gas leak in hospital",
+    "fire breaks out in house", "killed at home by a gas",
+    "farmhouse explodes",
+    "residential area", "residential buildings",
+    "petrol station", "gas station",
+    "daycare", "kindergarten",
+]
 
 
 def _match_keywords(text: str) -> list[str]:
     """Return list of keywords found in text (case-insensitive).
 
-    Strong keywords match directly. Weak keywords (like bare 'explosion')
-    only match if industrial context words are also present in the title.
+    Strong keywords match directly. Weak keywords (like bare 'explosion',
+    'hazmat', 'gas leak') only match if industrial context words are also
+    present. Articles matching exclude patterns are always rejected.
     """
     text_lower = text.lower()
+
+    # Check exclude patterns first
+    if any(pat in text_lower for pat in _EXCLUDE_PATTERNS):
+        return []
+
     matched = []
 
     for kw in config.KEYWORDS:
@@ -346,9 +384,37 @@ _DEFAULT_GOOGLE_KEYWORDS = [
 ]
 
 
+# Non-English exclude patterns (translated equivalents of _EXCLUDE_PATTERNS)
+_NON_EN_EXCLUDE_PATTERNS = [
+    # Dutch — residential/domestic
+    "woning", "appartement", "keuken", "riool",
+    # Dutch — exercises
+    "oefening",
+    # German — residential/domestic
+    "wohnung", "küche",
+    # German — exercises/training
+    "übung", "schulung",
+    # German — traffic only
+    "verkehr", "autobahn",
+    # Italian — residential/domestic/non-industrial
+    "appartamento", "cucina", "in casa", "palazzo", "palazzina",
+    "scuola", "ospedale", "cascina", "condominio",
+    "bombola", "distributore di carburante", "teatro",
+    # Dutch — residential areas
+    "woonwijk", "woonkern",
+    # German — residential areas
+    "wohngebiet", "wohnhäuser",
+    # Arabic — domestic/residential
+    "شقة", "منزل", "مطبخ",     # apartment, home, kitchen
+]
+
+
 def _match_keywords_custom(text: str, keywords: list[str]) -> list[str]:
     """Match against a custom keyword list (for non-English feeds)."""
     text_lower = text.lower()
+    # Check non-English exclude patterns
+    if any(pat in text_lower for pat in _NON_EN_EXCLUDE_PATTERNS):
+        return []
     return [kw for kw in keywords if kw.lower() in text_lower]
 
 

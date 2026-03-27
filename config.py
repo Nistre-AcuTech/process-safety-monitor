@@ -95,21 +95,28 @@ GOOGLE_NEWS_REGIONS = [
     ]},
     {"gl": "DE", "hl": "de", "ceid": "DE:de", "label": "Germany", "keywords": [
         "Raffinerieexplosion", "Chemiebrand", "Industrieexplosion",
-        "Raffineriebrand", "Chemieunfall", "Gasleck",
-        "Gefahrgut", "Schadstoffwolke", "Chemiewerk",
-        "Anlagensicherheit", "Störfall",
+        "Raffineriebrand", "Chemieunfall", "Schadstoffwolke", "Chemiewerk",
+        "Anlagensicherheit", "Störfall", "Industrieunfall",
+        "Gasleck Fabrik", "Gasleck Raffinerie", "Gasleck Anlage",
+        # Gefahrgut only with incident context (not transport/training)
+        "Gefahrgutunfall", "Gefahrgut Explosion", "Gefahrgut Brand",
     ]},
     {"gl": "NL", "hl": "nl", "ceid": "NL:nl", "label": "Netherlands", "keywords": [
         "raffinaderij explosie", "chemische brand", "industriële explosie",
-        "chemisch lek", "gaslek", "olielek",
-        "gevaarlijke stoffen", "gifwolk", "chemische fabriek",
-        "procesveiligheid", "Brzo",
+        "chemisch lek", "olielek", "gifwolk", "chemische fabriek",
+        "procesveiligheid", "Brzo", "industrieel incident",
+        "gaslek fabriek", "gaslek raffinaderij", "gaslek bedrijf",
+        "gaslek industrie", "gaslek chemisch",
+        # Pipeline/major leaks (not residential excavation)
+        "gaslek leiding", "grote gaslek",
     ]},
     {"gl": "IT", "hl": "it", "ceid": "IT:it", "label": "Italy", "keywords": [
         "esplosione raffineria", "incendio chimico", "esplosione industriale",
-        "incendio raffineria", "fuoriuscita chimica", "fuga di gas",
+        "incendio raffineria", "fuoriuscita chimica",
         "materiali pericolosi", "nube tossica", "impianto chimico",
         "sicurezza di processo", "incidente rilevante",
+        # More specific than bare "fuga di gas"
+        "fuga di gas industriale", "fuga di gas impianto", "fuga di gas fabbrica",
     ]},
     # Middle East — English editions (English widely used in Gulf industry)
     {"gl": "AE", "hl": "en", "ceid": "AE:en", "label": "UAE"},
@@ -119,11 +126,20 @@ GOOGLE_NEWS_REGIONS = [
     {"gl": "BH", "hl": "en", "ceid": "BH:en", "label": "Bahrain"},
     {"gl": "EG", "hl": "en", "ceid": "EG:en", "label": "Egypt"},
     # Middle East — Arabic edition (broader coverage)
+    # Kept specific to industrial/refinery context to avoid domestic gas leak stories
     {"gl": "SA", "hl": "ar", "ceid": "SA:ar", "label": "Middle East", "keywords": [
-        "انفجار مصفاة", "حريق مصنع", "انفجار صناعي",
-        "تسرب كيميائي", "تسرب غاز", "تسرب نفطي",
-        "مواد خطرة", "سحابة سامة", "مصنع كيميائي",
-        "سلامة العمليات", "حادث صناعي",
+        "انفجار مصفاة",       # refinery explosion
+        "حريق مصنع",         # factory fire
+        "انفجار صناعي",      # industrial explosion
+        "تسرب كيميائي",      # chemical leak
+        "مواد خطرة",         # hazardous materials
+        "سحابة سامة",        # toxic cloud
+        "مصنع كيميائي",      # chemical plant
+        "سلامة العمليات",    # process safety
+        "حادث صناعي",        # industrial accident
+        "تسرب نفطي مصفاة",   # oil leak refinery
+        "حريق مصفاة",        # refinery fire
+        "انفجار مصنع",       # factory explosion
     ]},
 ]
 
