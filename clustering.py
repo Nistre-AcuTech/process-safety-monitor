@@ -81,7 +81,8 @@ def cluster_events(
             dates.append(datetime.fromisoformat(d) if d else None)
         except (ValueError, TypeError):
             dates.append(None)
-        words.append(_significant_words(e.get("title", "")))
+        # Use translated title (title_en) if available, for cross-language clustering
+        words.append(_significant_words(e.get("title_en") or e.get("title", "")))
 
     max_seconds = time_window_hours * 3600
 

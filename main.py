@@ -15,6 +15,7 @@ from clustering import cluster_events
 from email_sender import send_report
 from news_sources import NewsArticle, fetch_all_news
 from report import generate_html_report
+from translator import translate_titles
 from zoho_client import ZohoClient
 
 logging.basicConfig(
@@ -34,7 +35,7 @@ def _normalize_url(url: str) -> str:
 
 
 def _article_to_dict(article: NewsArticle, client_match: str | None) -> dict:
-    return {
+    d = {
         "title": article.title,
         "url": article.url,
         "source": article.source,
@@ -44,6 +45,9 @@ def _article_to_dict(article: NewsArticle, client_match: str | None) -> dict:
         "client": client_match,
         "description": article.description,
     }
+    if hasattr(article, "title_en") and article.title_en:
+        d["title_en"] = article.title_en
+    return d
 
 
 def load_existing_events() -> list[dict]:
@@ -154,6 +158,11 @@ def main():
             logger.info("Re-matched %d existing events to clients", rematch_count)
 
     merged = merge_events(existing_events, new_events)
+
+    # Translate non-English titles to English (for clustering + display)
+    n_translated = translate_titles(merged)
+    if n_translated:
+        logger.info("Translated %d non-English titles", n_translated)
 
     # Cluster related articles about the same incident
     cluster_events(merged)

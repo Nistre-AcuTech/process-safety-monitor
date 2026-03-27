@@ -650,7 +650,7 @@ function applyFilters() {
             // Search across ALL sources in cluster
             const sources = e._sources || [e];
             const haystack = sources.map(s =>
-                `${s.title} ${s.source} ${s.country} ${(s.keywords||[]).join(' ')} ${s.client || ''} ${s.description || ''}`
+                `${s.title} ${s.title_en || ''} ${s.source} ${s.country} ${(s.keywords||[]).join(' ')} ${s.client || ''} ${s.description || ''}`
             ).join(' ').toLowerCase();
             if (!haystack.includes(f.search)) return false;
         }
@@ -762,14 +762,19 @@ function renderTable() {
             // Sources row (other articles in this cluster)
             const sourcesRow = sourceCount > 1
                 ? `<tr class="desc-row" id="sources-${i}" style="display:none"><td colspan="6"><div class="sources-list">${
-                    e._sources.slice(1).map(s =>
-                        `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}<span class="source-outlet"> — ${esc(s.source)}</span></a>`
-                    ).join('')
+                    e._sources.slice(1).map(s => {
+                        const sTitle = s.title_en && s.title_en !== s.title ? s.title_en : s.title;
+                        const sOriginal = s.title_en && s.title_en !== s.title ? ` title="${esc(s.title)}"` : '';
+                        return `<a href="${esc(s.url)}" target="_blank" rel="noopener"${sOriginal}>${esc(sTitle)}<span class="source-outlet"> — ${esc(s.source)}</span></a>`;
+                    }).join('')
                   }</div></td></tr>`
                 : '';
+            const displayTitle = e.title_en && e.title_en !== e.title ? e.title_en : e.title;
+            const titleTooltip = e.title_en && e.title_en !== e.title ? ` title="${esc(e.title)}"` : '';
+            const translatedBadge = e.title_en && e.title_en !== e.title ? '<span class="kw-tag" style="background:#dbeafe;color:#1e40af;font-size:9px;">translated</span> ' : '';
             return `<tr${rowClass}>
                 <td style="white-space:nowrap">${date}</td>
-                <td>${expandBtn}<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>${newBadge}${sourcesBadge}</td>
+                <td>${expandBtn}<a href="${esc(e.url)}" target="_blank" rel="noopener"${titleTooltip}>${esc(displayTitle)}</a>${newBadge}${sourcesBadge} ${translatedBadge}</td>
                 <td>${esc(e.source)}</td>
                 <td>${esc(e.country)}</td>
                 <td>${kws}</td>
@@ -814,15 +819,21 @@ function renderCards() {
         if (sourceCount > 1) {
             sourcesSection = `<button class="card-expand" onclick="toggleCardDesc(this, 'card-sources-${i}')">${sourceCount - 1} more source${sourceCount > 2 ? 's' : ''}</button>
             <div class="card-sources" id="card-sources-${i}">
-                ${e._sources.slice(1).map(s =>
-                    `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}<br><span class="source-outlet">${esc(s.source)}</span></a>`
-                ).join('')}
+                ${e._sources.slice(1).map(s => {
+                    const csTitle = s.title_en && s.title_en !== s.title ? s.title_en : s.title;
+                    const csOriginal = s.title_en && s.title_en !== s.title ? `<br><span style="font-size:11px;color:#9ca3af;font-style:italic;">${esc(s.title)}</span>` : '';
+                    return `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(csTitle)}${csOriginal}<br><span class="source-outlet">${esc(s.source)}</span></a>`;
+                }).join('')}
             </div>`;
         }
 
+        const cardDisplayTitle = e.title_en && e.title_en !== e.title ? e.title_en : e.title;
+        const cardOriginalTitle = e.title_en && e.title_en !== e.title
+            ? `<div style="font-size:12px;color:#6b7280;font-style:italic;margin-top:2px;">${esc(e.title)}</div>`
+            : '';
         return `<div class="event-card${e.client ? ' crm-match' : ''}">
             <div class="card-date">${newBadge}${date}</div>
-            <div class="card-title"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></div>
+            <div class="card-title"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(cardDisplayTitle)}</a>${cardOriginalTitle}</div>
             <div class="card-meta">
                 ${e.source ? `<span class="card-meta-item">${esc(e.source)}</span>` : ''}
                 ${countryBadge}
