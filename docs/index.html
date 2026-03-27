@@ -139,11 +139,13 @@
 
         /* Sources count badge */
         .sources-badge {
-            display: inline-block; background: #dbeafe; color: #1e40af;
-            font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px;
-            margin-left: 6px; vertical-align: middle; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 3px;
+            background: #1e3a5f; color: #fff;
+            font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+            margin-left: 8px; vertical-align: middle; cursor: pointer;
         }
-        .sources-badge:hover { background: #bfdbfe; }
+        .sources-badge:hover { background: #2d4a6f; }
+        .sources-badge svg { width: 12px; height: 12px; }
         .sources-list { padding: 8px 12px; }
         .sources-list a { display: block; padding: 4px 0; color: #1d4ed8; text-decoration: none; font-size: 13px; }
         .sources-list a:hover { text-decoration: underline; }
@@ -178,14 +180,25 @@
             display: inline-block; background: #e5e7eb; color: #4b5563;
             padding: 1px 6px; border-radius: 3px; font-size: 11px;
         }
+        .event-card .card-sources-btn {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: #1e3a5f; color: #fff; border: none; border-radius: 10px;
+            padding: 4px 12px; font-size: 12px; font-weight: 600;
+            cursor: pointer; margin-top: 8px;
+        }
+        .event-card .card-sources-btn:hover { background: #2d4a6f; }
+        .event-card .card-sources-btn svg { width: 14px; height: 14px; }
         .event-card .card-sources {
-            margin-top: 6px; padding-top: 6px; border-top: 1px solid #e5e7eb;
+            margin-top: 8px; padding: 10px; background: #f8fafc;
+            border-radius: 6px; border: 1px solid #e5e7eb;
             display: none;
         }
         .event-card .card-sources.open { display: block; }
         .event-card .card-sources a {
-            display: block; padding: 4px 0; color: #1d4ed8; text-decoration: none; font-size: 13px;
+            display: block; padding: 6px 0; color: #1d4ed8; text-decoration: none; font-size: 13px;
+            border-bottom: 1px solid #e5e7eb;
         }
+        .event-card .card-sources a:last-child { border-bottom: none; }
         .event-card .card-sources .source-outlet { color: #6b7280; font-size: 11px; }
 
         /* Pagination */
@@ -750,7 +763,7 @@ function renderTable() {
             const newBadge = isClusterNew(e) ? '<span class="new-badge">NEW</span>' : '';
             const sourceCount = e._sourceCount || 1;
             const sourcesBadge = sourceCount > 1
-                ? `<span class="sources-badge" onclick="toggleDesc('sources-${i}')" title="${sourceCount} sources">${sourceCount} sources</span>`
+                ? `<span class="sources-badge" onclick="toggleDesc('sources-${i}')" title="Click to see all ${sourceCount} sources"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h5l2 3h7a2 2 0 012 2v9a2 2 0 01-2 2z"/></svg>${sourceCount} sources</span>`
                 : '';
             const hasDesc = e.description && e.description.trim();
             const expandBtn = hasDesc
@@ -817,12 +830,13 @@ function renderCards() {
         const sourceCount = e._sourceCount || 1;
         let sourcesSection = '';
         if (sourceCount > 1) {
-            sourcesSection = `<button class="card-expand" onclick="toggleCardDesc(this, 'card-sources-${i}')">${sourceCount - 1} more source${sourceCount > 2 ? 's' : ''}</button>
+            sourcesSection = `<button class="card-sources-btn" onclick="toggleCardDesc(this, 'card-sources-${i}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h5l2 3h7a2 2 0 012 2v9a2 2 0 01-2 2z"/></svg>${sourceCount} sources</button>
             <div class="card-sources" id="card-sources-${i}">
-                ${e._sources.slice(1).map(s => {
+                ${e._sources.map((s, si) => {
                     const csTitle = s.title_en && s.title_en !== s.title ? s.title_en : s.title;
                     const csOriginal = s.title_en && s.title_en !== s.title ? `<br><span style="font-size:11px;color:#9ca3af;font-style:italic;">${esc(s.title)}</span>` : '';
-                    return `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(csTitle)}${csOriginal}<br><span class="source-outlet">${esc(s.source)}</span></a>`;
+                    const primary = si === 0 ? ' style="font-weight:600;"' : '';
+                    return `<a href="${esc(s.url)}" target="_blank" rel="noopener"${primary}>${esc(csTitle)}${csOriginal}<br><span class="source-outlet">${esc(s.source)}</span></a>`;
                 }).join('')}
             </div>`;
         }
@@ -886,9 +900,10 @@ function toggleCardDesc(btn, id) {
     desc.classList.toggle('open');
     if (id.includes('sources')) {
         const count = desc.querySelectorAll('a').length;
-        btn.textContent = desc.classList.contains('open')
-            ? 'Hide sources'
-            : `${count} more source${count > 1 ? 's' : ''}`;
+        const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;vertical-align:-2px;margin-right:2px;"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h5l2 3h7a2 2 0 012 2v9a2 2 0 01-2 2z"/></svg>';
+        btn.innerHTML = desc.classList.contains('open')
+            ? `${icon}Hide sources`
+            : `${icon}${count} sources`;
     } else {
         btn.textContent = desc.classList.contains('open') ? 'Hide summary' : 'Show summary';
     }
