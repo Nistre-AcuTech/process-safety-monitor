@@ -3,6 +3,7 @@
 cross-references against client list (from Egnyte) and optionally Zoho CRM,
 and maintains a JSON data file for the GitHub Pages dashboard."""
 
+import glob
 import json
 import logging
 import os
@@ -63,6 +64,13 @@ def load_existing_events() -> list[dict]:
 
 def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
     """Merge new events into existing, deduplicating by URL. Keep most recent first."""
+    # Index existing events by URL so we can carry over fields like title_en
+    existing_by_url: dict[str, dict] = {}
+    for event in existing:
+        norm = _normalize_url(event.get("url", ""))
+        if norm:
+            existing_by_url[norm] = event
+
     seen: set[str] = set()
     merged: list[dict] = []
 
@@ -71,6 +79,11 @@ def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
         norm = _normalize_url(event.get("url", ""))
         if norm and norm not in seen:
             seen.add(norm)
+            # Carry over title_en from existing event if the new one doesn't have it
+            if norm in existing_by_url and not event.get("title_en"):
+                prev = existing_by_url[norm]
+                if prev.get("title_en"):
+                    event["title_en"] = prev["title_en"]
             merged.append(event)
 
     # Sort by date descending
@@ -186,6 +199,12 @@ def main():
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(html)
     logger.info("Report saved to %s", report_path)
+
+    # Clean up old reports — keep only the 10 most recent
+    old_reports = sorted(glob.glob(os.path.join(report_dir, "report_*.html")), reverse=True)
+    for old in old_reports[10:]:
+        os.remove(old)
+        logger.info("Removed old report: %s", os.path.basename(old))
 
     period = f"{config.LOOKBACK_HOURS}h" if config.LOOKBACK_HOURS <= 48 else f"{config.LOOKBACK_HOURS // 24}d"
     subject = f"Process Safety Monitor: {len(articles)} events ({period})"
