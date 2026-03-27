@@ -11,6 +11,7 @@ from urllib.parse import urlparse
 
 import config
 from client_matcher import find_client_match, load_clients
+from clustering import cluster_events
 from email_sender import send_report
 from news_sources import NewsArticle, fetch_all_news
 from report import generate_html_report
@@ -153,6 +154,12 @@ def main():
             logger.info("Re-matched %d existing events to clients", rematch_count)
 
     merged = merge_events(existing_events, new_events)
+
+    # Cluster related articles about the same incident
+    cluster_events(merged)
+    n_clusters = len({e["cluster_id"] for e in merged})
+    logger.info("Clustered %d articles into %d incidents", len(merged), n_clusters)
+
     save_events(merged)
     logger.info(
         "Events data updated: %d new, %d total (was %d)",

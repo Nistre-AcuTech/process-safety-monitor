@@ -223,9 +223,12 @@ def fetch_article_texts(articles: list[NewsArticle], max_workers: int = 8):
             # Update URL to the real article URL
             if real_url != article.url:
                 article.url = real_url
-            # Detect location if not already set
-            if not article.country:
-                article.country = _detect_location(article.title, text or "")
+            # Detect location — override if we find something more specific
+            detected = _detect_location(article.title, text or "")
+            if detected:
+                article.country = detected
+            elif not article.country:
+                article.country = ""
             if text:
                 article.full_text = text
                 # First 300 chars as display snippet, break at sentence/word
@@ -333,32 +336,50 @@ def fetch_gdelt(lookback_hours: int) -> list[NewsArticle]:
     return articles
 
 
-def fetch_google_news(lookback_hours: int) -> list[NewsArticle]:
-    """Fetch articles from Google News RSS."""
-    # Build a query with the most distinctive process-safety keywords
-    priority_keywords = [
-        "refinery explosion", "chemical plant explosion", "industrial explosion",
-        "refinery fire", "chemical fire", "chemical spill", "chemical leak",
-        "vapor cloud", "hazmat", "shelter in place",
-        "process safety", "OSHA fine", "CSB investigation",
-    ]
+_DEFAULT_GOOGLE_KEYWORDS = [
+    "refinery explosion", "chemical plant explosion", "industrial explosion",
+    "refinery fire", "chemical fire", "chemical spill", "chemical leak",
+    "vapor cloud", "hazmat", "shelter in place",
+    "process safety", "OSHA fine", "CSB investigation",
+]
+
+
+def _match_keywords_custom(text: str, keywords: list[str]) -> list[str]:
+    """Match against a custom keyword list (for non-English feeds)."""
+    text_lower = text.lower()
+    return [kw for kw in keywords if kw.lower() in text_lower]
+
+
+def fetch_google_news_region(
+    lookback_hours: int,
+    gl: str = "US",
+    hl: str = "en",
+    ceid: str = "US:en",
+    keywords_override: list[str] | None = None,
+    label: str = "United States",
+) -> list[NewsArticle]:
+    """Fetch articles from Google News RSS for a specific region."""
+    keywords = keywords_override or _DEFAULT_GOOGLE_KEYWORDS
     query = " OR ".join(
-        f'"{kw}"' if " " in kw else kw for kw in priority_keywords
+        f'"{kw}"' if " " in kw else kw for kw in keywords
     )
     encoded_query = quote(query)
 
-    url = f"https://news.google.com/rss/search?q={encoded_query}&hl=en&gl=US&ceid=US:en"
+    url = f"https://news.google.com/rss/search?q={encoded_query}&hl={hl}&gl={gl}&ceid={ceid}"
 
     try:
         feed = feedparser.parse(url)
     except Exception as e:
-        logger.error("Google News RSS fetch failed: %s", e)
+        logger.error("Google News RSS (%s) fetch failed: %s", label, e)
         return []
 
     articles = []
     for entry in feed.entries:
         title = entry.get("title", "")
-        matched = _match_keywords(title)
+        if keywords_override:
+            matched = _match_keywords_custom(title, keywords_override)
+        else:
+            matched = _match_keywords(title)
         if not matched:
             continue
 
@@ -377,12 +398,54 @@ def fetch_google_news(lookback_hours: int) -> list[NewsArticle]:
                 url=entry.get("link", ""),
                 source=source,
                 date=date,
-                country="",  # Google News RSS doesn't provide country
+                country=label if keywords_override else "",  # Pre-populate for non-English
                 keywords_matched=matched,
             )
         )
 
-    logger.info("Google News returned %d entries (%d after keyword filter)", len(feed.entries), len(articles))
+    logger.info("Google News (%s) returned %d entries (%d after filter)", label, len(feed.entries), len(articles))
+    return articles
+
+
+def fetch_direct_rss(feed_config: dict, lookback_hours: int) -> list[NewsArticle]:
+    """Fetch from a direct RSS feed (BBC, France 24, etc.) and filter by keywords."""
+    url = feed_config["url"]
+    source_name = feed_config["source"]
+
+    try:
+        feed = feedparser.parse(url)
+    except Exception as e:
+        logger.error("Direct RSS (%s) fetch failed: %s", source_name, e)
+        return []
+
+    articles = []
+    for entry in feed.entries:
+        title = entry.get("title", "")
+        summary = entry.get("summary", "")
+        matched = _match_keywords(title + " " + summary)
+        if not matched:
+            continue
+
+        date = None
+        if hasattr(entry, "published_parsed") and entry.published_parsed:
+            try:
+                date = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+            except (ValueError, TypeError):
+                pass
+
+        articles.append(
+            NewsArticle(
+                title=title,
+                url=entry.get("link", ""),
+                source=source_name,
+                date=date,
+                country="",
+                keywords_matched=matched,
+                description=summary[:300] if summary else "",
+            )
+        )
+
+    logger.info("Direct RSS (%s) returned %d entries (%d after filter)", source_name, len(feed.entries), len(articles))
     return articles
 
 
@@ -391,14 +454,53 @@ def fetch_all_news(lookback_hours: int | None = None) -> list[NewsArticle]:
     if lookback_hours is None:
         lookback_hours = config.LOOKBACK_HOURS
 
-    gdelt_articles = fetch_gdelt(lookback_hours)
-    google_articles = fetch_google_news(lookback_hours)
+    all_articles: list[NewsArticle] = []
+
+    # 1. GDELT (global)
+    all_articles.extend(fetch_gdelt(lookback_hours))
+
+    # 2. Google News — all regional editions (concurrent)
+    regions = getattr(config, "GOOGLE_NEWS_REGIONS", [
+        {"gl": "US", "hl": "en", "ceid": "US:en", "label": "United States"},
+    ])
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {
+            pool.submit(
+                fetch_google_news_region,
+                lookback_hours,
+                gl=r["gl"], hl=r["hl"], ceid=r["ceid"],
+                keywords_override=r.get("keywords"),
+                label=r["label"],
+            ): r["label"]
+            for r in regions
+        }
+        for future in as_completed(futures):
+            label = futures[future]
+            try:
+                all_articles.extend(future.result())
+            except Exception as e:
+                logger.error("Google News (%s) failed: %s", label, e)
+
+    # 3. Direct RSS feeds (BBC, France 24, Deutsche Welle, etc.)
+    direct_feeds = getattr(config, "DIRECT_RSS_FEEDS", [])
+    if direct_feeds:
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            futures = {
+                pool.submit(fetch_direct_rss, feed, lookback_hours): feed["source"]
+                for feed in direct_feeds
+            }
+            for future in as_completed(futures):
+                source = futures[future]
+                try:
+                    all_articles.extend(future.result())
+                except Exception as e:
+                    logger.error("Direct RSS (%s) failed: %s", source, e)
 
     # Deduplicate by normalized URL
     seen_urls: set[str] = set()
     unique: list[NewsArticle] = []
 
-    for article in gdelt_articles + google_articles:
+    for article in all_articles:
         norm = _normalize_url(article.url)
         if norm not in seen_urls:
             seen_urls.add(norm)
@@ -410,5 +512,5 @@ def fetch_all_news(lookback_hours: int | None = None) -> list[NewsArticle]:
     # Fetch full article text (for client matching + display snippets)
     fetch_article_texts(unique)
 
-    logger.info("Total unique articles: %d", len(unique))
+    logger.info("Total unique articles: %d (from %d raw)", len(unique), len(all_articles))
     return unique

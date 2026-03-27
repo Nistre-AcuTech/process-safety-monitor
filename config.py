@@ -75,3 +75,47 @@ RECIPIENTS = [
 
 # GDELT settings
 GDELT_MAX_RECORDS = int(os.getenv("GDELT_MAX_RECORDS", "250"))
+
+# Google News regional editions
+# English regions use the same keywords; non-English regions have translated keywords
+GOOGLE_NEWS_REGIONS = [
+    # English-language regions
+    {"gl": "US", "hl": "en", "ceid": "US:en", "label": "United States"},
+    {"gl": "GB", "hl": "en", "ceid": "GB:en", "label": "United Kingdom"},
+    {"gl": "AU", "hl": "en", "ceid": "AU:en", "label": "Australia"},
+    {"gl": "IN", "hl": "en", "ceid": "IN:en", "label": "India"},
+    {"gl": "SG", "hl": "en", "ceid": "SG:en", "label": "Singapore"},
+    {"gl": "CA", "hl": "en", "ceid": "CA:en", "label": "Canada"},
+    # Non-English regions (translated keywords)
+    {"gl": "FR", "hl": "fr", "ceid": "FR:fr", "label": "France", "keywords": [
+        "explosion raffinerie", "incendie usine chimique", "explosion industrielle",
+        "incendie raffinerie", "fuite chimique", "fuite de gaz",
+        "marée noire", "nuage toxique", "matières dangereuses",
+        "sécurité des procédés", "accident industriel",
+    ]},
+    {"gl": "DE", "hl": "de", "ceid": "DE:de", "label": "Germany", "keywords": [
+        "Raffinerieexplosion", "Chemiebrand", "Industrieexplosion",
+        "Raffineriebrand", "Chemieunfall", "Gasleck",
+        "Gefahrgut", "Schadstoffwolke", "Chemiewerk",
+        "Anlagensicherheit", "Störfall",
+    ]},
+    {"gl": "NL", "hl": "nl", "ceid": "NL:nl", "label": "Netherlands", "keywords": [
+        "raffinaderij explosie", "chemische brand", "industriële explosie",
+        "chemisch lek", "gaslek", "olielek",
+        "gevaarlijke stoffen", "gifwolk", "chemische fabriek",
+        "procesveiligheid", "Brzo",
+    ]},
+    {"gl": "IT", "hl": "it", "ceid": "IT:it", "label": "Italy", "keywords": [
+        "esplosione raffineria", "incendio chimico", "esplosione industriale",
+        "incendio raffineria", "fuoriuscita chimica", "fuga di gas",
+        "materiali pericolosi", "nube tossica", "impianto chimico",
+        "sicurezza di processo", "incidente rilevante",
+    ]},
+]
+
+# Direct RSS feeds from international outlets (filtered by English keyword matching)
+DIRECT_RSS_FEEDS = [
+    {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "source": "BBC World News"},
+    {"url": "https://www.france24.com/en/rss", "source": "France 24"},
+    {"url": "https://rss.dw.com/rdf/rss-en-all", "source": "Deutsche Welle"},
+]
