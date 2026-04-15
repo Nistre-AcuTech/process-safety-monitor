@@ -387,7 +387,22 @@ _DEFAULT_GOOGLE_KEYWORDS = [
 # Non-English exclude patterns (translated equivalents of _EXCLUDE_PATTERNS)
 _NON_EN_EXCLUDE_PATTERNS = [
     # Dutch — residential/domestic
-    "woning", "appartement", "keuken", "riool",
+    "woning", "woonhuis", "appartement", "keuken", "riool",
+    "flatgebouw", "seniorenflat", "portiekflat",
+    # Dutch — vehicle/transport fires
+    "autobrand", "brand in auto", "brand in bus",
+    "brand in vrachtwagen", "voertuigbrand",
+    # Dutch — residential fires
+    "woningbrand", "flatbrand", "schuurbrand", "zolderbrand",
+    "brand in schuur", "brand in flat", "brand in slaapkamer",
+    # Dutch — dumpster/container fires
+    "containerbrand", "afvalbrand", "prullenbak",
+    # Dutch — non-industrial leaks
+    "waterlek", "waterlekkage", "datalek",
+    # Dutch — fireworks / military
+    "vuurwerk",
+    # Dutch — traffic
+    "verkeersongeval", "aanrijding",
     # Dutch — exercises
     "oefening",
     # German — residential/domestic

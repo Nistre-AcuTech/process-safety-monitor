@@ -109,6 +109,10 @@ GOOGLE_NEWS_REGIONS = [
         "gaslek industrie", "gaslek chemisch",
         # Pipeline/major leaks (not residential excavation)
         "gaslek leiding", "grote gaslek",
+        # Generic Dutch safety terms
+        "lekkage", "lek", "explosie", "brand",
+        "chemische stof", "brandbare stof", "giftige stof",
+        "vrijgekomen gas", "vrijgekomen materiaal",
     ]},
     {"gl": "IT", "hl": "it", "ceid": "IT:it", "label": "Italy", "keywords": [
         "esplosione raffineria", "incendio chimico", "esplosione industriale",
