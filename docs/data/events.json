@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-23T15:06:26.185141+00:00",
+  "last_updated": "2026-04-23T17:07:28.227442+00:00",
   "events": [
     {
       "title": "West Virginia chemical leak kills 2 , sickens dozens including 7 EMS providers at Catalyst Refiners plant",
@@ -1249,20 +1249,6 @@
       "cluster_id": 0
     },
     {
-      "title": "2 dead after Catalyst , Institute WV chemical explosion | Kanawha Valley",
-      "url": "https://www.wvgazettemail.com/news/kanawha_valley/violent-chemical-reaction-2-dead-1-in-critical-condition-after-institute-chemical-spill/article_71319fcd-9709-4caf-92c4-72c2d0e8541b.html",
-      "source": "wvgazettemail.com",
-      "date": "2026-04-23T02:15:00+00:00",
-      "country": "United States",
-      "keywords": [
-        "explosion"
-      ],
-      "client": "Chemical Safety Board",
-      "description": "A one-mile shelter-in-place order was issued around Catalyst Refiners in Nitro (center) on Wednesday, April 22, 2026. The plant is seen here in a July 11, 2024, aerial photo.\nFrom left: Kanawha County Commissioner Natalie Tennant, Kanawha County Emergency Management Agency director C.W.",
-      "title_en": "2 dead after Catalyst , Institute WV chemical explosion | Kanawha Valley",
-      "cluster_id": 6
-    },
-    {
       "title": "Chemical leak at a W . Va . plant kills 2 people , sends 30 more to hospitals , officials say",
       "url": "https://www.waer.org/2026-04-22/chemical-leak-at-a-w-va-plant-kills-2-people-sends-30-more-to-hospitals-officials-say",
       "source": "waer.org",
@@ -1316,7 +1302,7 @@
       "client": null,
       "description": "आतंकियों ने लगाई भारत की तेल रिफाइनरियों में आग? ऐक्शन में NIA, 6 देश हुए साजिश के शिकार\nपिछले 50 दिनों में भारत, अमेरिका और इराक समेत 6 देशों की ऑयल रिफाइनरियों में रहस्यमयी आग लगी है। राजस्थान के पचपदरा मामले में NIA जांच कर रही है। विस्तार से जानें क्या यह वैश्विक ऊर्जा संकट पैदा करने की कोई...",
       "title_en": "Rajasthan HPCL refinery fire mystery NIA investigation Terror angle probed global pattern Are terrorists setting fire to India's oil refineries? NIA in action, 6 countries victims of mysterious conspiracy, India News in Hindi",
-      "cluster_id": 7
+      "cluster_id": 6
     },
     {
       "title": "Chemical leak at a W . Va . plant kills 2 people , sends 30 more to hospitals , officials say",
@@ -1680,7 +1666,7 @@
       "client": null,
       "description": "GEORGETOWN TWP., MI (WHTC-AM/FM, Apr. 22, 2026) – Prompt response to an industrial fire between Jenison and Hudsonville on Wednesday afternoon apparently limited damage and prevented any injuries.",
       "title_en": "Five Departments Respond to Hudsonville - Area Industrial Fire",
-      "cluster_id": 8
+      "cluster_id": 7
     },
     {
       "title": "Chemical leak at a West Virginia plant kills 2 people and sends 19 more to hospital , officials say",
@@ -1960,7 +1946,7 @@
       "client": null,
       "description": "AVERY COUNTY, N.C. — A wildfire in Avery County continues to burn tonight with 45% containment, according to the North Carolina Forest Service.\nChannel 9 has been tracking the fire since it first broke out around 2:30 p.m.",
       "title_en": "Families told to shelter in place as wildfire burns near Avery County Airport",
-      "cluster_id": 9
+      "cluster_id": 8
     },
     {
       "title": "Two dead , 19 injured in US chemical plant leak",
@@ -2086,7 +2072,7 @@
       "client": "Technical",
       "description": "Officials: Two dead after chemical incident in Institute area; shelter in place lifted\nINSTITUTE, W.Va. (WCHS) — UPDATED - 6:55 p.m., 4/22/26\nWest Virginia Gov. Patrick Morrisey held a briefing Wednesday evening after speaking with Kanawha County emergency officials about a deadly chemical incident.",
       "title_en": "Shelter in place ordered in Institute after reported chemical leak; at least 7 transported - WCHS",
-      "cluster_id": 10
+      "cluster_id": 9
     },
     {
       "title": "Chemical leak at a West Virginia plant kills 2 people and sends 19 to hospital , officials say",
@@ -2310,7 +2296,7 @@
       "client": "Security",
       "description": "Updated on Wednesday, April 22, 2026 at 6:53 p.m.\nGov. Patrick Morrisey joined county commissioners Lance Wheeler and Natalie Tennant Wednesday evening in a press conference at the Kanawha County Emergency Operations Center.",
       "title_en": "Shelter-In-Place Order In Effect Following Chemical Leak In Institute - West Virginia Public Broadcasting",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "Chemical leak at West Virginia plant kills two people",
@@ -2548,7 +2534,7 @@
       "client": "Chemical Safety Board",
       "description": "Security officer Glennis Fields stands near a decontamination tent set up in the ambulance bay of WVU Thomas Hospital to receive patients from the chemical spill at Catalyst Refiners Inc, at WVU Thomas Hospital in St. Albans, Wednesday, April 22, 2026.",
       "title_en": "2 dead, 1 in critical condition after Kanawha County chemical spill - herald-dispatch.com",
-      "cluster_id": 12
+      "cluster_id": 11
     },
     {
       "title": "Chemical leak at West Virginia plant kills two people",
@@ -3038,7 +3024,7 @@
       "client": "Chemical Safety Board",
       "description": "State and local officials reflect on deadly chemical release in Institute\nKANAWHA COUNTY, W.Va. (WCHS) — State and local leaders have reflected on a deadly chemical release that occurred at Catalyst Refiners Wednesday morning in Institute.",
       "title_en": "State and local officials reflect on deadly chemical release in Institute",
-      "cluster_id": 13
+      "cluster_id": 12
     },
     {
       "title": "Chemical leak at West Virginia plant kills two people",
@@ -3892,7 +3878,7 @@
       "client": "Security",
       "description": "A chemical release at a West Virginia refinery Wednesday morning killed two people and left 21 others needing medical care as emergency crews raced to contain the incident.",
       "title_en": "Deadly chemical release at West Virginia refinery kills 2",
-      "cluster_id": 14
+      "cluster_id": 13
     },
     {
       "title": "2 dead , 19 hospitalized after chemical leak at West Virginia plant , authorities say",
@@ -3990,7 +3976,7 @@
       "client": null,
       "description": "‘Violent’ chemical spill leaves two dead and 19 wounded including ambulance workers\n- Two people have died and 19 others were rushed to the hospital after a chemical spill at the Catalyst Refiners plant in Institute, West Virginia.",
       "title_en": "‘Violent’ chemical spill leaves two dead and 19 wounded including ambulance workers - The Independent",
-      "cluster_id": 15
+      "cluster_id": 14
     },
     {
       "title": "UPDATES: Two dead, multiple injured in West Virginia chemical spill - WDTN.com",
@@ -4018,7 +4004,7 @@
       "client": "Security",
       "description": "TEAM COVERAGE: 2 dead, 1 in critical condition, at least 30 injured after chemical emergency\nGov. Morrisey assures a full investigation is underway\nUPDATE 4/22/26 @ 7 p.m.\nKANAWHA COUNTY, W.Va. (WSAZ) - West Virginia Gov.",
       "title_en": "TEAM COVERAGE : Shelter in place issued due to reported chemical emergency",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "UPDATES: Two dead, multiple injured in West Virginia chemical spill - Eyewitness News (WEHT/WTVW)",
@@ -4046,7 +4032,7 @@
       "client": null,
       "description": "State-run Hindustan Petroleum Corporation (HPCL) has formed an internal committee to investigate the fire at the Barmer refinery in Rajasthan, which happened on Monday.",
       "title_en": "HPCL forms internal committee to investigate Barmer refinery fire incident",
-      "cluster_id": 16
+      "cluster_id": 15
     },
     {
       "title": "Shelter-In-Place Order In Effect Following Chemical Leak In Institute - West Virginia Public Broadcasting",
@@ -4060,7 +4046,7 @@
       "client": "Security",
       "description": "Your browser doesn't support audio playback.\nUpdated on Wednesday, April 22, 2026 at 3:50 p.m.\nWhat We Know\nTwo people are dead and one is in critical condition after a volatile reaction at a chemical manufacturing facility in Nitro Wednesday morning.",
       "title_en": "Shelter-In-Place Order In Effect Following Chemical Leak In Institute - West Virginia Public Broadcasting",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "Giftige Dämpfe - Chemieunfall bei WC-Reinigung: Steirer (53) tot! - Kronen Zeitung",
@@ -4074,7 +4060,7 @@
       "client": null,
       "description": "Ein Monat nach einem Chemieunfall im Voitsberg ist ein 53-jähriger Steirer nun gestorben: Der Mann dürfte beim WC-Reinigen zwei Substanzen zusammengemischt und danach giftige Dämpfe eingeatmet haben.\nDer Unfall ereignete sich bereits am 23. März.",
       "title_en": "Toxic fumes - chemical accident while cleaning toilet: Styrian (53) dead! - Kronen Zeitung",
-      "cluster_id": 17
+      "cluster_id": 16
     },
     {
       "title": "Shelter in place ordered in Institute after reported chemical leak; at least 7 transported - WCHS",
@@ -4089,11 +4075,11 @@
       "client": null,
       "description": "Skip to main content\nMobile Menu Icon\nThumbnails\nView Thumbnails\nMore Galleries\nMore Galleries\n1/13\nClose\nClose\nOfficials: Two dead after chemical incident in Institute area; shelter in place lifted\nOfficials say two people died following a chemical incident at Catalyst Refiners.",
       "title_en": "Shelter in place ordered in Institute after reported chemical leak; at least 7 transported - WCHS",
-      "cluster_id": 10
+      "cluster_id": 9
     },
     {
-      "title": "Two dead, multiple injured in West Virginia chemical spill - WVNS",
-      "url": "https://www.wvnstv.com/news/west-virginia-news/shelter-in-place-issued-following-chemical-spill-near-institute/",
+      "title": "UPDATES: Two dead, multiple injured in West Virginia chemical spill - WVNS",
+      "url": "https://www.wvnstv.com/news/west-virginia-news/shelter-in-place-issued-following-chemical-spill-near-institute/?nxsparam=1",
       "source": "WVNS",
       "date": "2026-04-22T14:39:00+00:00",
       "country": "United States (West Virginia)",
@@ -4117,6 +4103,20 @@
       "client": "Chemical Safety Board",
       "description": "A one-mile shelter-in-place order was issued around Catalyst Refiners in Nitro (center) on Wednesday, April 22, 2026. The plant is seen here in a July 11, 2024, aerial photo.\nFrom left: Kanawha County Commissioner Natalie Tennant, Kanawha County Emergency Management Agency director C.W.",
       "title_en": "LIFTED: 2 dead, 1 in critical condition, shelter-in-place mostly lifted for Nitro chemical spill - Charleston Gazette-Mail",
+      "cluster_id": 17
+    },
+    {
+      "title": "‘Violent chemical reaction’: 2 dead, 1 in critical condition after Institute chemical spill - Charleston Gazette-Mail",
+      "url": "https://www.wvgazettemail.com/news/kanawha_valley/violent-chemical-reaction-2-dead-1-in-critical-condition-after-institute-chemical-spill/article_71319fcd-9709-4caf-92c4-72c2d0e8541b.html",
+      "source": "Charleston Gazette-Mail",
+      "date": "2026-04-22T14:23:00+00:00",
+      "country": "",
+      "keywords": [
+        "chemical spill"
+      ],
+      "client": "Chemical Safety Board",
+      "description": "A one-mile shelter-in-place order was issued around Catalyst Refiners in Nitro (center) on Wednesday, April 22, 2026. The plant is seen here in a July 11, 2024, aerial photo.\nFrom left: Kanawha County Commissioner Natalie Tennant, Kanawha County Emergency Management Agency director C.W.",
+      "title_en": "2 dead after Catalyst , Institute WV chemical explosion | Kanawha Valley",
       "cluster_id": 18
     },
     {
@@ -4131,7 +4131,7 @@
       "client": "Chemical Safety Board",
       "description": "A one-mile shelter-in-place order was issued around Catalyst Refiners in Nitro (center) on Wednesday, April 22, 2026. The plant is seen here in a July 11, 2024, aerial photo.\nFrom left: Kanawha County Commissioner Natalie Tennant, Kanawha County Emergency Management Agency director C.W.",
       "title_en": "‘Violent chemical reaction’: 2 dead, 1 in critical condition following Nitro chemical spill - Charleston Gazette-Mail",
-      "cluster_id": 18
+      "cluster_id": 17
     },
     {
       "title": "Chemical spill near Institute causes shelter in place - WBOY.com",
@@ -4146,7 +4146,7 @@
       "client": null,
       "description": "",
       "title_en": "Shelter in place issued following chemical spill in Kanawha County - WBOY.com",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "Chemical spill near Institute causes shelter in place - WOWK 13 News",
@@ -4161,7 +4161,7 @@
       "client": null,
       "description": "",
       "title_en": "Shelter in place issued following chemical spill near Institute - WOWK 13 News",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "West Virginia chemical spill causes shelter-in-place, dozens injured - WOWK 13 News",
@@ -4190,7 +4190,7 @@
       "client": "Security",
       "description": "TEAM COVERAGE: 2 dead, 1 in critical condition, at least 30 injured after chemical emergency\nGov. Morrisey assures a full investigation is underway\nUPDATE 4/22/26 @ 7 p.m.\nKANAWHA COUNTY, W.Va. (WSAZ) - West Virginia Gov.",
       "title_en": "Shelter in place issued, road closed due to reported chemical spill - WSAZ",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "UPDATES: Institute chemical spill causes shelter-in-place, dozens injured - Eyewitness News (WEHT/WTVW)",
@@ -4233,7 +4233,7 @@
       "client": "Chemical Safety Board",
       "description": "This article has been updated with the latest information.\nKANAWHA COUNTY, W.Va. (WOWK) – Two people have died after a chemical emergency at Catalytic Refiners, Inc.",
       "title_en": "Shelter in place issued following chemical spill near Institute - WVNS",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "3 people unresponsive due to cardiac arrest, 5 others hospitalized following chemical spill in West Virginia, 1-mile radius shelter in place - WTRF",
@@ -4263,7 +4263,7 @@
       "client": "Chemical Safety Board",
       "description": "This article has been updated with the latest information.\nKANAWHA COUNTY, W.Va. (WOWK) – Two people have died after a chemical emergency at Catalytic Refiners, Inc.",
       "title_en": "Shelter in place issued following chemical spill in Kanawha County - WBOY.com",
-      "cluster_id": 11
+      "cluster_id": 10
     },
     {
       "title": "Fire and Smoke : Eight Industrial Incidents in Oil & Gas in 60 Days Send Social Media Ablaze with Speculation",
@@ -4806,6 +4806,22 @@
       "cluster_id": 43
     },
     {
+      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - MSN",
+      "url": "https://www.msn.com/en-in/money/markets/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place/ar-AA1Zh2nW?cvid=69c23365fadd438799aa90c1d87af9db&ocid=hpmsn&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "source": "MSN",
+      "date": "2026-04-18T16:33:53+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion",
+        "shelter in place"
+      ],
+      "client": null,
+      "description": "",
+      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - MSN",
+      "cluster_id": 40
+    },
+    {
       "title": "Moorhead Police arrest a man armed with a rifle after a shelter in place took effect",
       "url": "https://www.kvrr.com/2026/04/17/moorhead-police-arrest-a-man-armed-with-a-rifle-after-a-shelter-in-place-took-effect/",
       "source": "kvrr.com",
@@ -5114,22 +5130,6 @@
       "client": null,
       "description": "",
       "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
-      "cluster_id": 55
-    },
-    {
-      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - MSN",
-      "url": "https://www.msn.com/en-in/money/markets/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place/ar-AA1Zh2nW?cvid=69c23365fadd438799aa90c1d87af9db&ocid=hpmsn",
-      "source": "MSN",
-      "date": "2026-04-14T18:09:19+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - MSN",
       "cluster_id": 55
     },
     {
@@ -10241,22 +10241,6 @@
       "cluster_id": 139
     },
     {
-      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
-      "url": "https://www.nbcnews.com/news/us-news/large-oil-refinery-explosion-texas-coast-forces-residents-shelter-plac-rcna264853",
-      "source": "NBC News",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
-      ],
-      "client": "Valero",
-      "description": "A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, officials said.\nNo one was injured in the explosion at the Valero refinery in Port Arthur, about 90 miles east of Houston, Mayor Charlotte M.",
-      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
-      "cluster_id": 139
-    },
-    {
       "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - AP News",
       "url": "https://apnews.com/article/refinery-explosion-texas-coast-60ecf6d9a70a2f1d5494fb8e38a84c4a",
       "source": "AP News",
@@ -10269,21 +10253,6 @@
       "client": "Valero",
       "description": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast\nFire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast\nHOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was...",
       "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - AP News",
-      "cluster_id": 139
-    },
-    {
-      "title": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast - New York Post",
-      "url": "https://nypost.com/2026/03/24/us-news/fire-out-shelter-in-place-order-lifted-after-huge-oil-refinery-explosion-near-texas-coast/",
-      "source": "New York Post",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (New York)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast\nAn oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
-      "title_en": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast - New York Post",
       "cluster_id": 139
     },
     {
@@ -10303,9 +10272,24 @@
       "cluster_id": 139
     },
     {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL.com",
+      "title": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast - New York Post",
+      "url": "https://nypost.com/2026/03/24/us-news/fire-out-shelter-in-place-order-lifted-after-huge-oil-refinery-explosion-near-texas-coast/",
+      "source": "New York Post",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (New York)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast\nAn oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
+      "title_en": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast - New York Post",
+      "cluster_id": 139
+    },
+    {
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL News",
       "url": "https://www.ksl.com/article/51472150/fire-out-and-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast",
-      "source": "KSL.com",
+      "source": "KSL News",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -10361,20 +10345,6 @@
       "description": "JavaScript is disabled in your browser.\nPlease enable JavaScript to proceed.\nA required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser.",
       "title_en": "Explosion at Port Arthur Valero refinery prompts 12-hour shelter-in-place order. See video - Austin American-Statesman",
       "cluster_id": 139
-    },
-    {
-      "title": "Fire ‘essentially out’ following explosion at Valero refinery near Texas coast - San Antonio Express-News",
-      "url": "https://www.expressnews.com/business/article/large-oil-refinery-explosion-near-texas-coast-22093505.php",
-      "source": "San Antonio Express-News",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion"
-      ],
-      "client": "Valero",
-      "description": "JavaScript is disabled in your browser.\nPlease enable JavaScript to proceed.\nA required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser.",
-      "title_en": "Fire ‘essentially out’ following explosion at Valero refinery near Texas coast - San Antonio Express-News",
-      "cluster_id": 184
     },
     {
       "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
@@ -10463,6 +10433,22 @@
       "client": "Valero",
       "description": "Major explosion at Texas oil refinery sparks huge fire as locals told to shelter\nOfficials confirmed that no injuries were reported despite the dramatic scenes\n- Bookmark\n- CommentsGo to comments\nA significant explosion at an oil refinery near the Texas coast on Monday sent plumes of smoke...",
       "title_en": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
+      "cluster_id": 139
+    },
+    {
+      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/large-oil-refinery-explosion-texas-coast-forces-residents-shelter-plac-rcna264853",
+      "source": "NBC News",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion",
+        "shelter in place"
+      ],
+      "client": "Valero",
+      "description": "A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, officials said.\nNo one was injured in the explosion at the Valero refinery in Port Arthur, about 90 miles east of Houston, Mayor Charlotte M.",
+      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
       "cluster_id": 139
     },
     {
@@ -10556,9 +10542,9 @@
       "cluster_id": 139
     },
     {
-      "title": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - NewsNation",
-      "url": "https://www.newsnationnow.com/video/texas-oil-refinery-explosion-forces-residents-to-shelter-in-place-morning-in-america/11634695/",
-      "source": "NewsNation",
+      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - The Hindu",
+      "url": "https://www.thehindu.com/news/international/texas-oil-refinery-explosion-usa-valero-port-author/article70778285.ece",
+      "source": "The Hindu",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -10566,9 +10552,9 @@
         "refinery explosion",
         "shelter in place"
       ],
-      "client": null,
-      "description": "",
-      "title_en": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - NewsNation",
+      "client": "Valero",
+      "description": "A large explosion at an oil refinery near the Texas coast on Monday (March 23, 2026) shot plumes of smoke into the air and forced nearby residents to shelter in place, according to officials.",
+      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - The Hindu",
       "cluster_id": 139
     },
     {
@@ -10603,9 +10589,24 @@
       "cluster_id": 139
     },
     {
-      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - The Hindu",
-      "url": "https://www.thehindu.com/news/international/texas-oil-refinery-explosion-usa-valero-port-author/article70778285.ece",
-      "source": "The Hindu",
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
+      "url": "https://www.audacy.com/krld/news/business/ap-us-refinery-fire-texas-6th-ld-writethru",
+      "source": "Audacy",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "HOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted following air-quality testing, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
+      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
+      "cluster_id": 139
+    },
+    {
+      "title": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - MSN",
+      "url": "https://www.msn.com/en-us/news/us/texas-oil-refinery-explosion-forces-residents-to-shelter-in-place-morning-in-america/vi-AA1Zitbc",
+      "source": "MSN",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -10613,10 +10614,24 @@
         "refinery explosion",
         "shelter in place"
       ],
-      "client": "Valero",
-      "description": "A large explosion at an oil refinery near the Texas coast on Monday (March 23, 2026) shot plumes of smoke into the air and forced nearby residents to shelter in place, according to officials.",
-      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - The Hindu",
+      "client": null,
+      "description": "",
+      "title_en": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - MSN",
       "cluster_id": 139
+    },
+    {
+      "title": "Fire ‘essentially out’ following explosion at Valero refinery near Texas coast - San Antonio Express-News",
+      "url": "https://www.expressnews.com/business/article/large-oil-refinery-explosion-near-texas-coast-22093505.php",
+      "source": "San Antonio Express-News",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion"
+      ],
+      "client": "Valero",
+      "description": "JavaScript is disabled in your browser.\nPlease enable JavaScript to proceed.\nA required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser.",
+      "title_en": "Fire ‘essentially out’ following explosion at Valero refinery near Texas coast - San Antonio Express-News",
+      "cluster_id": 184
     },
     {
       "title": "Incendio nell’ex industria a Bagnoregio, allerta nube tossica: il sindaco vieta le attività all’aperto - Fanpage",
@@ -10745,6 +10760,22 @@
       "cluster_id": 188
     },
     {
+      "title": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - NewsNation",
+      "url": "https://www.newsnationnow.com/video/texas-oil-refinery-explosion-forces-residents-to-shelter-in-place-morning-in-america/11634695/",
+      "source": "NewsNation",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion",
+        "shelter in place"
+      ],
+      "client": null,
+      "description": "",
+      "title_en": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - NewsNation",
+      "cluster_id": 139
+    },
+    {
       "title": "Shelter-in-place issued in Port Arthur after oil refinery explosion - KVUE",
       "url": "https://www.kvue.com/video/news/state/oil-refinery-explosion-port-arthur-shelter-in-place-valero-no-injuries/269-87318a1c-2879-415f-a712-a491edb72a17",
       "source": "KVUE",
@@ -10757,22 +10788,6 @@
       "client": null,
       "description": "To stream KVUE on your phone, you need the KVUE app.\nNext up in 5\nExample video title will go here for this...",
       "title_en": "Shelter-in-place issued in Port Arthur after oil refinery explosion - KVUE",
-      "cluster_id": 139
-    },
-    {
-      "title": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - MSN",
-      "url": "https://www.msn.com/en-us/news/us/texas-oil-refinery-explosion-forces-residents-to-shelter-in-place-morning-in-america/vi-AA1Zitbc",
-      "source": "MSN",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Texas oil refinery explosion forces residents to shelter in place | Morning in America - MSN",
       "cluster_id": 139
     },
     {
@@ -10864,21 +10879,6 @@
       "description": "مشاهد تحبس الأنفاس، لحظة حريق مصفاة النفط \"فاليور\" قرب سواحل تكساس الأمريكية (فيديو)\nأدى انفجار كبير في مصفاة نفط قرب سواحل تكساس يوم الإثنين إلى تصاعد أعمدة كثيفة من الدخان في الهواء، وإجبار السكان القريبين على البقاء في منازلهم، بحسب ما أفاد به مسؤولون.",
       "title_en": "Breathtaking scenes at the moment of the Valor oil refinery fire near the coast of Texas (video) - Veto",
       "cluster_id": 195
-    },
-    {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
-      "url": "https://www.audacy.com/krld/news/business/ap-us-refinery-fire-texas-6th-ld-writethru",
-      "source": "Audacy",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "HOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted following air-quality testing, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
-      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
-      "cluster_id": 139
     },
     {
       "title": "Large oil refinery explosion rocks Texas coast, forces residents to shelter in place - The Tribune",
@@ -13609,9 +13609,9 @@
       "title_en": "Gas leak during work in Roosendaal, Enexis on site - BN DeStem"
     },
     {
-      "title": "Shelter-in-place advised in Port Arthur after refinery explosion - KPLC 7 News",
-      "url": "https://www.kplctv.com/2026/03/23/explosion-port-arthur-refinery/",
-      "source": "KPLC 7 News",
+      "title": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
+      "url": "https://www.fox10tv.com/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
+      "source": "fox10tv.com",
       "date": "2026-03-23T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -13620,7 +13620,7 @@
       ],
       "client": "Valero",
       "description": "Shelter-in-place advised in Port Arthur after refinery explosion\nPublished: Mar. 23, 2026 at 6:50 PM CDT|Updated: Mar. 23, 2026 at 7:51 PM CDT\nPORT ARTHUR, Texas (KPLC) - Emergency officials are responding to the Valero refinery in Port Arthur as smoke rises from the facility.",
-      "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KPLC 7 News",
+      "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 139
     },
     {
@@ -13679,7 +13679,7 @@
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 12 hours ago\nSubmit your birthdays and anniversaries at least two weeks in advance.\nUpdated: 12 hours ago\nA man in New Hanover County is facing a murder charge.\nUpdated: 8 hours ago\nSuspect involved in S. Lincoln Park Dr.",
+      "description": "Updated: 10 hours ago\nA man in New Hanover County is facing a murder charge.\nUpdated: 10 hours ago\nSubmit your birthdays and anniversaries at least two weeks in advance.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KWTX",
       "cluster_id": 139
     },
@@ -13699,6 +13699,21 @@
       "cluster_id": 139
     },
     {
+      "title": "Shelter-in-place advised in Port Arthur after refinery explosion - KPLC 7 News",
+      "url": "https://www.kplctv.com/2026/03/23/explosion-port-arthur-refinery/",
+      "source": "KPLC 7 News",
+      "date": "2026-03-23T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "Shelter-in-place advised in Port Arthur after refinery explosion\nPublished: Mar. 23, 2026 at 6:50 PM CDT|Updated: Mar. 23, 2026 at 7:51 PM CDT\nPORT ARTHUR, Texas (KPLC) - Emergency officials are responding to the Valero refinery in Port Arthur as smoke rises from the facility.",
+      "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KPLC 7 News",
+      "cluster_id": 139
+    },
+    {
       "title": "Watch: Explosion reported at US oil refinery - NZ Herald",
       "url": "https://www.nzherald.co.nz/world/texas-oil-refinery-explosion-residents-told-to-shelter-in-place/VURXTN3XNFH2FIEN5LZQDZXW7E/",
       "source": "NZ Herald",
@@ -13710,21 +13725,6 @@
       "client": "Valero",
       "description": "An explosion at an oil refinery has sparked a shelter-in-place warning for nearby residents in Texas. Photo / Supplied\nLocal officials have warned residents near a Texas oil refinery to immediately shelter in place “in light of the recent explosion” at Valero’s Port Arthur Refinery.",
       "title_en": "Watch: Explosion reported at US oil refinery - NZ Herald",
-      "cluster_id": 139
-    },
-    {
-      "title": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
-      "url": "https://www.fox10tv.com/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
-      "source": "fox10tv.com",
-      "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "Shelter-in-place advised in Port Arthur after refinery explosion\nPublished: Mar. 23, 2026 at 6:50 PM CDT|Updated: Mar. 23, 2026 at 7:51 PM CDT\nPORT ARTHUR, Texas (KPLC) - Emergency officials are responding to the Valero refinery in Port Arthur as smoke rises from the facility.",
-      "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 139
     },
     {
@@ -15211,12 +15211,12 @@
       "url": "https://www.actionnewsnow.com/video/chemical-spill-in-dorris-prompts-shelter-in-place-order/video_a583add5-4feb-5096-9d29-8419d11b39a3.html",
       "source": "Action News Now",
       "date": "2026-03-17T23:42:00+00:00",
-      "country": "United States (California)",
+      "country": "",
       "keywords": [
         "chemical spill"
       ],
       "client": null,
-      "description": "Chemical spill in Dorris prompts shelter-in-place order\nA chemical spill involving the toxic herbicide Paraquat in Dorris led to a shelter-in-place order on Tuesday morning.",
+      "description": "",
       "title_en": "Chemical spill in Dorris prompts shelter-in-place order - Action News Now",
       "cluster_id": 214
     },
@@ -16293,20 +16293,6 @@
       "cluster_id": 278
     },
     {
-      "title": "Massive Industrial Explosion in Logan Township Injures Several, Triggers Shelter-in-Place Order - RLS Media",
-      "url": "https://www.rlsmedia.com/node/62639",
-      "source": "RLS Media",
-      "date": "2026-03-05T08:00:00+00:00",
-      "country": "",
-      "keywords": [
-        "explosion"
-      ],
-      "client": null,
-      "description": "By: Richard L. Smith\nAuthorities are investigating a powerful explosion that rocked an industrial facility in Gloucester County on Wednesday afternoon, sending multiple people to the hospital and prompting emergency officials to issue a temporary shelter-in-place order for nearby residents and...",
-      "title_en": "Massive Industrial Explosion in Logan Township Injures Several, Triggers Shelter-in-Place Order - RLS Media",
-      "cluster_id": 277
-    },
-    {
       "title": "Four hospitalized in New Jersey cannabis oil refinery explosion felt across three states and shelter in place ordered - the-sun.com",
       "url": "https://www.the-sun.com/news/16037555/",
       "source": "the-sun.com",
@@ -16321,6 +16307,20 @@
       "description": "A MASSIVE explosion rocked a New Jersey town Wednesday afternoon, sending at least four people to the hospital.\nLocals were told to shelter in place as smoke continued to fill the area.",
       "title_en": "Four hospitalized in New Jersey cannabis oil refinery explosion felt across three states and shelter in place ordered - The US Sun",
       "cluster_id": 278
+    },
+    {
+      "title": "Massive Industrial Explosion in Logan Township Injures Several, Triggers Shelter-in-Place Order - RLS Media",
+      "url": "https://www.rlsmedia.com/node/62639",
+      "source": "RLS Media",
+      "date": "2026-03-05T08:00:00+00:00",
+      "country": "",
+      "keywords": [
+        "explosion"
+      ],
+      "client": null,
+      "description": "By: Richard L. Smith\nAuthorities are investigating a powerful explosion that rocked an industrial facility in Gloucester County on Wednesday afternoon, sending multiple people to the hospital and prompting emergency officials to issue a temporary shelter-in-place order for nearby residents and...",
+      "title_en": "Massive Industrial Explosion in Logan Township Injures Several, Triggers Shelter-in-Place Order - RLS Media",
+      "cluster_id": 277
     },
     {
       "title": "Industrial explosion at South Jersey plant sends five to hospital, sparks shelter-in-place | PHL17 Morning News - PHL17.com",
@@ -17055,20 +17055,6 @@
       "title_en": "Fire brigade responds to gas leak on Kaldenkerkerweg - Omroep Venlo"
     },
     {
-      "title": "Chemieunfall im Stadtgebiet von Leoben endete glimpflich - Kurier",
-      "url": "https://kurier.at/chronik/steiermark/chemieunfall-im-stadtgebiet-von-leoben-endete-glimpflich/403134614",
-      "source": "Kurier",
-      "date": "2026-02-24T08:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemieunfall"
-      ],
-      "client": null,
-      "description": "Chemieunfall im Stadtgebiet von Leoben endete glimpflich\nIn Leoben ist es am Dienstagmittag zu einem Chemieunfall gekommen, der einen Großeinsatz der Feuerwehren auslöste.",
-      "title_en": "Chemical accident in the city of Leoben ended lightly - Kurier",
-      "cluster_id": 309
-    },
-    {
       "title": "Entwarnung nach Chemieunfall in Leoben - steiermark.ORF.at",
       "url": "https://steiermark.orf.at/stories/3343273/",
       "source": "steiermark.ORF.at",
@@ -17080,6 +17066,20 @@
       "client": null,
       "description": "Der Unfall passierte kurz vor 12.00 Uhr in der Nähe der Abwasser-Pumpstation in der Gösser Straße: Ein Behälter mit einer ätzenden, anorganischen Chemikalie war beim Abladen von einem Lkw umgekippt, die Chemikalie in der Folge ausgetreten.",
       "title_en": "Entwarnung nach Chemieunfall in Leoben - steiermark.ORF.at",
+      "cluster_id": 309
+    },
+    {
+      "title": "Chemieunfall im Stadtgebiet von Leoben endete glimpflich - Kurier",
+      "url": "https://kurier.at/chronik/steiermark/chemieunfall-im-stadtgebiet-von-leoben-endete-glimpflich/403134614",
+      "source": "Kurier",
+      "date": "2026-02-24T08:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemieunfall"
+      ],
+      "client": null,
+      "description": "Chemieunfall im Stadtgebiet von Leoben endete glimpflich\nIn Leoben ist es am Dienstagmittag zu einem Chemieunfall gekommen, der einen Großeinsatz der Feuerwehren auslöste.",
+      "title_en": "Chemical accident in the city of Leoben ended lightly - Kurier",
       "cluster_id": 310
     },
     {
@@ -17122,7 +17122,7 @@
       "client": null,
       "description": "",
       "title_en": "Entwarnung nach Chemieunfall in Leoben - steiermark.ORF.at",
-      "cluster_id": 310
+      "cluster_id": 309
     },
     {
       "title": "Brandweer rukt uit voor gaslek Maagdenbergweg - Omroep Venlo",
@@ -17275,7 +17275,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: moments ago\nA once problem-ridden Tiffin apartment complex, has new owners\nUpdated: 2 hours ago\nTurning back the pages through centuries of science! Dan Smith has the story of an Italian historian's incredible find on a library shelf.",
+      "description": "Updated: 17 minutes ago\nMan in critical condition after shooting in East Toledo\nUpdated: 18 minutes ago\nFalse bomb threat in Tiffin prompts evacuations, leads to teen’s arrest\nUpdated: 23 minutes ago\nSashem Brey is live at 13abc's Shred Day event on April 23, 2026.",
       "title_en": "Shelter in place order issued in Toledo over HAZMAT response - WTVG",
       "cluster_id": 317
     },
@@ -17290,7 +17290,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: moments ago\nA once problem-ridden Tiffin apartment complex, has new owners\nUpdated: 2 hours ago\nTurning back the pages through centuries of science! Dan Smith has the story of an Italian historian's incredible find on a library shelf.",
+      "description": "Updated: 17 minutes ago\nMan in critical condition after shooting in East Toledo\nUpdated: 18 minutes ago\nFalse bomb threat in Tiffin prompts evacuations, leads to teen’s arrest\nUpdated: 23 minutes ago\nSashem Brey is live at 13abc's Shred Day event on April 23, 2026.",
       "title_en": "Shelter in place order issued during HAZMAT investigation - WTVG",
       "cluster_id": 317
     },
@@ -19821,20 +19821,6 @@
       "cluster_id": 406
     },
     {
-      "title": "Kurz nach Wartung - Störfall im AKW: Reaktor in Schweden abgeschaltet - Kronen Zeitung",
-      "url": "https://www.krone.at/3996011",
-      "source": "Kronen Zeitung",
-      "date": "2025-12-23T08:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Störfall"
-      ],
-      "client": null,
-      "description": "Kurz nach Wartung\nStörfall im AKW: Reaktor in Schweden abgeschaltet\nEin technischer Fehler hat den Betrieb eines schwedischen Atomreaktors vorübergehend zum Stillstand gebracht. Der Reaktor Forsmark 1 wurde Medienberichten zufolge abgeschaltet, während Experten an der Behebung des Problems arbeiten.",
-      "title_en": "Shortly after maintenance - accident in the nuclear power plant: reactor in Sweden shut down - Kronen Zeitung",
-      "cluster_id": 407
-    },
-    {
       "title": "Nell'inferno di New Delhi, la città che soffoca sotto una nube tossica: smog record e proteste nella capitale indiana - TViWeb",
       "url": "https://www.tviweb.it/nellinferno-di-new-delhi-la-citta-che-soffoca-sotto-una-nube-tossica-smog-record-e-proteste-nella-capitale-indiana/",
       "source": "TViWeb",
@@ -19846,6 +19832,20 @@
       "client": null,
       "description": "Nell’inferno di New Delhi, la città che soffoca sotto una nube tossica: smog record e proteste nella capitale indiana\nUna fitta foschia grigiastra avvolge Delhi da giorni, trasformando l’aria in una miscela irrespirabile e aggravando una crisi ambientale che i residenti definiscono ormai...",
       "title_en": "In the hell of New Delhi, the city suffocating under a toxic cloud: record smog and protests in the Indian capital - TViWeb",
+      "cluster_id": 407
+    },
+    {
+      "title": "Kurz nach Wartung - Störfall im AKW: Reaktor in Schweden abgeschaltet - Kronen Zeitung",
+      "url": "https://www.krone.at/3996011",
+      "source": "Kronen Zeitung",
+      "date": "2025-12-23T08:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Störfall"
+      ],
+      "client": null,
+      "description": "Kurz nach Wartung\nStörfall im AKW: Reaktor in Schweden abgeschaltet\nEin technischer Fehler hat den Betrieb eines schwedischen Atomreaktors vorübergehend zum Stillstand gebracht. Der Reaktor Forsmark 1 wurde Medienberichten zufolge abgeschaltet, während Experten an der Behebung des Problems arbeiten.",
+      "title_en": "Shortly after maintenance - accident in the nuclear power plant: reactor in Sweden shut down - Kronen Zeitung",
       "cluster_id": 408
     },
     {
@@ -21109,20 +21109,6 @@
       "cluster_id": 448
     },
     {
-      "title": "مخاوف من انفجار مواد خطرة.. آخر تطورات حريق بسفينة حاويات بميناء لوس أنجلوس - اليوم السابع",
-      "url": "https://www.youm7.com/story/2025/11/22/%D9%85%D8%AE%D8%A7%D9%88%D9%81-%D9%85%D9%86-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D9%88%D8%A7%D8%AF-%D8%AE%D8%B7%D8%B1%D8%A9-%D8%A2%D8%AE%D8%B1-%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-%D8%AD%D8%B1%D9%8A%D9%82-%D8%A8%D8%B3%D9%81%D9%8A%D9%86%D8%A9-%D8%AD%D8%A7%D9%88%D9%8A%D8%A7%D8%AA/7207252",
-      "source": "اليوم السابع",
-      "date": "2025-11-22T08:00:00+00:00",
-      "country": "Middle East",
-      "keywords": [
-        "مواد خطرة"
-      ],
-      "client": null,
-      "description": "اندلع حريق هائل على متن سفينة حاويات راسية في ميناء لوس أنجلوس، ما دفع عشرات فرق الإطفاء لمحاولة السيطرة على النيران التي اندلعت فجأة، وأعلنت إدارة الإطفاء أن جميع أفراد الطاقم الـ23 تم إجلاؤهم دون تسجيل أي إصابات، وسط مخاوف من المواد الخطرة الموجودة ضمن حمولتها.",
-      "title_en": "Fears of the explosion of hazardous materials...the latest developments in a container ship fire in the Port of Los Angeles - Youm7",
-      "cluster_id": 450
-    },
-    {
       "title": "Container ship is moved out to sea from Port of LA after fire erupts onboard; shelter in place order lifted in San Pedro - ABC7 Los Angeles",
       "url": "https://abc7.com/post/container-ship-is-moved-sea-port-la-fire-erupts-onboard-shelter-place-order-lifted-san-pedro/18190978/",
       "source": "ABC7 Los Angeles",
@@ -21134,6 +21120,20 @@
       "client": null,
       "description": "SAN PEDRO, LOS ANGELES (KABC) -- After a massive fire erupted on a container ship docked at the Port of Los Angeles, the vessel was moved out to sea overnight and a shelter-in-place order was lifted Saturday morning in San Pedro, officials said.\nThe fire was reported around 6:38 p.m.",
       "title_en": "Container ship is moved out to sea from Port of LA after fire erupts onboard; shelter in place order lifted in San Pedro - abc7.com",
+      "cluster_id": 450
+    },
+    {
+      "title": "مخاوف من انفجار مواد خطرة.. آخر تطورات حريق بسفينة حاويات بميناء لوس أنجلوس - اليوم السابع",
+      "url": "https://www.youm7.com/story/2025/11/22/%D9%85%D8%AE%D8%A7%D9%88%D9%81-%D9%85%D9%86-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D9%88%D8%A7%D8%AF-%D8%AE%D8%B7%D8%B1%D8%A9-%D8%A2%D8%AE%D8%B1-%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-%D8%AD%D8%B1%D9%8A%D9%82-%D8%A8%D8%B3%D9%81%D9%8A%D9%86%D8%A9-%D8%AD%D8%A7%D9%88%D9%8A%D8%A7%D8%AA/7207252",
+      "source": "اليوم السابع",
+      "date": "2025-11-22T08:00:00+00:00",
+      "country": "Middle East",
+      "keywords": [
+        "مواد خطرة"
+      ],
+      "client": null,
+      "description": "اندلع حريق هائل على متن سفينة حاويات راسية في ميناء لوس أنجلوس، ما دفع عشرات فرق الإطفاء لمحاولة السيطرة على النيران التي اندلعت فجأة، وأعلنت إدارة الإطفاء أن جميع أفراد الطاقم الـ23 تم إجلاؤهم دون تسجيل أي إصابات، وسط مخاوف من المواد الخطرة الموجودة ضمن حمولتها.",
+      "title_en": "Fears of the explosion of hazardous materials...the latest developments in a container ship fire in the Port of Los Angeles - Youm7",
       "cluster_id": 451
     },
     {
@@ -21148,7 +21148,7 @@
       "client": null,
       "description": "",
       "title_en": "Fears of the explosion of hazardous materials...the latest developments in a container ship fire in the Port of Los Angeles - Youm7",
-      "cluster_id": 450
+      "cluster_id": 451
     },
     {
       "title": "Einsatz: Gasleck nach Baggerunfall – Bundesstraße wieder frei - DIE ZEIT",
@@ -24174,7 +24174,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 8 hours ago\nSuspect involved in S. Lincoln Park Dr. shooting arrested, police say\nUpdated: 12 hours ago\nVCSO: Second arrest made in connection to early morning shooting\nUpdated: 16 hours ago\nCrews respond to 3-alarm house fire on Koring Rd., officials say\nUpdated: 16 hours ago\nMt.",
+      "description": "Updated: 6 hours ago\nMayor Stephanie Terry schedules second Traveling City Hall meeting\nUpdated: 6 hours ago\nW. Franklin St. reopening on Thursday\nUpdated: 6 hours ago\nSuspect involved in S. Lincoln Park Dr.",
       "title_en": "Hazmat, firefighters on scene of chemical fire in Newburgh, shelter in place extended - 14 News",
       "cluster_id": 558
     },
@@ -24235,6 +24235,22 @@
       "cluster_id": 556
     },
     {
+      "title": "Hazmat, firefighters on scene of chemical fire in Newburgh, shelter in place extended - WFIE | 14 News",
+      "url": "https://www.14news.com/video/2025/09/06/hazmat-firefighters-scene-chemical-fire-newburgh-shelter-place-extended/",
+      "source": "WFIE | 14 News",
+      "date": "2025-09-06T07:00:00+00:00",
+      "country": "",
+      "keywords": [
+        "chemical fire",
+        "hazmat",
+        "shelter in place"
+      ],
+      "client": null,
+      "description": "Updated: 6 hours ago\nMayor Stephanie Terry schedules second Traveling City Hall meeting\nUpdated: 6 hours ago\nW. Franklin St. reopening on Thursday\nUpdated: 6 hours ago\nSuspect involved in S. Lincoln Park Dr.",
+      "title_en": "Hazmat, firefighters on scene of chemical fire in Newburgh, shelter in place extended - 14 News",
+      "cluster_id": 558
+    },
+    {
       "title": "Southern Indiana county reduces shelter-in-place advisory to specific areas after chemical fire - WTHR",
       "url": "https://www.wthr.com/article/news/local/indiana/southern-indiana-warrick-county-shelter-in-place-advisory-issued-due-to-possible-chemical-fire-newburgh/531-352e0c68-d9d4-46d6-9728-6b062e8e380c",
       "source": "WTHR",
@@ -24247,22 +24263,6 @@
       "description": "NEWBURGH, Ind. — A shelter-in-place advisory has been lifted in a southern Indiana county after a fire that police say could have included hazardous chemicals.\nAccording to the Warrick County Sheriff's Office, around 2:42 p.m. on Saturday, Sept.",
       "title_en": "Southern Indiana county reduces shelter-in-place advisory to specific areas after chemical fire - WTHR",
       "cluster_id": 556
-    },
-    {
-      "title": "Hazmat, firefighters on scene of chemical fire in Newburgh, shelter in place extended - WFIE | 14 News",
-      "url": "https://www.14news.com/video/2025/09/06/hazmat-firefighters-scene-chemical-fire-newburgh-shelter-place-extended/",
-      "source": "WFIE | 14 News",
-      "date": "2025-09-06T07:00:00+00:00",
-      "country": "",
-      "keywords": [
-        "chemical fire",
-        "hazmat",
-        "shelter in place"
-      ],
-      "client": null,
-      "description": "Updated: 8 hours ago\nSuspect involved in S. Lincoln Park Dr. shooting arrested, police say\nUpdated: 12 hours ago\nVCSO: Second arrest made in connection to early morning shooting\nUpdated: 16 hours ago\nCrews respond to 3-alarm house fire on Koring Rd., officials say\nUpdated: 16 hours ago\nMt.",
-      "title_en": "Hazmat, firefighters on scene of chemical fire in Newburgh, shelter in place extended - 14 News",
-      "cluster_id": 558
     },
     {
       "title": "UPDATE: Officials lift voluntary ‘shelter in place’ issued due to chemical fire in Newburgh - The Owensboro Times",
@@ -25606,9 +25606,9 @@
       "title_en": "Toxic cloud in the Cordenons swimming pool, 7 poisoned people (5 are children) taken to the emergency room. 200 people evacuated from the plant - Il Gazzettino"
     },
     {
-      "title": "Texas City refinery fire prompts shelter-in-place - fox26houston.com",
+      "title": "Texas City refinery fire prompts shelter-in-place - FOX 26 Houston",
       "url": "https://www.fox26houston.com/video/1658457",
-      "source": "fox26houston.com",
+      "source": "FOX 26 Houston",
       "date": "2025-06-14T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -26142,9 +26142,9 @@
       "title_en": "Gas leak in steelworks 2, area evacuated. Maximum alert - Buonasera24.it"
     },
     {
-      "title": "Chemieunfall in Katalonien: Ausgangssperre in 5 Gemeinden - Euronews",
+      "title": "Chemieunfall in Katalonien: Ausgangssperre in 5 Gemeinden - Euronews.com",
       "url": "https://de.euronews.com/my-europe/2025/05/10/chemieunfall-in-katalonien-5-gemeinden-von-massivem-chlorbrand-betroffen",
-      "source": "Euronews",
+      "source": "Euronews.com",
       "date": "2025-05-10T07:00:00+00:00",
       "country": "Germany",
       "keywords": [
@@ -27393,20 +27393,6 @@
       "cluster_id": 685
     },
     {
-      "title": "Feuer in Chemiewerk – Feuerwehr warnt Bevölkerung vor gesundheitlichen Folgen - T-Online",
-      "url": "https://www.t-online.de/nachrichten/panorama/ungluecke/id_100516856/leverkusen-grossbrand-in-chemiewerk-von-dynamit-nobel-feuerwehr-warnt.html",
-      "source": "T-Online",
-      "date": "2024-10-24T07:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemiewerk"
-      ],
-      "client": null,
-      "description": "Kilometerweit Rauch zu sehen Brand in Chemiewerk – Feuerwehr warnt Bevölkerung\nEin Großbrand in einem Chemiewerk in Leverkusen hat eine weithin sichtbare Rauchsäule verursacht. Die Bevölkerung wurde per Warn-App und Sirenen alarmiert.",
-      "title_en": "Fire in chemical plant – fire department warns population of health consequences - t-online.de",
-      "cluster_id": 686
-    },
-    {
       "title": "Enorme Rauchausbreitung: Großbrand in Chemiewerk Dynamit Nobel in Leverkusen - RP Online",
       "url": "https://rp-online.de/nrw/staedte/leverkusen/leverkusen-grossbrand-in-chemiewerk-dynamit-nobel_bid-120426143",
       "source": "RP Online",
@@ -27418,6 +27404,20 @@
       "client": null,
       "description": "Enorme Rauchausbreitung Großbrand in Chemiewerk Dynamit Nobel in Leverkusen\nIn Leverkusen brach am Donnerstagnachmittag (24. Oktober) in dem Chemiewerk Dynamit Nobel ein Feuer aus. Eine schwarze Rauchwolke breitete sich bis nach Mettmann, Hilden und Langenfeld aus.",
       "title_en": "Enormous spread of smoke: major fire in the Dynamit Nobel chemical plant in Leverkusen - RP Online",
+      "cluster_id": 686
+    },
+    {
+      "title": "Feuer in Chemiewerk – Feuerwehr warnt Bevölkerung vor gesundheitlichen Folgen - T-Online",
+      "url": "https://www.t-online.de/nachrichten/panorama/ungluecke/id_100516856/leverkusen-grossbrand-in-chemiewerk-von-dynamit-nobel-feuerwehr-warnt.html",
+      "source": "T-Online",
+      "date": "2024-10-24T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemiewerk"
+      ],
+      "client": null,
+      "description": "Kilometerweit Rauch zu sehen Brand in Chemiewerk – Feuerwehr warnt Bevölkerung\nEin Großbrand in einem Chemiewerk in Leverkusen hat eine weithin sichtbare Rauchsäule verursacht. Die Bevölkerung wurde per Warn-App und Sirenen alarmiert.",
+      "title_en": "Fire in chemical plant – fire department warns population of health consequences - t-online.de",
       "cluster_id": 687
     },
     {
@@ -27432,7 +27432,7 @@
       "client": null,
       "description": "",
       "title_en": "Enormous spread of smoke: major fire in the Dynamit Nobel chemical plant in Leverkusen - RP Online",
-      "cluster_id": 687
+      "cluster_id": 686
     },
     {
       "title": "Rockdale County ends shelter-in-place order after BioLab chemical fire cleanup - FOX 5 Atlanta",
