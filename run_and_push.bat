@@ -13,7 +13,7 @@ if not exist logs mkdir logs
 echo. >> logs\run.log
 echo ===== %DATE% %TIME% ===== >> logs\run.log
 
-python main.py >> logs\run.log 2>&1
+python -u main.py >> logs\run.log 2>&1
 set RC=%ERRORLEVEL%
 if %RC% NEQ 0 goto :end
 
