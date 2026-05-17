@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-17T13:03:22.727346+00:00",
+  "last_updated": "2026-05-17T15:03:01.060019+00:00",
   "events": [
     {
       "title": "Nürnberg: Ein Toter nach Chemieunfall - 30 Menschen verletzt - Bayern - SZ.de - SZ.de",
@@ -559,22 +559,8 @@
         "chemical spill"
       ],
       "client": null,
-      "description": "Updated: 7 hours ago\n|A crash into a utility pole in northeast Hillsboro closed North First Avenue on Saturday afternoon and knocked out power nearby, according to officials.",
+      "description": "Updated: 9 hours ago\n|A crash into a utility pole in northeast Hillsboro closed North First Avenue on Saturday afternoon and knocked out power nearby, according to officials.",
       "title_en": "Shelter-in-place order issued after rollover crash causes chemical spill near Vancouver - KPTV",
-      "cluster_id": 23
-    },
-    {
-      "title": "Vancouver chemical spill closes NE Padden Pkwy, shelter-in-place issued - MSN",
-      "url": "http://www.msn.com/en-us/health/yogapilates/vancouver-chemical-spill-closes-ne-padden-pkwy-shelter-in-place-issued/vi-AA22dOsq",
-      "source": "MSN",
-      "date": "2026-05-02T07:00:00+00:00",
-      "country": "",
-      "keywords": [
-        "chemical spill"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Vancouver chemical spill closes NE Padden Pkwy, shelter-in-place issued - MSN",
       "cluster_id": 23
     },
     {
@@ -590,6 +576,20 @@
       "description": "Un violento incendio sta colpendo in queste ore l’autostrada A2 Salerno-Reggio Calabria, nel tratto vicino allo svincolo di Gallico, nel territorio di Reggio Calabria. Il rogo ha generato una densa nube nera che si sta rapidamente diffondendo, rendendo l’area pericolosa.",
       "title_en": "Reggio Calabria | Fire on the A2: toxic cloud and haywire traffic - Online News",
       "cluster_id": 24
+    },
+    {
+      "title": "Vancouver chemical spill closes NE Padden Pkwy, shelter-in-place issued - MSN",
+      "url": "http://www.msn.com/en-us/health/yogapilates/vancouver-chemical-spill-closes-ne-padden-pkwy-shelter-in-place-issued/vi-AA22dOsq",
+      "source": "MSN",
+      "date": "2026-05-02T07:00:00+00:00",
+      "country": "",
+      "keywords": [
+        "chemical spill"
+      ],
+      "client": null,
+      "description": "",
+      "title_en": "Vancouver chemical spill closes NE Padden Pkwy, shelter-in-place issued - MSN",
+      "cluster_id": 23
     },
     {
       "title": "Shelter-in-place order issued after rollover crash causes chemical spill near Vancouver - KPTV",
@@ -7737,6 +7737,20 @@
       "cluster_id": 159
     },
     {
+      "title": "Industrie: Chemiewerk Leuna mit Hunderten Jobs gerettet - WirtschaftsWoche",
+      "url": "https://www.wiwo.de/unternehmen/industrie/industrie-chemiewerk-leuna-mit-hunderten-jobs-gerettet/100213709.html",
+      "source": "WirtschaftsWoche",
+      "date": "2026-04-01T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemiewerk"
+      ],
+      "client": "BASF",
+      "description": "Industrie: Chemiewerk Leuna mit Hunderten Jobs gerettet\nDie drohende Stilllegung des Chemiewerks in Leuna (Sachsen-Anhalt) ist abgewendet. Das Werk Domo Caproleuna wurde an eine neu gegründete Auffanggesellschaft übertragen, wie Insolvenzverwalter Lucas Flöther mitteilte.",
+      "title_en": "Industry: Leuna chemical plant saved with hundreds of jobs - WirtschaftsWoche",
+      "cluster_id": 159
+    },
+    {
       "title": "Brandbare stof gelekt bij chemische fabriek in de Europoort - Rijnmond",
       "url": "https://www.rijnmond.nl/nieuws/2175065/brandbare-stof-gelekt-bij-chemische-fabriek-in-de-europoort",
       "source": "Rijnmond",
@@ -7766,20 +7780,6 @@
       "description": "",
       "title_en": "Chemical plant in Leuna can continue - Manager Magazine",
       "cluster_id": 160
-    },
-    {
-      "title": "Industrie: Chemiewerk Leuna mit Hunderten Jobs gerettet - WirtschaftsWoche",
-      "url": "https://www.wiwo.de/unternehmen/industrie/industrie-chemiewerk-leuna-mit-hunderten-jobs-gerettet/100213709.html",
-      "source": "WirtschaftsWoche",
-      "date": "2026-04-01T07:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemiewerk"
-      ],
-      "client": "BASF",
-      "description": "Industrie: Chemiewerk Leuna mit Hunderten Jobs gerettet\nDie drohende Stilllegung des Chemiewerks in Leuna (Sachsen-Anhalt) ist abgewendet. Das Werk Domo Caproleuna wurde an eine neu gegründete Auffanggesellschaft übertragen, wie Insolvenzverwalter Lucas Flöther mitteilte.",
-      "title_en": "Industry: Leuna chemical plant saved with hundreds of jobs - WirtschaftsWoche",
-      "cluster_id": 159
     },
     {
       "title": "Chemiewerk Leuna gerettet: Über 430 Jobs bleiben erhalten - ingenieur.de",
@@ -11581,12 +11581,12 @@
       "url": "https://www.today.com/video/texas-oil-refinery-explosion-forces-residents-to-shelter-in-place-259928133808",
       "source": "TODAY.com",
       "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Louisiana)",
+      "country": "United States (Texas)",
       "keywords": [
         "explosion"
       ],
       "client": "Contract",
-      "description": "Napoleon Solo Races to Victory at the 2026 Preakness Stakes\n00:21\nSwatch Stores Forced to Close Amid Frenzy Over Luxury Collab\n01:55\nExtreme Weather Threatens More than 10M from Plains to Midwest\n00:24\nKey Takeaways From Trump’s Meeting With China’s Xi Jinping\n02:08\nWill the US Resume Military...",
+      "description": "Dr. Edith Eger, Holocaust Survivor and Psychologist, Dies at 98\n02:19\nWomen’s Pro Baseball League Returns to the Field After 70 Years\n02:46\nStephen Colbert Marks End of an Era for ‘The Late Show’ on CBS\n05:07\nShaquille O’Neal Jabs at Charles Barkley During LSU Graduation\n00:39\nNapoleon Solo Races...",
       "title_en": "Explosion at Texas Oil Refinery Forces Shelter-in-Place Order - TODAY.com",
       "cluster_id": 158
     },
@@ -11607,6 +11607,22 @@
       "cluster_id": 158
     },
     {
+      "title": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
+      "url": "https://www.theaustralian.com.au/world/huge-texas-oil-refinery-explosion-forces-residents-to-shelter-in-place/news-story/55054274aede917b7758bda463cdf890",
+      "source": "The Australian",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion",
+        "shelter in place"
+      ],
+      "client": null,
+      "description": "",
+      "title_en": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
+      "cluster_id": 158
+    },
+    {
       "title": "E&E News: Shelter-in-place order lifted after Texas refinery fire put out - POLITICO Pro",
       "url": "https://subscriber.politicopro.com/article/eenews/2026/03/24/shelter-in-place-order-lifted-after-texas-oil-refinery-fire-put-out-00841485",
       "source": "POLITICO Pro",
@@ -11618,34 +11634,6 @@
       "client": null,
       "description": "We're sorry but client doesn't work properly without JavaScript enabled. Please enable it to continue.",
       "title_en": "E&E News: Shelter-in-place order lifted after Texas refinery fire put out - POLITICO Pro",
-      "cluster_id": 158
-    },
-    {
-      "title": "What caused the Valero Port Arthur Oil Refinery fire, were there any injuries - NationalWorld",
-      "url": "https://www.nationalworld.com/us/us-news/valero-port-arthur-oil-refinery-fire-what-caused-it-where-is-the-refinery-located-and-were-there-any-injuries-6213008",
-      "source": "NationalWorld",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "refinery fire"
-      ],
-      "client": "Valero",
-      "description": "Valero Port Arthur Oil Refinery fire: What caused it, where is the refinery located and were there any injuries?\nAn immediate shelter-in-place was ordered following the Valero Port Arthur Oil Refinery fire in Texas. Charlotte M.",
-      "title_en": "What caused the Valero Port Arthur Oil Refinery fire, were there any injuries - NationalWorld",
-      "cluster_id": 228
-    },
-    {
-      "title": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
-      "url": "https://www.independent.co.uk/news/world/americas/port-arthur-oil-refinery-explosion-texas-b2944354.html",
-      "source": "The Independent",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion"
-      ],
-      "client": "Valero",
-      "description": "Major explosion at Texas oil refinery sparks huge fire as locals told to shelter\nOfficials confirmed that no injuries were reported despite the dramatic scenes\n- Bookmark\n- CommentsGo to comments\nA significant explosion at an oil refinery near the Texas coast on Monday sent plumes of smoke...",
-      "title_en": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
       "cluster_id": 158
     },
     {
@@ -11664,49 +11652,32 @@
       "cluster_id": 158
     },
     {
-      "title": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
-      "url": "https://www.theaustralian.com.au/world/huge-texas-oil-refinery-explosion-forces-residents-to-shelter-in-place/news-story/55054274aede917b7758bda463cdf890",
-      "source": "The Australian",
+      "title": "What caused the Valero Port Arthur Oil Refinery fire, were there any injuries - NationalWorld",
+      "url": "https://www.nationalworld.com/us/us-news/valero-port-arthur-oil-refinery-fire-what-caused-it-where-is-the-refinery-located-and-were-there-any-injuries-6213008",
+      "source": "NationalWorld",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "refinery fire"
+      ],
+      "client": "Valero",
+      "description": "Valero Port Arthur Oil Refinery fire: What caused it, where is the refinery located and were there any injuries?\nAn immediate shelter-in-place was ordered following the Valero Port Arthur Oil Refinery fire in Texas. Charlotte M.",
+      "title_en": "What caused the Valero Port Arthur Oil Refinery fire, were there any injuries - NationalWorld",
+      "cluster_id": 228
+    },
+    {
+      "title": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
+      "url": "https://www.msn.com/en-us/weather/topstories/fire-out-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast/vi-AA1Zk8Xw?ocid=UCPNC2",
+      "source": "MSN",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
         "explosion",
-        "refinery explosion",
-        "shelter in place"
+        "refinery explosion"
       ],
       "client": null,
       "description": "",
-      "title_en": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
-      "cluster_id": 158
-    },
-    {
-      "title": "Valero refinery explosion: What caused the blast at Port Arthur, Texas? | Hindustan Times - Hindustan Times",
-      "url": "https://www.hindustantimes.com/world-news/us-news/valero-refinery-explosion-port-arthur-texas-what-caused-fire-blast-oil-refinery-shelter-in-place-iran-war-101774316956025.html",
-      "source": "Hindustan Times",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "Valero refinery explosion: What caused the blast at Port Arthur, Texas?\nAs thick, black smoke from the fire filled the sky, a shelter-in-place order was also reportedly issued for the west side of Port Arthur.",
-      "title_en": "Valero refinery explosion: What caused the blast at Port Arthur, Texas? | Hindustan Times - Hindustan Times",
-      "cluster_id": 229
-    },
-    {
-      "title": "Valero Refinery explosion: What happened in Valero Port Arthur, and why the shelter-in-Place Order? - The Economic Times",
-      "url": "https://m.economictimes.com/news/international/us/valero-refinery-explosion-what-happened-in-valero-port-arthur-and-why-the-shelter-in-place-order/articleshow/129764995.cms",
-      "source": "The Economic Times",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Contract",
-      "description": "Emergency crews were quickly alerted as calls began pouring in from across the area. Officials have confirmed an incident but say details are still unclear. As the situation unfolds, authorities are urging caution while first responders head to the scene.",
-      "title_en": "Valero Refinery explosion: What happened in Valero Port Arthur, and why the shelter-in-Place Order? - The Economic Times",
+      "title_en": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
       "cluster_id": 158
     },
     {
@@ -11726,6 +11697,36 @@
       "cluster_id": 158
     },
     {
+      "title": "Valero refinery explosion: What caused the blast at Port Arthur, Texas? | Hindustan Times - Hindustan Times",
+      "url": "https://www.hindustantimes.com/world-news/us-news/valero-refinery-explosion-port-arthur-texas-what-caused-fire-blast-oil-refinery-shelter-in-place-iran-war-101774316956025.html",
+      "source": "Hindustan Times",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "Valero refinery explosion: What caused the blast at Port Arthur, Texas?\nAs thick, black smoke from the fire filled the sky, a shelter-in-place order was also reportedly issued for the west side of Port Arthur.",
+      "title_en": "Valero refinery explosion: What caused the blast at Port Arthur, Texas? | Hindustan Times - Hindustan Times",
+      "cluster_id": 229
+    },
+    {
+      "title": "Valero Refinery explosion: What happened in Valero Port Arthur, and why the shelter-in-Place Order? - economictimes.com",
+      "url": "https://m.economictimes.com/news/international/us/valero-refinery-explosion-what-happened-in-valero-port-arthur-and-why-the-shelter-in-place-order/articleshow/129764995.cms",
+      "source": "economictimes.com",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Contract",
+      "description": "Emergency crews were quickly alerted as calls began pouring in from across the area. Officials have confirmed an incident but say details are still unclear. As the situation unfolds, authorities are urging caution while first responders head to the scene.",
+      "title_en": "Valero Refinery explosion: What happened in Valero Port Arthur, and why the shelter-in-Place Order? - The Economic Times",
+      "cluster_id": 158
+    },
+    {
       "title": "Texas residents ordered to shelter after oil refinery explosion - Jagonews24.com",
       "url": "https://www.jagonews24.com/en/international/news/91077",
       "source": "Jagonews24.com",
@@ -11738,21 +11739,6 @@
       "client": null,
       "description": "",
       "title_en": "Texas residents ordered to shelter after oil refinery explosion - Jagonews24.com",
-      "cluster_id": 158
-    },
-    {
-      "title": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
-      "url": "https://www.msn.com/en-us/weather/topstories/fire-out-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast/vi-AA1Zk8Xw?ocid=UCPNC2",
-      "source": "MSN",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
       "cluster_id": 158
     },
     {
@@ -11801,21 +11787,6 @@
       "cluster_id": 158
     },
     {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - AP News",
-      "url": "https://apnews.com/article/refinery-explosion-texas-coast-60ecf6d9a70a2f1d5494fb8e38a84c4a",
-      "source": "AP News",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast\nFire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast\nHOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was...",
-      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - AP News",
-      "cluster_id": 158
-    },
-    {
       "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Toronto Star",
       "url": "https://www.thestar.com/news/world/united-states/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place/article_0f19035e-c954-53ac-a663-e872a658dd95.html",
       "source": "Toronto Star",
@@ -11831,18 +11802,19 @@
       "cluster_id": 158
     },
     {
-      "title": "مشاهد جوية من حريق مصفاة النفط الأمريكية بورت آرثر بولاية تكساس - Masrawy",
-      "url": "https://www.masrawy.com/news/news_publicaffairs/details/2026/3/24/2961429/%D9%85%D8%B4%D8%A7%D9%87%D8%AF-%D8%AC%D9%88%D9%8A%D8%A9-%D9%85%D9%86-%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D8%B5%D9%81%D8%A7%D8%A9-%D8%A7%D9%84%D9%86%D9%81%D8%B7-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%A8%D9%88%D8%B1%D8%AA-%D8%A2%D8%B1%D8%AB%D8%B1-%D8%A8%D9%88%D9%84%D8%A7%D9%8A%D8%A9-%D8%AA%D9%83%D8%B3%D8%A7%D8%B3",
-      "source": "Masrawy",
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - AP News",
+      "url": "https://apnews.com/article/refinery-explosion-texas-coast-60ecf6d9a70a2f1d5494fb8e38a84c4a",
+      "source": "AP News",
       "date": "2026-03-24T07:00:00+00:00",
-      "country": "Middle East",
+      "country": "United States (Texas)",
       "keywords": [
-        "حريق مصفاة"
+        "explosion",
+        "refinery explosion"
       ],
-      "client": null,
-      "description": "مشاهد جوية من حريق مصفاة النفط الأمريكية بورت آرثر بولاية تكساس\nكتب : مصراوي\nانفجار - ارشيفية\nوكالات\nهز انفجار قوي مصفاة فاليرو في بورت آرثر الثلاثاء، مما أدى إلى تصاعد عمود ضخم من الدخان في السماء. ووفقا لوسائل إعلام أمريكية، تم إصدار أوامر لسكان الجانب الغربي بالبقاء في منازلهم.",
-      "title_en": "Aerial views of the American oil refinery fire in Port Arthur, Texas - Masrawy",
-      "cluster_id": 230
+      "client": "Valero",
+      "description": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast\nFire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast\nHOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was...",
+      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - AP News",
+      "cluster_id": 158
     },
     {
       "title": "انفجار مصفاة نفط فى ولاية تكساس الأمريكية - اليوم السابع",
@@ -11898,7 +11870,7 @@
       "client": null,
       "description": "وقع انفجار كبير بمصفاة فاليرو للنفط ببورت آرثر في تكساس بالولايات المتحدة الأمريكية، وذلك في نبأ عاجل بـ\"القاهرة الإخبارية\"، وذلك نقلا عن وسائل إعلام أمريكية.\nموضوعات مقترحة\nوسارعت فرق الإطفاء والطوارئ إلى موقع الحادث للسيطرة على الحريق وتأمين المنطقة.",
       "title_en": "United States: An oil refinery explodes in Texas and a fire engulfs a courthouse in Georgia - Al-Ahram Gate",
-      "cluster_id": 231
+      "cluster_id": 230
     },
     {
       "title": "انفجار مصفاة نفط في ولاية تكساس الأمريكية - الثورة نت",
@@ -11913,6 +11885,20 @@
       "description": "",
       "title_en": "Oil refinery explosion in Texas, USA - Al-Thawra Net",
       "cluster_id": 158
+    },
+    {
+      "title": "مشاهد جوية من حريق مصفاة النفط الأمريكية بورت آرثر بولاية تكساس - Masrawy",
+      "url": "https://www.masrawy.com/news/news_publicaffairs/details/2026/3/24/2961429/%D9%85%D8%B4%D8%A7%D9%87%D8%AF-%D8%AC%D9%88%D9%8A%D8%A9-%D9%85%D9%86-%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D8%B5%D9%81%D8%A7%D8%A9-%D8%A7%D9%84%D9%86%D9%81%D8%B7-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%A8%D9%88%D8%B1%D8%AA-%D8%A2%D8%B1%D8%AB%D8%B1-%D8%A8%D9%88%D9%84%D8%A7%D9%8A%D8%A9-%D8%AA%D9%83%D8%B3%D8%A7%D8%B3",
+      "source": "Masrawy",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "Middle East",
+      "keywords": [
+        "حريق مصفاة"
+      ],
+      "client": null,
+      "description": "مشاهد جوية من حريق مصفاة النفط الأمريكية بورت آرثر بولاية تكساس\nكتب : مصراوي\nانفجار - ارشيفية\nوكالات\nهز انفجار قوي مصفاة فاليرو في بورت آرثر الثلاثاء، مما أدى إلى تصاعد عمود ضخم من الدخان في السماء. ووفقا لوسائل إعلام أمريكية، تم إصدار أوامر لسكان الجانب الغربي بالبقاء في منازلهم.",
+      "title_en": "Aerial views of the American oil refinery fire in Port Arthur, Texas - Masrawy",
+      "cluster_id": 231
     },
     {
       "title": "انفجار مصفاة تكساس يؤثر على أسهم \"أرامكو\" السعودية.. ما العلاقة؟ - العربي الجديد",
@@ -11955,6 +11941,20 @@
       "description": "أسعار النفط اليوم ، تعيش أسواق النفط العالمية حالة من الاضطراب الكبير اليوم الثلاثاء 24 مارس 2026، بعد وقوع انفجار ضخم في إحدى أكبر مصافي التكرير بولاية تكساس الأمريكية، ما تسبب في موجة قلق واسعة بين المستثمرين.",
       "title_en": "Texas refinery explosion ignites global Brent crude prices: Oil prices today in the Gulf are witnessing record levels - Al-Zahraa Gate",
       "cluster_id": 233
+    },
+    {
+      "title": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/port-arthur-oil-refinery-explosion-texas-b2944354.html",
+      "source": "The Independent",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion"
+      ],
+      "client": "Valero",
+      "description": "Major explosion at Texas oil refinery sparks huge fire as locals told to shelter\nOfficials confirmed that no injuries were reported despite the dramatic scenes\n- Bookmark\n- CommentsGo to comments\nA significant explosion at an oil refinery near the Texas coast on Monday sent plumes of smoke...",
+      "title_en": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
+      "cluster_id": 158
     },
     {
       "title": "Fire out, shelter-in-place order lifted after huge oil refinery explosion near Texas coast - AOL.com",
@@ -12547,7 +12547,7 @@
       "client": null,
       "description": "",
       "title_en": "United States: An oil refinery explodes in Texas and a fire engulfs a courthouse in Georgia - Al-Ahram Gate",
-      "cluster_id": 231
+      "cluster_id": 230
     },
     {
       "title": "انفجار مصفاة نفط في ولاية تكساس الأمريكية - saba.ye",
@@ -12575,7 +12575,7 @@
       "client": null,
       "description": "",
       "title_en": "Aerial views of the American oil refinery fire in Port Arthur, Texas - Masrawy",
-      "cluster_id": 230
+      "cluster_id": 231
     },
     {
       "title": "انفجار مصفاة نفط في تكساس الأمريكية ودعوات بالتزام المنازل - جريدة زمان التركية",
@@ -14319,7 +14319,7 @@
       "client": null,
       "description": "",
       "title_en": "Aerial views of the American Port Arthur oil refinery explosion - news.egydreampro.com",
-      "cluster_id": 230
+      "cluster_id": 231
     },
     {
       "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - The Daily Gazette",
@@ -15269,13 +15269,13 @@
       "url": "https://www.kalb.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "KALB",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (Louisiana)",
+      "country": "United States (Florida)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Skip to content\nLivestream\nNews\nWeather\nCenla Alerts\nSports\nKALB+\nKALB Investigates\nSubmit a Story\nLinks on 5\nLegal Advocate\nDigital Advertising\nNews\nCrime\nWe the People\nDaily Pledge\nLouisiana Latest\nLunch Kids\nMilitary\nNational\nState\nElection Results\nKALB+\nBack Home in Louisiana\nHeroes in Plain...",
+      "description": "Updated: 27 minutes ago\nDozens of families gathered at the North Florida Fairgrounds Saturday for the third annual Public Safety Summer Kickoff hosted by Leon County first responders.\nUpdated: 30 minutes ago\n|State representatives gathered this week for a post-legislative briefing in Biloxi.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KALB",
       "cluster_id": 158
     },
@@ -15284,13 +15284,13 @@
       "url": "https://www.kwtx.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "KWTX",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "",
+      "country": "United States (Florida)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Skip to content\nNews\nWeather\nSports\nLIVE: KWTXtra\nObituaries\nWe the People\nStars, Stripes and Support\nSign In\nHome\nNews\nLocal\nFort Hood\nBack To School\nMaking The Grade\nTell Me Something Good\nRestaurant Report Card\nNational\nPolitics\nState\nCrime\nXtra! Xtra!",
+      "description": "Updated: 27 minutes ago\nDozens of families gathered at the North Florida Fairgrounds Saturday for the third annual Public Safety Summer Kickoff hosted by Leon County first responders.\nUpdated: 30 minutes ago\n|State representatives gathered this week for a post-legislative briefing in Biloxi.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KWTX",
       "cluster_id": 158
     },
@@ -15299,13 +15299,13 @@
       "url": "https://www.fox10tv.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "fox10tv.com",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (Mississippi)",
+      "country": "United States (Florida)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Skip to content\nWatch Live\nLatest Video\nNews\nWeather\nInvestigates\nSports\nOur Apps\nStudio 10\nWe the People\nHigh Speed Hope\nHomepage\nLatest Video\nWatch Live\nOur Apps\nSubmit Photos or Videos\nStar-Spangled Sing-Off\nNews\nAlabama News\nNational\nMobile County\nBaldwin County\nFlorida News\nMississippi...",
+      "description": "Updated: 27 minutes ago\nDozens of families gathered at the North Florida Fairgrounds Saturday for the third annual Public Safety Summer Kickoff hosted by Leon County first responders.\nUpdated: 30 minutes ago\n|State representatives gathered this week for a post-legislative briefing in Biloxi.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 158
     },
@@ -21495,20 +21495,6 @@
     },
     {
       "title": "Chemiewerk heißt wieder Oxea und kündigt Pläne für die Zukunft an - WAZ | Westdeutsche Allgemeine Zeitung",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNTMtQ05CbkhlTmsyVlZFQ1BXTUVEanc3RFpkd3dvS2tQdUZqZ2NQSGVJdUZxT3JvcFdNdlV3cE1Bdk9IQnNzUXdkRThCdndPaTNoMzNJRGNVclJub2o1d0Ywd0NaRHJYOEVzNVhzTC1GQ05SYk0yVXFTS0pYcV9GU2hzRS13UHhub2Q3cDBnWWJSemY0WlJEUTRma0xtR1pFSUNHQXg2Q2dWTFVidVZ1bHVXM1BUX09iRjg4?oc=5",
-      "source": "WAZ | Westdeutsche Allgemeine Zeitung",
-      "date": "2025-12-30T08:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemiewerk"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Chemical plant is called Oxea again and announces plans for the future - WAZ | West German General Newspaper",
-      "cluster_id": 441
-    },
-    {
-      "title": "Chemiewerk heißt wieder Oxea und kündigt Pläne für die Zukunft an - WAZ | Westdeutsche Allgemeine Zeitung",
       "url": "https://www.waz.de/lokales/oberhausen/article410212894/nach-der-krise-wie-sich-chemiewerk-oxea-nun-ausrichten-will.html",
       "source": "WAZ | Westdeutsche Allgemeine Zeitung",
       "date": "2025-12-30T08:00:00+00:00",
@@ -21518,6 +21504,20 @@
       ],
       "client": null,
       "description": "Meistgelesen 2025\nChemiewerk heißt wieder Oxea und kündigt Pläne für die Zukunft an\nOberhausen.\nDie Firma mit weltweit 1200 Beschäftigten haben zwei Investoren übernommen. Wie nun der Oberhausener Standort ausgerichtet werden soll.",
+      "title_en": "Chemical plant is called Oxea again and announces plans for the future - WAZ | West German General Newspaper",
+      "cluster_id": 441
+    },
+    {
+      "title": "Chemiewerk heißt wieder Oxea und kündigt Pläne für die Zukunft an - WAZ | Westdeutsche Allgemeine Zeitung",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNTMtQ05CbkhlTmsyVlZFQ1BXTUVEanc3RFpkd3dvS2tQdUZqZ2NQSGVJdUZxT3JvcFdNdlV3cE1Bdk9IQnNzUXdkRThCdndPaTNoMzNJRGNVclJub2o1d0Ywd0NaRHJYOEVzNVhzTC1GQ05SYk0yVXFTS0pYcV9GU2hzRS13UHhub2Q3cDBnWWJSemY0WlJEUTRma0xtR1pFSUNHQXg2Q2dWTFVidVZ1bHVXM1BUX09iRjg4?oc=5",
+      "source": "WAZ | Westdeutsche Allgemeine Zeitung",
+      "date": "2025-12-30T08:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemiewerk"
+      ],
+      "client": null,
+      "description": "",
       "title_en": "Chemical plant is called Oxea again and announces plans for the future - WAZ | West German General Newspaper",
       "cluster_id": 441
     },
@@ -23216,6 +23216,20 @@
       "title_en": "After full closure due to gas leak: B184 between Magdeburg and Zerbst open again - MDR"
     },
     {
+      "title": "Unknown substance that prompted hazmat response to Dallas ICE facility was corn starch, source says - CBS News",
+      "url": "https://www.cbsnews.com/texas/news/suspicious-package-reported-ice-facility/",
+      "source": "CBS News",
+      "date": "2025-11-21T08:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "hazmat"
+      ],
+      "client": null,
+      "description": "Unknown substance that prompted hazmat response to Dallas ICE facility was corn starch, source says\nDallas Fire-Rescue and the Dallas Police Department responded to the ICE facility on North Stemmons Freeway in Dallas Friday morning on a report of a suspicious package.",
+      "title_en": "Unknown substance that prompted hazmat response to Dallas ICE facility was corn starch, source says - CBS News",
+      "cluster_id": 499
+    },
+    {
       "title": "انفجار مصنع كيميائي في باكستان يخلّف 15 قتيلاً وعشرات الجرحى - شبكة سرمد الإعلامية",
       "url": "https://sarmad.com/301849/",
       "source": "شبكة سرمد الإعلامية",
@@ -23228,7 +23242,7 @@
       "client": null,
       "description": "أخبار دولية\nانفجار مصنع كيميائي في باكستان يخلّف 15 قتيلاً وعشرات الجرحى\nالحادث وقع فجراً في مدينة فيصل آباد وتسبب بانهيار منازل مجاورة\nلقي 15 شخصا مصرعهم وأصيب العشرات صباح إثر انفجار في مصنع للمواد الكيميائية بمنطقة سكنية في مقاطعة البنجاب شرقي باكستان.",
       "title_en": "A chemical factory explosion in Pakistan leaves 15 dead and dozens injured - Sarmad Media Network",
-      "cluster_id": 499
+      "cluster_id": 500
     },
     {
       "title": "باكستان.. عشرات القتلى والجرحى بانفجار «مصنع كيميائي» - عين ليبيا",
@@ -23242,20 +23256,6 @@
       "client": null,
       "description": "لقي 15 شخصًا مصرعهم وأصيب العشرات صباح الجمعة إثر انفجار في مصنع للمواد الكيميائية بمنطقة سكنية في مقاطعة البنجاب شرقي باكستان.\nووقع الانفجار حوالي الساعة 5:30 صباحًا بالتوقيت المحلي في مدينة فيصل آباد الصناعية، ما أدى إلى اندلاع حريق هائل انتشر بسرعة عبر أقسام المصنع.",
       "title_en": "Pakistan.. Dozens of deaths and injuries in the explosion of a “chemical factory” - Ain Libya",
-      "cluster_id": 499
-    },
-    {
-      "title": "Unknown substance that prompted hazmat response to Dallas ICE facility was corn starch, source says - CBS News",
-      "url": "https://www.cbsnews.com/texas/news/suspicious-package-reported-ice-facility/",
-      "source": "CBS News",
-      "date": "2025-11-21T08:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "hazmat"
-      ],
-      "client": null,
-      "description": "Unknown substance that prompted hazmat response to Dallas ICE facility was corn starch, source says\nDallas Fire-Rescue and the Dallas Police Department responded to the ICE facility on North Stemmons Freeway in Dallas Friday morning on a report of a suspicious package.",
-      "title_en": "Unknown substance that prompted hazmat response to Dallas ICE facility was corn starch, source says - CBS News",
       "cluster_id": 500
     },
     {
@@ -23270,7 +23270,7 @@
       "client": null,
       "description": "",
       "title_en": "Pakistan.. Dozens of deaths and injuries in the explosion of a “chemical factory” - Ain Libya",
-      "cluster_id": 499
+      "cluster_id": 500
     },
     {
       "title": "انفجار مصنع كيميائي في باكستان يخلّف 15 قتيلاً وعشرات الجرحى - شبكة سرمد الإعلامية",
@@ -23285,7 +23285,7 @@
       "client": null,
       "description": "",
       "title_en": "A chemical factory explosion in Pakistan leaves 15 dead and dozens injured - Sarmad Media Network",
-      "cluster_id": 499
+      "cluster_id": 500
     },
     {
       "title": "Officials respond to HAZMAT situation at ICE facility - NBC 5 Dallas-Fort Worth",
@@ -24512,20 +24512,6 @@
     },
     {
       "title": "Tunisia in rivolta: proteste e scioperi contro l’inquinamento dell’impianto chimico - Infoaut",
-      "url": "https://infoaut.org/conflitti-globali/tunisia-in-rivolta-proteste-e-scioperi-contro-linquinamento-dellimpianto-chimico",
-      "source": "Infoaut",
-      "date": "2025-10-25T07:00:00+00:00",
-      "country": "Italy",
-      "keywords": [
-        "impianto chimico"
-      ],
-      "client": null,
-      "description": "Tunisia in rivolta: proteste e scioperi contro l’inquinamento dell’impianto chimico\nIl 21 ottobre 2025, la città tunisina di Gabès è stata paralizzata da uno sciopero generale e da massicce proteste contro l’inquinamento causato dall’impianto chimico statale gestito dal gruppo Tunisian Chemical...",
-      "title_en": "Tunisia in revolt: protests and strikes against the pollution of the chemical plant - infoaut.org",
-      "cluster_id": 543
-    },
-    {
-      "title": "Tunisia in rivolta: proteste e scioperi contro l’inquinamento dell’impianto chimico - Infoaut",
       "url": "https://www.infoaut.org/conflitti-globali/tunisia-in-rivolta-proteste-e-scioperi-contro-linquinamento-dellimpianto-chimico",
       "source": "Infoaut",
       "date": "2025-10-25T07:00:00+00:00",
@@ -24536,6 +24522,20 @@
       "client": null,
       "description": "Tunisia in rivolta: proteste e scioperi contro l’inquinamento dell’impianto chimico\nIl 21 ottobre 2025, la città tunisina di Gabès è stata paralizzata da uno sciopero generale e da massicce proteste contro l’inquinamento causato dall’impianto chimico statale gestito dal gruppo Tunisian Chemical...",
       "title_en": "Tunisia in revolt: protests and strikes against the pollution of the chemical plant - Infoaut",
+      "cluster_id": 543
+    },
+    {
+      "title": "Tunisia in rivolta: proteste e scioperi contro l’inquinamento dell’impianto chimico - Infoaut",
+      "url": "https://infoaut.org/conflitti-globali/tunisia-in-rivolta-proteste-e-scioperi-contro-linquinamento-dellimpianto-chimico",
+      "source": "Infoaut",
+      "date": "2025-10-25T07:00:00+00:00",
+      "country": "Italy",
+      "keywords": [
+        "impianto chimico"
+      ],
+      "client": null,
+      "description": "Tunisia in rivolta: proteste e scioperi contro l’inquinamento dell’impianto chimico\nIl 21 ottobre 2025, la città tunisina di Gabès è stata paralizzata da uno sciopero generale e da massicce proteste contro l’inquinamento causato dall’impianto chimico statale gestito dal gruppo Tunisian Chemical...",
+      "title_en": "Tunisia in revolt: protests and strikes against the pollution of the chemical plant - infoaut.org",
       "cluster_id": 543
     },
     {
@@ -26323,7 +26323,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 10 hours ago\nApollo HS FFA hosts first car show in Owensboro to raise money\nUpdated: 10 hours ago\nMadisonville community gathers to honor local veterans\nUpdated: 10 hours ago\nSalvation Army of Evansville hosts yard sale to benefit women’s ministries\nUpdated: 10 hours ago\nNew LEGO toy store...",
+      "description": "Updated: 12 hours ago\nApollo HS FFA hosts first car show in Owensboro to raise money\nUpdated: 12 hours ago\nMadisonville community gathers to honor local veterans\nUpdated: 12 hours ago\nSalvation Army of Evansville hosts yard sale to benefit women’s ministries\nUpdated: 12 hours ago\nNew LEGO toy store...",
       "title_en": "Hazmat, firefighters on scene of chemical fire in Newburgh, shelter in place extended - 14 News",
       "cluster_id": 605
     },
@@ -26339,6 +26339,20 @@
       "client": null,
       "description": "Chemical fire extinguished; shelter-in-place advisory lifted near Newburgh\nMultiple agencies responded to the blaze in an industrial park, including the Evansville Fire Department's hazmat team.\nUpdate from Ohio Township Fire Department, 8:02 a.m. Sunday:\nThe shelter in place order has expired.",
       "title_en": "Chemical fire extinguished; shelter-in-place advisory lifted near Newburgh - Courier & Press",
+      "cluster_id": 602
+    },
+    {
+      "title": "Southern Indiana shelter-in-place advisory issued due to possible chemical fire - WTHR",
+      "url": "https://www.wthr.com/video/news/local/indiana/southern-indiana-shelter-in-place-advisory-issued-due-to-possible-chemical-fire/531-e1a3adff-47e9-48bb-9ee8-d0bc45f12790",
+      "source": "WTHR",
+      "date": "2025-09-06T07:00:00+00:00",
+      "country": "United States (Indiana)",
+      "keywords": [
+        "chemical fire"
+      ],
+      "client": null,
+      "description": "To stream 13 WTHR on your phone, you need the 13 WTHR app.\nNext up in 5\nExample video title will go here for this...",
+      "title_en": "Southern Indiana shelter-in-place advisory issued due to possible chemical fire - WTHR",
       "cluster_id": 602
     },
     {
@@ -26367,20 +26381,6 @@
       "client": null,
       "description": "Shelter-in-place advisory issued for chemical fire in Newburgh\nNEWBURGH, Ind. (WISH) — A shelter-in-place advisory has been issued for a chemical fire in Newburgh, Indiana, Saturday, according to the Warrick County Sheriff’s Office.\nAt 3:20 p.m.",
       "title_en": "Shelter-in-place advisory issued for chemical fire in Newburgh - WISH-TV",
-      "cluster_id": 602
-    },
-    {
-      "title": "Southern Indiana shelter-in-place advisory issued due to possible chemical fire - WTHR",
-      "url": "https://www.wthr.com/video/news/local/indiana/southern-indiana-shelter-in-place-advisory-issued-due-to-possible-chemical-fire/531-e1a3adff-47e9-48bb-9ee8-d0bc45f12790",
-      "source": "WTHR",
-      "date": "2025-09-06T07:00:00+00:00",
-      "country": "United States (Indiana)",
-      "keywords": [
-        "chemical fire"
-      ],
-      "client": null,
-      "description": "To stream 13 WTHR on your phone, you need the 13 WTHR app.\nNext up in 5\nExample video title will go here for this...",
-      "title_en": "Southern Indiana shelter-in-place advisory issued due to possible chemical fire - WTHR",
       "cluster_id": 602
     },
     {
@@ -26761,20 +26761,6 @@
       "cluster_id": 612
     },
     {
-      "title": "Chemieunfall in Kirchheim: Warnungen nach Gasaustritt erreichen nicht alle - SZ.de",
-      "url": "https://www.sueddeutsche.de/muenchen/landkreismuenchen/kirchheim-heimstetten-chemieunfall-feuerwehr-abc-zug-warnung-katwarn-li.3300348",
-      "source": "SZ.de",
-      "date": "2025-08-19T07:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemieunfall"
-      ],
-      "client": null,
-      "description": "Fenster und Türen geschlossen halten und in den Häusern zu bleiben, lautete die Anweisung am Montagabend um 18.41 Uhr für die Bewohner in Kirchheim und Feldkirchen. Auch im Radio wurden in kurzen Abständen Warnungen über die lokalen Sender verbreitet.",
-      "title_en": "Chemical accident in Kirchheim: Warnings about gas leaks do not reach everyone - sueddeutsche.de",
-      "cluster_id": 613
-    },
-    {
       "title": "Heimstetten bei München: Chemieunfall – Austritt von Stickstoffoxiden - t-online – München",
       "url": "https://muenchen.t-online.de/region/muenchen/id_100872466/heimstetten-bei-muenchen-chemieunfall-austritt-von-stickstoffoxiden.html",
       "source": "t-online – München",
@@ -26786,6 +26772,20 @@
       "client": null,
       "description": "Auf Firmengelände in Heimstetten Nach Betriebsunfall: Austritt von giftigen Stickstoffoxiden\nIm Landkreis München war am Montagabend die Feuerwehr im Einsatz. Den ersten Ermittlungen zufolge ist bei dem Chemieunfall in Heimstetten Nitrosengas ins Freie gelangt.",
       "title_en": "Heimstetten near Munich: Chemical accident – ​​leakage of nitrogen oxides - t-online – Munich",
+      "cluster_id": 613
+    },
+    {
+      "title": "Chemieunfall in Kirchheim: Warnungen nach Gasaustritt erreichen nicht alle - SZ.de",
+      "url": "https://www.sueddeutsche.de/muenchen/landkreismuenchen/kirchheim-heimstetten-chemieunfall-feuerwehr-abc-zug-warnung-katwarn-li.3300348",
+      "source": "SZ.de",
+      "date": "2025-08-19T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemieunfall"
+      ],
+      "client": null,
+      "description": "Fenster und Türen geschlossen halten und in den Häusern zu bleiben, lautete die Anweisung am Montagabend um 18.41 Uhr für die Bewohner in Kirchheim und Feldkirchen. Auch im Radio wurden in kurzen Abständen Warnungen über die lokalen Sender verbreitet.",
+      "title_en": "Chemical accident in Kirchheim: Warnings about gas leaks do not reach everyone - sueddeutsche.de",
       "cluster_id": 614
     },
     {
@@ -28078,20 +28078,6 @@
       "cluster_id": 668
     },
     {
-      "title": "انفجار محطة الحدث يكشف فضيحة مدويّة... HDCO تخلط المازوت بمواد خطرة! - Lebanon Debate",
-      "url": "https://www.lebanondebate.com/article/708769-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D8%AD%D8%B7%D8%A9-%D8%A7%D9%84%D8%AD%D8%AF%D8%AB-%D9%8A%D9%83%D8%B4%D9%81-%D9%81%D8%B6%D9%8A%D8%AD%D8%A9-%D9%85%D8%AF%D9%88%D9%8A%D8%A9-hdco-%D8%AA%D8%AE%D9%84%D8%B7-%D8%A7%D9%84%D9%85%D8%A7%D8%B2%D9%88%D8%AA-%D8%A8%D9%85%D9%88%D8%A7%D8%AF-%D8%AE%D8%B7%D8%B1%D8%A9",
-      "source": "Lebanon Debate",
-      "date": "2025-06-05T07:00:00+00:00",
-      "country": "Middle East",
-      "keywords": [
-        "مواد خطرة"
-      ],
-      "client": null,
-      "description": "أعمال مشبوهة خلف الانفجار\nووفق ما كشفه “ليبانون ديبايت”، فإن الحريق لم يكن حادثًا عرضيًا، بل تبيّن أن أعمالًا مشبوهة تقف خلف هذا الانفجار المدوي.",
-      "title_en": "Al-Hadath station explosion reveals a loud scandal... HDCO mixes diesel with dangerous materials! - Lebanon Debate",
-      "cluster_id": 669
-    },
-    {
       "title": "Non, ce n’était pas une fuite de gaz de ville dans la zone d’Hellieule à Saint-Dié - Vosges Matin",
       "url": "https://www.vosgesmatin.fr/faits-divers-justice/2025/06/05/non-ce-n-etait-pas-une-fuite-de-gaz-de-ville-dans-la-zone-d-hellieule-a-saint-die",
       "source": "Vosges Matin",
@@ -28103,6 +28089,20 @@
       "client": null,
       "description": "Vosges Non, ce n’était pas une fuite de gaz de ville dans la zone d’Hellieule à Saint-Dié\nD’importants moyens ont été mobilisés ce jeudi en milieu de journée dans la zone d’Hellieule de Saint-Dié, à l’arrière du magasin Leclerc et du restaurant Buffalo Grill.",
       "title_en": "No, it was not a city gas leak in the Hellieule area in Saint-Dié - Vosges Matin",
+      "cluster_id": 669
+    },
+    {
+      "title": "انفجار محطة الحدث يكشف فضيحة مدويّة... HDCO تخلط المازوت بمواد خطرة! - Lebanon Debate",
+      "url": "https://www.lebanondebate.com/article/708769-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D8%AD%D8%B7%D8%A9-%D8%A7%D9%84%D8%AD%D8%AF%D8%AB-%D9%8A%D9%83%D8%B4%D9%81-%D9%81%D8%B6%D9%8A%D8%AD%D8%A9-%D9%85%D8%AF%D9%88%D9%8A%D8%A9-hdco-%D8%AA%D8%AE%D9%84%D8%B7-%D8%A7%D9%84%D9%85%D8%A7%D8%B2%D9%88%D8%AA-%D8%A8%D9%85%D9%88%D8%A7%D8%AF-%D8%AE%D8%B7%D8%B1%D8%A9",
+      "source": "Lebanon Debate",
+      "date": "2025-06-05T07:00:00+00:00",
+      "country": "Middle East",
+      "keywords": [
+        "مواد خطرة"
+      ],
+      "client": null,
+      "description": "أعمال مشبوهة خلف الانفجار\nووفق ما كشفه “ليبانون ديبايت”، فإن الحريق لم يكن حادثًا عرضيًا، بل تبيّن أن أعمالًا مشبوهة تقف خلف هذا الانفجار المدوي.",
+      "title_en": "Al-Hadath station explosion reveals a loud scandal... HDCO mixes diesel with dangerous materials! - Lebanon Debate",
       "cluster_id": 670
     },
     {
@@ -28117,7 +28117,7 @@
       "client": null,
       "description": "",
       "title_en": "No, it was not a city gas leak in the Hellieule area in Saint-Dié - Vosges Matin",
-      "cluster_id": 670
+      "cluster_id": 669
     },
     {
       "title": "انفجار محطة الحدث يكشف فضيحة مدويّة... HDCO تخلط المازوت بمواد خطرة! - Lebanon Debate",
@@ -28131,7 +28131,7 @@
       "client": null,
       "description": "",
       "title_en": "Al-Hadath station explosion reveals a loud scandal... HDCO mixes diesel with dangerous materials! - Lebanon Debate",
-      "cluster_id": 669
+      "cluster_id": 670
     },
     {
       "title": "Nach Umweltverschmutzung durch Chemieunfall: „Grund zur Sorge“ – Zahlreiche blau gefärbte Tiere - Frankfurter Rundschau",
@@ -28219,20 +28219,6 @@
       "cluster_id": 674
     },
     {
-      "title": "L’Inde tente de contenir une marée noire après le naufrage d’un porte-conteneurs - Le Monde.fr",
-      "url": "https://www.lemonde.fr/planete/article/2025/05/27/l-inde-tente-de-contenir-une-maree-noire-apres-le-naufrage-d-un-porte-conteneurs_6608782_3244.html",
-      "source": "Le Monde.fr",
-      "date": "2025-05-27T07:00:00+00:00",
-      "country": "France",
-      "keywords": [
-        "marée noire"
-      ],
-      "client": null,
-      "description": "JavaScript is disabled in your browser.\nPlease enable JavaScript to proceed.\nA required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser.",
-      "title_en": "India tries to contain an oil spill after the sinking of a container ship - Le Monde.fr",
-      "cluster_id": 675
-    },
-    {
       "title": "Second investigation update released into 2024 chemical fire that led to evacuation of 17,000 people - HazardEx",
       "url": "https://www.hazardexonthenet.net/article/215715/Second-investigation-update-released-into-2024-chemical-fire-that-led-to-evacuation-of-17-000-people.aspx",
       "source": "HazardEx",
@@ -28244,6 +28230,20 @@
       "client": null,
       "description": "Second investigation update released into 2024 chemical fire that led to evacuation of 17,000 people\n27 May 2025\nThe US Chemical Safety and Hazard Investigation Board (CSB) has released a second update on the agency’s ongoing investigation into the chemical fire that occurred at the Bio-Lab, Inc.",
       "title_en": "Second investigation update released into 2024 chemical fire that led to evacuation of 17,000 people - HazardEx",
+      "cluster_id": 675
+    },
+    {
+      "title": "L’Inde tente de contenir une marée noire après le naufrage d’un porte-conteneurs - Le Monde.fr",
+      "url": "https://www.lemonde.fr/planete/article/2025/05/27/l-inde-tente-de-contenir-une-maree-noire-apres-le-naufrage-d-un-porte-conteneurs_6608782_3244.html",
+      "source": "Le Monde.fr",
+      "date": "2025-05-27T07:00:00+00:00",
+      "country": "France",
+      "keywords": [
+        "marée noire"
+      ],
+      "client": null,
+      "description": "JavaScript is disabled in your browser.\nPlease enable JavaScript to proceed.\nA required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser.",
+      "title_en": "India tries to contain an oil spill after the sinking of a container ship - Le Monde.fr",
       "cluster_id": 676
     },
     {
@@ -28258,7 +28258,7 @@
       "client": null,
       "description": "",
       "title_en": "India tries to contain an oil spill after the sinking of a container ship - Le Monde.fr",
-      "cluster_id": 675
+      "cluster_id": 676
     },
     {
       "title": "Second investigation update released into 2024 chemical fire that led to evacuation of 17,000 people - HazardEx",
@@ -28272,7 +28272,7 @@
       "client": null,
       "description": "",
       "title_en": "Second investigation update released into 2024 chemical fire that led to evacuation of 17,000 people - HazardEx",
-      "cluster_id": 676
+      "cluster_id": 675
     },
     {
       "title": "Cina, 5 morti e 19 feriti per esplosione in impianto chimico - lapresse.it",
