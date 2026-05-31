@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-05-31T13:04:02.410903+00:00",
+  "last_updated": "2026-05-31T15:03:02.183980+00:00",
   "events": [
+    {
+      "title": "US chemical spill death toll rises to 11",
+      "url": "https://thefrontierpost.com/us-chemical-spill-death-toll-rises-to-11/",
+      "source": "thefrontierpost.com",
+      "date": "2026-05-31T12:00:00+00:00",
+      "country": "United States (Washington)",
+      "keywords": [
+        "chemical spill"
+      ],
+      "client": null,
+      "description": "LOS ANGELES (AFP) : The death toll from a chemical spill at a paper plant in Washington state has risen to 11 as rescuers recovered the bodies of all nine missing people, US authorities said on Saturday.",
+      "title_en": "US chemical spill death toll rises to 11",
+      "cluster_id": 0
+    },
     {
       "title": "أمريكا بين كارثتين.. قتلى بـ«تسرب كيميائي» وانفجار نيزك يهزّ الشمال - عين ليبيا",
       "url": "https://www.eanlibya.com/%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D8%A7-%D8%A8%D9%8A%D9%86-%D9%83%D8%A7%D8%B1%D8%AB%D8%AA%D9%8A%D9%86-%D9%82%D8%AA%D9%84%D9%89-%D8%A8%D9%80%D8%AA%D8%B3%D8%B1%D8%A8-%D9%83%D9%8A%D9%85%D9%8A%D8%A7/",
@@ -13,6 +27,20 @@
       "client": null,
       "description": "أعلنت السلطات الأميركية، وفق ما نقلته وكالة «رويترز»، ارتفاع عدد القتلى جراء تسرب مواد كيميائية من خزان داخل مصنع في ولاية واشنطن إلى 11 شخصًا، بعد انتشال فرق الإنقاذ جميع الجثث، بينهم تسعة أشخاص جرى تصنيفهم في عداد المفقودين في بداية الحادث.",
       "title_en": "America is between two disasters... dead due to a “chemical leak” and a meteorite explosion that rocks the north - Libya Eye",
+      "cluster_id": 1
+    },
+    {
+      "title": "US chemical spill death toll rises to 11",
+      "url": "https://www.hurriyetdailynews.com/us-chemical-spill-death-toll-rises-to-11-222699",
+      "source": "hurriyetdailynews.com",
+      "date": "2026-05-31T11:15:00+00:00",
+      "country": "United States (Washington)",
+      "keywords": [
+        "chemical spill"
+      ],
+      "client": null,
+      "description": "The death toll from a chemical spill at a paper plant in Washington state has risen to 11 as rescuers recovered the bodies of all nine missing people, U.S. authorities said on Saturday.",
+      "title_en": "US chemical spill death toll rises to 11",
       "cluster_id": 0
     },
     {
@@ -27,7 +55,7 @@
       "client": null,
       "description": "The death toll from a chemical spill at a paper plant in Washington state has risen to 11 as rescuers recovered the bodies of all nine missing people, US authorities said on Saturday.",
       "title_en": "Death toll rises to 11 at US chemical spill paper plant",
-      "cluster_id": 1
+      "cluster_id": 0
     },
     {
       "title": "US chemical spill death toll rises to 11",
@@ -41,7 +69,7 @@
       "client": null,
       "description": "",
       "title_en": "US chemical spill death toll rises to 11",
-      "cluster_id": 1
+      "cluster_id": 0
     },
     {
       "title": "Hazmat spill in Campustown : contained after response",
@@ -209,7 +237,7 @@
       "client": null,
       "description": "News Flash\nLOS ANGELES, United States, May 29, 2026 (BSS/AFP) - The death toll from a chemical spill at a paper plant in the northwestern United States has risen to eight, an official said Thursday, with three others still missing.",
       "title_en": "US chemical spill death toll rises to eight , three missing",
-      "cluster_id": 1
+      "cluster_id": 0
     },
     {
       "title": "Shelter-in-place Order Lifted For Martinez Refinery Fire; Multiple Injuries Reported Unabomber (FtLi8eQls6) - Mshale",
@@ -265,7 +293,7 @@
       "client": null,
       "description": "Nippon chemical spill death toll rises to 8\nPublished 4:43 pm Thursday, May 28, 2026\nThe number of confirmed deaths resulting from the chemical spill at the Nippon Dynawave facility in Longview, Washington, has climbed to eight.",
       "title_en": "Nippon chemical spill death toll rises to 8",
-      "cluster_id": 1
+      "cluster_id": 0
     },
     {
       "title": "Tragödie in Longview: Chemieunfall in US-Fabrik – Zahl der Todesopfer steigt auf acht, keine Überlebenden erwartet - WELT",
@@ -873,9 +901,9 @@
       "cluster_id": 36
     },
     {
-      "title": "وزارة الصناعة والتجارة تفرض فريق مراقبة للتعامل مع انفجار مصنع كيميائي في سيليجون - VOI.ID",
+      "title": "وزارة الصناعة والتجارة تفرض فريق مراقبة للتعامل مع انفجار مصنع كيميائي في سيليجون - VOI.id",
       "url": "https://voi.id/ar/aiqtisad/577260",
-      "source": "VOI.ID",
+      "source": "VOI.id",
       "date": "2026-05-26T15:29:50+00:00",
       "country": "Indonesia",
       "keywords": [
@@ -1991,7 +2019,7 @@
         "impianto chimico"
       ],
       "client": null,
-      "description": "Prossimi video\nLibano, bandiera israeliana issata sul castello di Beaufort\nMondo\nUcraina, la guerra dei droni tra il Rostov e Zaporizhzhia\nMondo\nLibano, bandiera israeliana su Beaufort: castello conteso da 900 anni\nMondo\nCongo, il direttore OMS a Bunia per l'emergenza Ebola\nMondo\nParigi, disordini...",
+      "description": "Prossimi video\nPalm Springs,1037 sosia di Marilyn celebrano il centenario\nMondo\nL’Eufrate esonda in Siria, case e campi allagati\nMondo\nLibano, bandiera israeliana issata sul castello di Beaufort\nMondo\nUcraina, la guerra dei droni tra il Rostov e Zaporizhzhia\nMondo\nLibano, bandiera israeliana su...",
       "title_en": "War in Ukraine, Zelensky: chemical plant hit - Sky TG24",
       "cluster_id": 70
     },
@@ -2343,7 +2371,7 @@
         "تسرب كيميائي"
       ],
       "client": null,
-      "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n25\no\nبيروت\n24\no\nطرابلس\n24\no\nصور\n22\no\nجبيل\n22\no\nصيدا\n24\no\nجونية\n24\no\nالنبطية\n22\no\nزحلة\n24\no\nبعلبك\n22\no\nبشري\n20\no\nبيت الدين\n19\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
+      "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n24\no\nبيروت\n24\no\nطرابلس\n23\no\nصور\n22\no\nجبيل\n22\no\nصيدا\n23\no\nجونية\n23\no\nالنبطية\n21\no\nزحلة\n23\no\nبعلبك\n22\no\nبشري\n19\no\nبيت الدين\n21\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
       "title_en": "About 40,000 people were evacuated from their homes.. “Chemical leak” threatens a huge explosion in an American state - Lebanon 24",
       "cluster_id": 77
     },
@@ -3508,7 +3536,7 @@
         "chemical spill"
       ],
       "client": null,
-      "description": "Updated: 7 hours ago\n|Officials said on Saturday that they have found the remains and identified all nine missing workers after the deadly Longview chemical spill, bringing the death toll to 11.",
+      "description": "Updated: 9 hours ago\n|Officials said on Saturday that they have found the remains and identified all nine missing workers after the deadly Longview chemical spill, bringing the death toll to 11.",
       "title_en": "Shelter-in-place order issued after rollover crash causes chemical spill near Vancouver - KPTV",
       "cluster_id": 125
     },
@@ -14541,9 +14569,9 @@
       "cluster_id": 283
     },
     {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - mcall.com",
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - The Morning Call",
       "url": "https://www.mcall.com/2026/03/24/texas-refinery-fire/",
-      "source": "mcall.com",
+      "source": "The Morning Call",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -14652,7 +14680,7 @@
         "explosion"
       ],
       "client": "SPARK",
-      "description": "Spurs Beat Reigning Champion Thunder to Face Knicks in Finals\n00:38\nNASA Confirms Meteor Caused Loud Boom Heard in New England\n00:37\nProtests Outside Newark ICE Detention Center Enters 10th Day\n01:36\nHow Trump’s Hold on GOP Will Play into the Midterm Elections\n02:38\nAll Eyes on US and Iran as...",
+      "description": "Dr. Clarence B. Jones, ‘I Have a Dream’ Co-Writer, Dies at 95\n02:04\nMovie Theaters Make Comeback but Is It Enough to Survive?",
       "title_en": "Explosion at Texas Oil Refinery Forces Shelter-in-Place Order - TODAY.com",
       "cluster_id": 283
     },
@@ -14750,40 +14778,9 @@
       "cluster_id": 283
     },
     {
-      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
-      "url": "https://www.nbcnews.com/news/us-news/large-oil-refinery-explosion-texas-coast-forces-residents-shelter-plac-rcna264853",
-      "source": "NBC News",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
-      ],
-      "client": "Valero",
-      "description": "A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, officials said.\nNo one was injured in the explosion at the Valero refinery in Port Arthur, about 90 miles east of Houston, Mayor Charlotte M.",
-      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
-      "cluster_id": 283
-    },
-    {
-      "title": "Oil refinery explosion reported in Texas - Gulf News",
-      "url": "https://gulfnews.com/world/americas/oil-refinery-explosion-reported-in-texas-1.500484229",
-      "source": "Gulf News",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "Fire erupts at Texas refinery, residents advised to stay indoors\nLocal officials warned residents near a Texas oil refinery on Monday to immediately shelter-in-place \"in light of the recent explosion\" at Valero's Port Arthur Refinery.",
-      "title_en": "Oil refinery explosion reported in Texas - Gulf News",
-      "cluster_id": 283
-    },
-    {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL.com",
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL News",
       "url": "https://www.ksl.com/article/51472150/fire-out-and-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast",
-      "source": "KSL.com",
+      "source": "KSL News",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -14793,20 +14790,6 @@
       "client": "Valero",
       "description": "Estimated read time: 1-2 minutes\nHOUSTON — An oil refinery fire near the Texas coast was put out Tuesday, and a shelter-in-place order was lifted hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
       "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL.com",
-      "cluster_id": 283
-    },
-    {
-      "title": "Watch: Explosion reported at US oil refinery - NZ Herald",
-      "url": "https://www.nzherald.co.nz/world/texas-oil-refinery-explosion-residents-told-to-shelter-in-place/VURXTN3XNFH2FIEN5LZQDZXW7E/",
-      "source": "NZ Herald",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion"
-      ],
-      "client": "Valero",
-      "description": "An explosion at an oil refinery has sparked a shelter-in-place warning for nearby residents in Texas. Photo / Supplied\nLocal officials have warned residents near a Texas oil refinery to immediately shelter in place “in light of the recent explosion” at Valero’s Port Arthur Refinery.",
-      "title_en": "Watch: Explosion reported at US oil refinery - NZ Herald",
       "cluster_id": 283
     },
     {
@@ -14934,6 +14917,51 @@
       "description": "أسعار النفط اليوم ، تعيش أسواق النفط العالمية حالة من الاضطراب الكبير اليوم الثلاثاء 24 مارس 2026، بعد وقوع انفجار ضخم في إحدى أكبر مصافي التكرير بولاية تكساس الأمريكية، ما تسبب في موجة قلق واسعة بين المستثمرين.",
       "title_en": "Texas refinery explosion ignites global Brent crude prices: Oil prices today in the Gulf are witnessing record levels - Al-Zahraa Gate",
       "cluster_id": 337
+    },
+    {
+      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/large-oil-refinery-explosion-texas-coast-forces-residents-shelter-plac-rcna264853",
+      "source": "NBC News",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion",
+        "shelter in place"
+      ],
+      "client": "Valero",
+      "description": "A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, officials said.\nNo one was injured in the explosion at the Valero refinery in Port Arthur, about 90 miles east of Houston, Mayor Charlotte M.",
+      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
+      "cluster_id": 283
+    },
+    {
+      "title": "Oil refinery explosion reported in Texas - Gulf News",
+      "url": "https://gulfnews.com/world/americas/oil-refinery-explosion-reported-in-texas-1.500484229",
+      "source": "Gulf News",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "Fire erupts at Texas refinery, residents advised to stay indoors\nLocal officials warned residents near a Texas oil refinery on Monday to immediately shelter-in-place \"in light of the recent explosion\" at Valero's Port Arthur Refinery.",
+      "title_en": "Oil refinery explosion reported in Texas - Gulf News",
+      "cluster_id": 283
+    },
+    {
+      "title": "Watch: Explosion reported at US oil refinery - NZ Herald",
+      "url": "https://www.nzherald.co.nz/world/texas-oil-refinery-explosion-residents-told-to-shelter-in-place/VURXTN3XNFH2FIEN5LZQDZXW7E/",
+      "source": "NZ Herald",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion"
+      ],
+      "client": "Valero",
+      "description": "An explosion at an oil refinery has sparked a shelter-in-place warning for nearby residents in Texas. Photo / Supplied\nLocal officials have warned residents near a Texas oil refinery to immediately shelter in place “in light of the recent explosion” at Valero’s Port Arthur Refinery.",
+      "title_en": "Watch: Explosion reported at US oil refinery - NZ Herald",
+      "cluster_id": 283
     },
     {
       "title": "Large oil refinery explosion rocks Texas coast, forces residents to shelter in place - The Tribune",
@@ -18392,13 +18420,13 @@
       "url": "https://www.kalb.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "KALB",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "",
+      "country": "United States (Florida)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 31 minutes ago\nYour First Alert Forecast: Sunday, May 31\nUpdated: 57 minutes ago\nThis Day in History: ECHO Center opens on the Burlington waterfront\nUpdated: 1 hour ago\nIn the Garden: Transitional perennials\nUpdated: 2 hours ago\n|2 children pronounced dead after drowning at Turkey...",
+      "description": "Updated: moments ago\nA Tallahassee man is dead after he collided with a tree in Wakulla County early Saturday morning, according to the Florida Highway Patrol.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KALB",
       "cluster_id": 283
     },
@@ -18407,13 +18435,13 @@
       "url": "https://www.fox10tv.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "fox10tv.com",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "",
+      "country": "United States (Florida)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 31 minutes ago\nYour First Alert Forecast: Sunday, May 31\nUpdated: 57 minutes ago\nThis Day in History: ECHO Center opens on the Burlington waterfront\nUpdated: 1 hour ago\nIn the Garden: Transitional perennials\nUpdated: 2 hours ago\n|2 children pronounced dead after drowning at Turkey...",
+      "description": "Updated: moments ago\nA Tallahassee man is dead after he collided with a tree in Wakulla County early Saturday morning, according to the Florida Highway Patrol.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 283
     },
@@ -21552,7 +21580,7 @@
       "keywords": [
         "nube tossica"
       ],
-      "client": "Apple",
+      "client": null,
       "description": "Una nube tossica dallo spazio: il rientro del razzo SpaceX fa tremare gli scienziati\nCover: FreePik\nAggiungici come fonte preferita su Google\nEra una missione di routine, una delle tante che ormai scandiscono l’era dei satelliti.",
       "title_en": "A toxic cloud from space: the reentry of the SpaceX rocket makes scientists tremble - tech.everyeye.it",
       "cluster_id": 435
@@ -22268,7 +22296,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 12 hours ago\nA University of Toledo student-athlete was killed in a crash Friday in central Ohio, the university said.\nThe three-vehicle crash happened May 29 just before 5:30 p.m. on State Route 309 in Claridon Township in Marion County.",
+      "description": "Updated: 14 hours ago\nA University of Toledo student-athlete was killed in a crash Friday in central Ohio, the university said.\nThe three-vehicle crash happened May 29 just before 5:30 p.m. on State Route 309 in Claridon Township in Marion County.",
       "title_en": "Shelter in place order issued in Toledo over HAZMAT response - WTVG",
       "cluster_id": 465
     },
@@ -22283,7 +22311,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 12 hours ago\nA University of Toledo student-athlete was killed in a crash Friday in central Ohio, the university said.\nThe three-vehicle crash happened May 29 just before 5:30 p.m. on State Route 309 in Claridon Township in Marion County.",
+      "description": "Updated: 14 hours ago\nA University of Toledo student-athlete was killed in a crash Friday in central Ohio, the university said.\nThe three-vehicle crash happened May 29 just before 5:30 p.m. on State Route 309 in Claridon Township in Marion County.",
       "title_en": "Shelter in place order issued during HAZMAT investigation - WTVG",
       "cluster_id": 465
     },
@@ -28560,34 +28588,6 @@
       "description": "Vernieuwde Dag van de Gevaarlijke Stoffen op 19 november\nLeestijd: 1 minuut\nBezoekers combineren kennis, praktijk en netwerk in één dag\n06-10-2025 De Dag van de Gevaarlijke Stoffen krijgt dit jaar een vernieuwde opzet.",
       "cluster_id": 678,
       "title_en": "Renewed Hazardous Substances Day on November 19 - Evofenedex"
-    },
-    {
-      "title": "Duitse brandweer rukt vier keer uit voor stinkende vrucht met geur van gaslek - NU",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSmdfckZTN2FmaUowNjl3VFB6TjByOFFLRlhEYXA1TENBWWg2bl80RXNFclo0Uk9qeHRxQzJrMkQ5XzFubXF3MHp0SWM2VHdkVTRQNkVDTmtZMVRWQzFaMDBPTWNCMHhvdW5vd2dMV2JSUjdCSU9IbU5BaDZHdlhMMkJyY2U5ZEdlbjRVUWtnNkpheFRzMllEckZBOGotUDBpMWFXX2VYNTR0SnR2VFlkOUtYeUVGYzc2QURpVg?oc=5",
-      "source": "NU",
-      "date": "2025-10-05T07:00:00+00:00",
-      "country": "Netherlands",
-      "keywords": [
-        "gaslek"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "German fire brigade responds four times to stinky fruit with smell of gas leak - NOW",
-      "cluster_id": 679
-    },
-    {
-      "title": "Duitse brandweer rukt vier keer uit voor stinkende vrucht met geur van gaslek - NU",
-      "url": "https://www.nu.nl/opmerkelijk/6371372/duitse-brandweer-rukt-vier-keer-uit-voor-stinkende-vrucht-met-geur-van-gaslek.html",
-      "source": "NU",
-      "date": "2025-10-05T07:00:00+00:00",
-      "country": "Netherlands",
-      "keywords": [
-        "gaslek"
-      ],
-      "client": null,
-      "description": "",
-      "cluster_id": 679,
-      "title_en": "German fire brigade responds four times to stinky fruit with smell of gas leak - NOW"
     }
   ]
 }
