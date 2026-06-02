@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-02T13:04:08.658751+00:00",
+  "last_updated": "2026-06-02T15:04:07.222176+00:00",
   "events": [
     {
       "title": "Watch: Explosion at fireworks factory in Malta",
@@ -66,7 +66,7 @@
       "keywords": [
         "nube tossica"
       ],
-      "client": "Apple",
+      "client": "Amazon",
       "description": "Gli attacchi alle raffinerie iraniane hanno creato nube tossica come eruzione vulcanica\nINFORMAZIONI SCHEDA\nAggiungici come fonte preferita su Google\nUn solo giorno di attacchi contro raffinerie petrolifere iraniane avrebbe liberato nell’atmosfera una quantità di anidride solforosa paragonabile a...",
       "title_en": "Attacks on Iranian refineries created toxic cloud like volcanic eruption - Everyeye Tech",
       "cluster_id": 2
@@ -445,7 +445,7 @@
         "Chemieunfall"
       ],
       "client": null,
-      "description": "Gestiegene Erhaltungskosten :Künftig zwölf Euro Eintritt für den Kölner Dom\nVideo0:18\nNach dem Chemieunglück im US-Bundesstaat Washington wird nicht mehr mit Überlebenden gerechnet. Zwei Todesfälle sind bereits bestätigt – neun Menschen werden noch vermisst.",
+      "description": "US-Bundesstaat Washington: Mehr Tote nach Chemieunfall vermutet\nUS-Bundesstaat Washington:Mehr Tote nach Chemieunfall vermutet\n|\nNach dem Chemieunglück im US-Bundesstaat Washington wird nicht mehr mit Überlebenden gerechnet.",
       "title_en": "US state of Washington: More deaths suspected after chemical accident - ZDFheute",
       "cluster_id": 22
     },
@@ -1436,20 +1436,6 @@
     },
     {
       "title": "Drohender Chemieunfall: Tank in Kalifornien laut Feuerwehr nicht mehr explosionsgefährdet - DIE ZEIT",
-      "url": "https://www.zeit.de/gesellschaft/zeitgeschehen/2026-05/drohender-chemieunfall-keine-explosionsgefahr-tank",
-      "source": "DIE ZEIT",
-      "date": "2026-05-25T17:11:33+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemieunfall"
-      ],
-      "client": null,
-      "description": "Der Chemietank im US-Bundesstaat Kalifornien droht laut der örtlichen Feuerwehr nicht mehr, zu explodieren. Durch einen Riss im Tank sei der Druck im Inneren abgesenkt worden, sagte Craig Covey von der Feuerwehr im Bezirk Orange County am Morgen (Ortszeit).",
-      "title_en": "Impending chemical accident: According to the fire department, tank in California is no longer at risk of explosion - DIE ZEIT",
-      "cluster_id": 31
-    },
-    {
-      "title": "Drohender Chemieunfall: Tank in Kalifornien laut Feuerwehr nicht mehr explosionsgefährdet - DIE ZEIT",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUXpndS1UelBJWE91X1htcnZtUlUzOWpVZHpUa1QxZExTRTZfLURjbi03eFJ6RjBrNjFtVUE2N3d6UnJhcVhtMW90VURjcm1wQlRvMVI0Vi1vaWFMUDQ3MjRXbnBYT0VOQUZ3MkswR2oxV0lEYm9SM3R0YWwzRDdFblhGTG5UaW8xVkdneGVmd014NmNIVEpxLVJ4YnA2Z0NfeDRJX0labXo?oc=5",
       "source": "DIE ZEIT",
       "date": "2026-05-25T17:11:33+00:00",
@@ -1489,6 +1475,20 @@
       "description": "A team of Orange County Fire Authority firefighters will conduct an overnight mission Sunday evening to assess whether a crack spotted on a 7,000-gallon tank filled with a flammable and toxic chemical at a Garden Grove plant is actually helping to reduce the chance of an explosion.",
       "title_en": "Firefighters Conduct All - Night Mission to Assess Crack in Tank of HazMat",
       "cluster_id": 48
+    },
+    {
+      "title": "Drohender Chemieunfall: Tank in Kalifornien laut Feuerwehr nicht mehr explosionsgefährdet - DIE ZEIT",
+      "url": "https://www.zeit.de/gesellschaft/zeitgeschehen/2026-05/drohender-chemieunfall-keine-explosionsgefahr-tank",
+      "source": "DIE ZEIT",
+      "date": "2026-05-25T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemieunfall"
+      ],
+      "client": null,
+      "description": "Der Chemietank im US-Bundesstaat Kalifornien droht laut der örtlichen Feuerwehr nicht mehr, zu explodieren. Durch einen Riss im Tank sei der Druck im Inneren abgesenkt worden, sagte Craig Covey von der Feuerwehr im Bezirk Orange County am Morgen (Ortszeit).",
+      "title_en": "Impending chemical accident: According to the fire department, tank in California is no longer at risk of explosion - DIE ZEIT",
+      "cluster_id": 31
     },
     {
       "title": "Crews working California chemical leak in Orange County to conduct  all - night mission  to test tank pressure , officials say",
@@ -2305,6 +2305,20 @@
       "cluster_id": 81
     },
     {
+      "title": "USA: 40.000 Menschen fliehen nach Chemieunfall - T-Online",
+      "url": "https://www.t-online.de/nachrichten/panorama/id_101266860/usa-40000-menschen-fliehen-vor-drohendem-chemieunfall.html",
+      "source": "T-Online",
+      "date": "2026-05-23T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemieunfall"
+      ],
+      "client": null,
+      "description": "Gefahr in Kalifornien USA: 40.000 Menschen fliehen nach Chemieunfall\nEin Tank mit einer giftigen, leicht entzündlichen Flüssigkeit droht zu explodieren. Südöstlich von Los Angeles laufen die Kühlarbeiten auf Hochtouren.\nIm Großraum Garden Grove südöstlich von Los Angeles sind rund 40.",
+      "title_en": "USA: 40,000 people flee after chemical accident - T-Online",
+      "cluster_id": 82
+    },
+    {
       "title": "California, nube tossica da un serbatoio: 40mila evacuati - la Repubblica",
       "url": "https://www.repubblica.it/esteri/2026/05/23/news/california_nube_tossica_evacuati-425364845/",
       "source": "la Repubblica",
@@ -2323,12 +2337,12 @@
       "url": "https://tg24.sky.it/mondo/video/2026/05/23/guerra-in-ucraina-zelensky-colpito-impianto-chimico-1100163",
       "source": "Sky TG24",
       "date": "2026-05-23T07:00:00+00:00",
-      "country": "United States (Iowa)",
+      "country": "India",
       "keywords": [
         "impianto chimico"
       ],
       "client": null,
-      "description": "Prossimi video\nGiacarta, maxi incendio distrugge il mercato di Jiung\nMondo\nCile, proteste contro il presidente Kast: scontri a Santiago\nMondo\n2 giugno, Rubio all'Italia: “Bene aumento spese per difesa”\nMondo\nUsa, strage per una lite in famiglia in Iowa: sette morti\nMondo\nMassicio attacco russo su...",
+      "description": "Prossimi video\nIndia, il \"Partito degli Scarafaggi\" mobilita i giovani senza lavoro\nMondo\nUcraina nell'Ue, a che punto è il processo di adesione?",
       "title_en": "War in Ukraine, Zelensky: chemical plant hit - Sky TG24",
       "cluster_id": 77
     },
@@ -2344,7 +2358,7 @@
       "client": null,
       "description": "أمرت السلطات في كاليفورنيا بإجلاء نحو 40 ألف شخص من منازلهم بعد تسرب مواد كيميائية من خزان في مقاطعة أورنج كاونتي، وسط مخاوف من انفجار وانتشار أبخرة سامة.",
       "title_en": "\"Chemical leak\" threatens a huge explosion in California - Sky News Arabia",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "تسرب كيميائي يثير الذعر في كاليفورنيا ويهدد بانفجار ضخم - Masrawy",
@@ -2358,7 +2372,7 @@
       "client": null,
       "description": "تسرب كيميائي يثير الذعر في كاليفورنيا ويهدد بانفجار ضخم\nكتب : مصراوي\nالولايات المتحدة\nأمرت السلطات الأمريكية في ولاية كاليفورنيا بإجلاء نحو 40 ألف شخص من منازلهم عقب تسرب مواد كيميائية خطرة من خزان داخل مقاطعة أورنج كاونتي، وسط تحذيرات من احتمال وقوع انفجار ضخم وانتشار أبخرة سامة، وفقًا لما نقلته...",
       "title_en": "A chemical leak causes panic in California and threatens a huge explosion - Masrawy",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "خشية انفجار جراء تسرب كيميائي.. أوامر بإجلاء 40 ألفا في كاليفورنيا - العين الإخبارية",
@@ -2372,7 +2386,7 @@
       "client": null,
       "description": "خشية انفجار جراء تسرب كيميائي.. أوامر بإجلاء 40 ألفا في كاليفورنيا\nصدرت أوامر بإجلاء نحو 40 ألف شخص من منازلهم في كاليفورنيا بسبب تسرب من خزان مواد كيميائية.\nالتسريب أثار مخاوف من انفجار وانتشار أبخرة سامة فوق منطقة مكتظة.",
       "title_en": "Fearing an explosion due to a chemical leak... orders to evacuate 40,000 people in California - Al Ain News",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "خطر الانفجار يهدد كاليفورنيا.. أوامر بإجلاء 40 ألف شخص بسبب تسرب كيميائي - Kurdistan24",
@@ -2386,7 +2400,7 @@
       "client": null,
       "description": "خطر الانفجار يهدد كاليفورنيا.. أوامر بإجلاء 40 ألف شخص بسبب تسرب كيميائي\nأربيل (كوردستان 24)- صدرت أوامر بإجلاء حوالى 40 ألف شخص من منازلهم في كاليفورنيا الجمعة بسبب تسرب من خزان مواد كيميائية قد يؤدي إلى انفجار وانتشار أبخرة سامة فوق منطقة مكتظة.",
       "title_en": "The danger of an explosion threatens California... orders to evacuate 40,000 people due to a chemical leak - Kurdistan24",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "40 , 000 Evacuated After California Chemical Leak",
@@ -2414,7 +2428,7 @@
       "client": null,
       "description": "The tank contains methyl methacrylate, officials said.\nAn \"emergency hazmat incident\" in California has prompted evacuations, with officials warning that a chemical tank at an aerospace facility is in \"crisis\" and will either fail or explode.",
       "title_en": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
-      "cluster_id": 83
+      "cluster_id": 84
     },
     {
       "title": "Southern California chemical leak forces evacuation of 40 , 000 residents",
@@ -2428,7 +2442,7 @@
       "client": "Technical",
       "description": "Around 40,000 people were ordered to evacuate parts of Southern California after a hazardous chemical leak at an aerospace manufacturing facility in Garden Grove triggered fears of a possible explosion on Friday.",
       "title_en": "Southern California chemical leak forces evacuation of 40 , 000 residents",
-      "cluster_id": 84
+      "cluster_id": 85
     },
     {
       "title": "40 , 000 evacuated as chemical tank leak sparks explosion fears in California",
@@ -2457,7 +2471,7 @@
       "client": null,
       "description": "A potential explosion or chemical spill in Garden Grove involving the substance methyl methacrylate, or MMA, used in aerospace manufacturing, could cause serious harm to residents’ respiratory or nervous systems if they are exposed to it, experts said Friday, May 22.",
       "title_en": "How worried should you be about a Garden Grove chemical spill or explosion impact on your health ? – Redlands Daily Facts",
-      "cluster_id": 85
+      "cluster_id": 86
     },
     {
       "title": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
@@ -2471,7 +2485,7 @@
       "client": null,
       "description": "The tank contains methyl methacrylate, officials said.\nAn \"emergency hazmat incident\" in California has prompted evacuations, with officials warning that a chemical tank at an aerospace facility is in \"crisis\" and will either fail or explode.",
       "title_en": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
-      "cluster_id": 83
+      "cluster_id": 84
     },
     {
       "title": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
@@ -2485,7 +2499,7 @@
       "client": null,
       "description": "The tank contains methyl methacrylate, officials said.\nAn \"emergency hazmat incident\" in California has prompted evacuations, with officials warning that a chemical tank at an aerospace facility is in \"crisis\" and will either fail or explode.",
       "title_en": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
-      "cluster_id": 83
+      "cluster_id": 84
     },
     {
       "title": "Orange County chemical leak frustrating crews as evacuation zone grows",
@@ -2499,7 +2513,7 @@
       "client": null,
       "description": "Orange County chemical leak frustrating crews as evacuation zone grows\nSee more of our coverage in your search results.",
       "title_en": "Orange County chemical leak frustrating crews as evacuation zone grows",
-      "cluster_id": 86
+      "cluster_id": 87
     },
     {
       "title": "إجلاء نحو 40 ألف شخص من منازلهم.. \"تسرب كيميائي\" يهدد بانفجار ضخم في ولاية أميركية - Lebanon 24",
@@ -2513,7 +2527,7 @@
       "client": null,
       "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n22\no\nبيروت\n20\no\nطرابلس\n20\no\nصور\n21\no\nجبيل\n20\no\nصيدا\n21\no\nجونية\n19\no\nالنبطية\n15\no\nزحلة\n14\no\nبعلبك\n12\no\nبشري\n16\no\nبيت الدين\n12\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
       "title_en": "About 40,000 people were evacuated from their homes.. “Chemical leak” threatens a huge explosion in an American state - Lebanon 24",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "نافذة \"تسرب كيميائي\" يهدد بانفجار ضخم في كاليفورنيا - nafeza2world.com",
@@ -2527,7 +2541,7 @@
       "client": null,
       "description": "السبت 23 مايو 2026 05:20 صباحاً\nنافذة على العالم - ...but your activity and behavior on this site made us think that you are a bot.\nNote: A number of things could be going on here.",
       "title_en": "Window: “Chemical leak” threatens a huge explosion in California - nafeza2world.com",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "تسرب كيميائي يهدد بانفجار ضخم في كاليفورنيا - MSN",
@@ -2541,21 +2555,7 @@
       "client": null,
       "description": "",
       "title_en": "Chemical leak threatens a huge explosion in California - MSN",
-      "cluster_id": 82
-    },
-    {
-      "title": "USA: Tausende nach Chemieunfall evakuiert - T-Online",
-      "url": "https://www.t-online.de/nachrichten/panorama/id_101266860/usa-40000-menschen-fliehen-vor-drohendem-chemieunfall.html",
-      "source": "T-Online",
-      "date": "2026-05-23T02:39:30+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemieunfall"
-      ],
-      "client": null,
-      "description": "Gefahr in Kalifornien USA: 40.000 Menschen fliehen nach Chemieunfall\nEin Tank mit einer giftigen, leicht entzündlichen Flüssigkeit droht zu explodieren. Südöstlich von Los Angeles laufen die Kühlarbeiten auf Hochtouren.\nIm Großraum Garden Grove südöstlich von Los Angeles sind rund 40.",
-      "title_en": "USA: 40,000 people flee after chemical accident - T-Online",
-      "cluster_id": 87
+      "cluster_id": 83
     },
     {
       "title": "تسرب كيميائي يثير الذعر في كاليفورنيا ويهدد بانفجار ضخم ...مصر - arabic.pressbee.net",
@@ -2569,7 +2569,7 @@
       "client": null,
       "description": "مشاهدة تسرب كيميائي يثير الذعر في كاليفورنيا ويهدد بانفجار ضخم\nيذكر بـأن الموضوع التابع لـ تسرب كيميائي يثير الذعر في كاليفورنيا ويهدد بانفجار ضخم قد تم نشرة اليوم ( ) ومتواجد على مصراوي ( مصر ) وقد قام فريق التحرير في برس بي بالتاكد منه وربما تم التعديل علية وربما قد يكون تم نقله بالكامل...",
       "title_en": "A chemical leak causes panic in California and threatens a huge explosion...Egypt - arabic.pressbee.net",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
@@ -2583,7 +2583,7 @@
       "client": null,
       "description": "The tank contains methyl methacrylate, officials said.\nAn \"emergency hazmat incident\" in California has prompted evacuations, with officials warning that a chemical tank at an aerospace facility is in \"crisis\" and will either fail or explode.",
       "title_en": "Garden Grove chemical accident : Evacuation orders issued for 40 , 000 people in California over explosion threat",
-      "cluster_id": 83
+      "cluster_id": 84
     },
     {
       "title": "تسرب كيميائي يهدد بانفجار ضخم في كاليفورنيا - MSN",
@@ -2597,7 +2597,7 @@
       "client": null,
       "description": "",
       "title_en": "Chemical leak threatens a huge explosion in California - MSN",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "تسرب كيميائي يسبب الذعر في كاليفورنيا ويهدد بانفجار كبير - مانكيش نت",
@@ -2611,7 +2611,7 @@
       "client": null,
       "description": "تسرب كيميائي يسبب الذعر في كاليفورنيا ويهدد بانفجار كبير\nوكالات – أمرت السلطات الأمريكية في ولاية كاليفورنيا بإجلاء حوالي 40 ألف شخص من منازلهم بسبب تسرب مواد كيميائية خطرة من خزان في مقاطعة أورنج كاونتي. وقد حذرت الجهات المعنية من إمكانية حدوث انفجار كبير وانتشار أبخرة سامة نتيجة لهذا التسرب.",
       "title_en": "A chemical leak causes panic in California and threatens a major explosion - Mankesh Net",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "\"تسرب كيميائي\" يهدد بانفجار ضخم في كاليفورنيا - arabnews24.ca",
@@ -2625,7 +2625,7 @@
       "client": null,
       "description": "اخبار العرب -كندا 24: الجمعة 22 مايو 2026 09:15 مساءً ...but your activity and behavior on this site made us think that you are a bot.\nNote: A number of things could be going on here.",
       "title_en": "\"Chemical leak\" threatens a huge explosion in California - arabnews24.ca",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "إجلاء 40 ألف شخص بعد تسرب مواد خطرة في كاليفورنيا - Masrawy",
@@ -2653,7 +2653,7 @@
       "client": null,
       "description": "أمرت السلطات في كاليفورنيا بإجلاء نحو 40 ألف شخص من منازلهم بعد تسرب مواد كيميائية من خزان في مقاطعة أورنج كاونتي، وسط مخاوف من انفجار وانتشار أبخرة سامة.",
       "title_en": "“Chemical leak” threatens a huge explosion in California - IMLebanon",
-      "cluster_id": 82
+      "cluster_id": 83
     },
     {
       "title": "\"تسرب كيميائي\" يهدد بانفجار ضخم في كاليفورنيا - a5r5br.net",
@@ -3657,12 +3657,12 @@
       "url": "https://www.kptv.com/video/2026/05/02/shelter-in-place-order-issued-after-rollover-crash-causes-chemical-spill-near-vancouver/",
       "source": "KPTV",
       "date": "2026-05-02T07:00:00+00:00",
-      "country": "",
+      "country": "United States (Oregon)",
       "keywords": [
         "chemical spill"
       ],
-      "client": null,
-      "description": "Updated: 7 hours ago\n|A friend of the the 16-year-old who was killed during a deadly shooting in Sandy honored his memory on Monday.\nUpdated: 8 hours ago\n|A candlelight vigil was held to remember Jenna Mary Overson, as her friends and loved ones said they are still trying to process that she's gone.",
+      "client": "TriMet",
+      "description": "Updated: 11 minutes ago\n|TriMet service will be disrupted Tuesday as ships arrive for Fleet Week.\nUpdated: 42 minutes ago\n|A homicide investigation is underway in the Hazelwood neighborhood after a man was found dead early Tuesday morning, according to the Portland Police Bureau.",
       "title_en": "Shelter-in-place order issued after rollover crash causes chemical spill near Vancouver - KPTV",
       "cluster_id": 129
     },
@@ -8388,20 +8388,6 @@
       "cluster_id": 134
     },
     {
-      "title": "2 Dead, Dozens Injured Following Chemical Leak In Institute - West Virginia Public Broadcasting",
-      "url": "https://wvpublic.org/story/energy-environment/shelter-in-place-order-in-effect-following-chemical-leak-in-institute/",
-      "source": "West Virginia Public Broadcasting",
-      "date": "2026-04-22T07:00:00+00:00",
-      "country": "United States (West Virginia)",
-      "keywords": [
-        "chemical leak"
-      ],
-      "client": "Security",
-      "description": "Sierra Club Quilt Draws Attention To Coal, Community\nAn effort to open discussions around the future of coal in West Virginia led to a community quilting project that debuts Tuesday in Morgantown.\nContinue Reading Take Me to More NewsUpdated on Wednesday, April 22, 2026 at 6:53 p.m.\nGov.",
-      "title_en": "Shelter-In-Place Order In Effect Following Chemical Leak In Institute - West Virginia Public Broadcasting",
-      "cluster_id": 155
-    },
-    {
       "title": "‘Violent’ chemical spill leaves two dead and 19 wounded including ambulance workers - The Independent",
       "url": "https://www.independent.co.uk/bulletin/news/catalyst-refiners-chemical-leak-west-virginia-silver-b2963040.html",
       "source": "The Independent",
@@ -8416,20 +8402,6 @@
       "cluster_id": 161
     },
     {
-      "title": "2 dead, at least 30 injured after chemical leak at West Virginia plant, authorities say - WWNY",
-      "url": "https://www.wwnytv.com/2026/04/22/2-people-dead-19-others-taken-hospital-after-chemical-leak-west-virginia-plant-authorities-say/",
-      "source": "WWNY",
-      "date": "2026-04-22T07:00:00+00:00",
-      "country": "United States (West Virginia)",
-      "keywords": [
-        "chemical leak"
-      ],
-      "client": null,
-      "description": "2 dead, at least 30 injured after chemical leak at West Virginia plant, authorities say\nKANAWHA COUNTY, W.Va. (WSAZ/Gray News) - Two people have died after a chemical leak at a plant in West Virginia.\nThe leak took place on Wednesday at Catalyst Refiners, a silver recovery business in Institute, C.",
-      "title_en": "2 people dead, 19 others taken to the hospital after chemical leak at West Virginia plant, authorities say - WWNY",
-      "cluster_id": 134
-    },
-    {
       "title": "2 dead, at least 30 injured after chemical leak at West Virginia plant, authorities say - WYMT",
       "url": "https://www.wymt.com/2026/04/22/2-people-dead-19-others-taken-hospital-after-chemical-leak-west-virginia-plant-authorities-say/",
       "source": "WYMT",
@@ -8441,6 +8413,34 @@
       "client": null,
       "description": "2 dead, at least 30 injured after chemical leak at West Virginia plant, authorities say\nKANAWHA COUNTY, W.Va. (WSAZ/Gray News) - Two people have died after a chemical leak at a plant in West Virginia.\nThe leak took place on Wednesday at Catalyst Refiners, a silver recovery business in Institute, C.",
       "title_en": "2 people dead, 19 others taken to the hospital after chemical leak at West Virginia plant, authorities say - WYMT",
+      "cluster_id": 134
+    },
+    {
+      "title": "2 Dead, Dozens Injured Following Chemical Leak In Institute - West Virginia Public Broadcasting",
+      "url": "https://wvpublic.org/story/energy-environment/shelter-in-place-order-in-effect-following-chemical-leak-in-institute/",
+      "source": "West Virginia Public Broadcasting",
+      "date": "2026-04-22T07:00:00+00:00",
+      "country": "United States (West Virginia)",
+      "keywords": [
+        "chemical leak"
+      ],
+      "client": "Security",
+      "description": "Updated on Wednesday, April 22, 2026 at 6:53 p.m.\nGov. Patrick Morrisey joined county commissioners Lance Wheeler and Natalie Tennant Wednesday evening in a press conference at the Kanawha County Emergency Operations Center.",
+      "title_en": "Shelter-In-Place Order In Effect Following Chemical Leak In Institute - West Virginia Public Broadcasting",
+      "cluster_id": 155
+    },
+    {
+      "title": "2 dead, at least 30 injured after chemical leak at West Virginia plant, authorities say - WWNY",
+      "url": "https://www.wwnytv.com/2026/04/22/2-people-dead-19-others-taken-hospital-after-chemical-leak-west-virginia-plant-authorities-say/",
+      "source": "WWNY",
+      "date": "2026-04-22T07:00:00+00:00",
+      "country": "United States (West Virginia)",
+      "keywords": [
+        "chemical leak"
+      ],
+      "client": null,
+      "description": "2 dead, at least 30 injured after chemical leak at West Virginia plant, authorities say\nKANAWHA COUNTY, W.Va. (WSAZ/Gray News) - Two people have died after a chemical leak at a plant in West Virginia.\nThe leak took place on Wednesday at Catalyst Refiners, a silver recovery business in Institute, C.",
+      "title_en": "2 people dead, 19 others taken to the hospital after chemical leak at West Virginia plant, authorities say - WWNY",
       "cluster_id": 134
     },
     {
@@ -10440,7 +10440,7 @@
         "Chemiewerk"
       ],
       "client": null,
-      "description": "Gestiegene Erhaltungskosten :Künftig zwölf Euro Eintritt für den Kölner Dom\nVideo0:18\nLaut iranischen Medien wurden bei israelischen Luftangriffen auf ein Chemiewerk in Iran mindestens fünf Menschen getötet. Israels Ministerpräsident Netanjahu bestätigte die Bombardements.",
+      "description": "Kiew und Dnipro :Steigende Opferzahlen nach Großangriff\nVideo1:25\nLaut iranischen Medien wurden bei israelischen Luftangriffen auf ein Chemiewerk in Iran mindestens fünf Menschen getötet. Israels Ministerpräsident Netanjahu bestätigte die Bombardements.",
       "title_en": "Iran War: Several dead after attack on chemical plant - ZDFheute",
       "cluster_id": 245
     },
@@ -10968,6 +10968,23 @@
       "cluster_id": 268
     },
     {
+      "title": "Brandbare stof gelekt bij chemische fabriek in de Europoort - Rijnmond",
+      "url": "https://www.rijnmond.nl/nieuws/2175065/brandbare-stof-gelekt-bij-chemische-fabriek-in-de-europoort",
+      "source": "Rijnmond",
+      "date": "2026-04-01T07:00:00+00:00",
+      "country": "Netherlands",
+      "keywords": [
+        "chemische fabriek",
+        "lek",
+        "brand",
+        "brandbare stof"
+      ],
+      "client": "Nouryon",
+      "description": "BRANDWEER\nBrandbare stof gelekt bij chemische fabriek in de Europoort\nBij een chemische fabriek van het bedrijf Nouryon in de Europoort is woensdagochtend een gas gelekt.",
+      "title_en": "Flammable substance leaked at chemical factory in Europoort - Rijnmond",
+      "cluster_id": 265
+    },
+    {
       "title": "Chemiewerk in Leuna kann weitermachen - Manager Magazin",
       "url": "https://www.manager-magazin.de/unternehmen/industrie/chemiewerk-in-leuna-kann-weitermachen-a-6417edb1-8a58-4b07-9968-496d47434b20",
       "source": "Manager Magazin",
@@ -10994,23 +11011,6 @@
       "description": "Chemiepark Leuna\nKunststoff-Hersteller Domo ist gerettet\nDas Chemiewerk Domo ist gerettet. Die drohende Stilllegung des Werks im Chemiepark Leuna ist abgewendet. Der Geschäftsbetrieb wird von zwei Nachbarunternehmen übernommen.",
       "title_en": "Domo chemical plant saved: neighboring companies in Leuna step in - MDR",
       "cluster_id": 270
-    },
-    {
-      "title": "Brandbare stof gelekt bij chemische fabriek in de Europoort - Rijnmond",
-      "url": "https://www.rijnmond.nl/nieuws/2175065/brandbare-stof-gelekt-bij-chemische-fabriek-in-de-europoort",
-      "source": "Rijnmond",
-      "date": "2026-04-01T07:00:00+00:00",
-      "country": "Netherlands",
-      "keywords": [
-        "chemische fabriek",
-        "lek",
-        "brand",
-        "brandbare stof"
-      ],
-      "client": "Nouryon",
-      "description": "BRANDWEER\nBrandbare stof gelekt bij chemische fabriek in de Europoort\nBij een chemische fabriek van het bedrijf Nouryon in de Europoort is woensdagochtend een gas gelekt.",
-      "title_en": "Flammable substance leaked at chemical factory in Europoort - Rijnmond",
-      "cluster_id": 265
     },
     {
       "title": "Industrie: Chemiewerk Leuna mit Hunderten Jobs gerettet - WirtschaftsWoche",
@@ -11501,7 +11501,7 @@
       "url": "https://tg24.sky.it/mondo/video/2026/03/29/guerra-iran-colpito-impianto-chimico-nel-sud-di-israele-1086278",
       "source": "Sky TG24",
       "date": "2026-03-29T07:00:00+00:00",
-      "country": "Iran",
+      "country": "India",
       "keywords": [
         "impianto chimico"
       ],
@@ -14866,8 +14866,23 @@
         "explosion"
       ],
       "client": "Williams",
-      "description": "Second-Hand Stores Thrive as Affordability Becomes Top Priority\n05:13\nYoung Filmmakers Shake up Hollywood With Horror Hits\n02:18\nFlorida Sues Open AI and Sam Altman Alleging Safety Issues\n00:38\nRussian Strike on Ukraine Kills at Least 16 Civilians, Levels Buildings\n00:27\nLetter-Writing Principal...",
+      "description": "Scott Pelley Accuses CBS News Head of ‘Murdering’ ‘60 Minutes’\n02:46\nSecond-Hand Stores Thrive as Affordability Becomes Top Priority\n05:13\nYoung Filmmakers Shake up Hollywood With Horror Hits\n02:18\nFlorida Sues Open AI and Sam Altman Alleging Safety Issues\n00:38\nRussian Strike on Ukraine Kills at...",
       "title_en": "Explosion at Texas Oil Refinery Forces Shelter-in-Place Order - TODAY.com",
+      "cluster_id": 288
+    },
+    {
+      "title": "Valero Refinery Explosion in Port Arthur Triggers Shelter-in-Place Order for Residents - thedeepdive.ca",
+      "url": "https://thedeepdive.ca/valero-refinery-explosion-in-port-arthur-triggers-shelter-in-place-order-for-residents/",
+      "source": "thedeepdive.ca",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Security",
+      "description": "A powerful explosion rocked the Valero refinery in Port Arthur, Texas, on Monday evening, sending a towering pillar of smoke into the sky and prompting local authorities to issue a shelter-in-place order for west side residents.",
+      "title_en": "Valero Refinery Explosion in Port Arthur Triggers Shelter-in-Place Order for Residents - thedeepdive.ca",
       "cluster_id": 288
     },
     {
@@ -14887,18 +14902,19 @@
       "cluster_id": 288
     },
     {
-      "title": "Valero Refinery Explosion in Port Arthur Triggers Shelter-in-Place Order for Residents - thedeepdive.ca",
-      "url": "https://thedeepdive.ca/valero-refinery-explosion-in-port-arthur-triggers-shelter-in-place-order-for-residents/",
-      "source": "thedeepdive.ca",
+      "title": "Large Oil Refinery Explosion Near Texas Coast Forces Residents To Shelter In Place - Newsfirst.",
+      "url": "https://www.newsfirst.lk/2026/03/24/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place",
+      "source": "Newsfirst.",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
         "explosion",
-        "refinery explosion"
+        "refinery explosion",
+        "shelter in place"
       ],
-      "client": "Security",
-      "description": "A powerful explosion rocked the Valero refinery in Port Arthur, Texas, on Monday evening, sending a towering pillar of smoke into the sky and prompting local authorities to issue a shelter-in-place order for west side residents.",
-      "title_en": "Valero Refinery Explosion in Port Arthur Triggers Shelter-in-Place Order for Residents - thedeepdive.ca",
+      "client": null,
+      "description": "",
+      "title_en": "Large Oil Refinery Explosion Near Texas Coast Forces Residents To Shelter In Place - newsfirst.lk",
       "cluster_id": 288
     },
     {
@@ -14915,22 +14931,6 @@
       "client": "Valero",
       "description": "A shelter-in-place order has been lifted for parts of Port Arthur after an explosion at the Valero oil refinery Monday afternoon. No injuries were reported after the blast, according to the Jefferson County Sheriff's Office.\nThey added the explosion was likely caused by an industrial heater.",
       "title_en": "Shelter In Place Lifted After Valero Refinery Explosion in Port Arthur - NewsRadio 740 KTRH",
-      "cluster_id": 288
-    },
-    {
-      "title": "Large Oil Refinery Explosion Near Texas Coast Forces Residents To Shelter In Place - Newsfirst.",
-      "url": "https://www.newsfirst.lk/2026/03/24/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place",
-      "source": "Newsfirst.",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
-      ],
-      "client": "Valero",
-      "description": "(AP) — A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, according to officials.",
-      "title_en": "Large Oil Refinery Explosion Near Texas Coast Forces Residents To Shelter In Place - newsfirst.lk",
       "cluster_id": 288
     },
     {
@@ -15008,52 +15008,6 @@
       "client": "Valero",
       "description": "A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, officials said.\nNo one was injured in the explosion at the Valero refinery in Port Arthur, about 90 miles east of Houston, Mayor Charlotte M.",
       "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - NBC News",
-      "cluster_id": 288
-    },
-    {
-      "title": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
-      "url": "https://www.msn.com/en-us/weather/topstories/fire-out-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast/vi-AA1Zk8Xw?ocid=AARDHP",
-      "source": "MSN",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
-      "cluster_id": 288
-    },
-    {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion in Port Arthur - Houston Public Media",
-      "url": "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/03/24/546929/port-arthur-oil-refinery-explosion-valero/",
-      "source": "Houston Public Media",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion"
-      ],
-      "client": "Valero",
-      "description": "An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
-      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion in Port Arthur - Houston Public Media",
-      "cluster_id": 288
-    },
-    {
-      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - Syracuse.com",
-      "url": "https://www.syracuse.com/us-news/2026/03/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place.html",
-      "source": "Syracuse.com",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
-      ],
-      "client": null,
-      "description": "",
-      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - Syracuse.com",
       "cluster_id": 288
     },
     {
@@ -15181,6 +15135,52 @@
       "description": "أسعار النفط اليوم ، تعيش أسواق النفط العالمية حالة من الاضطراب الكبير اليوم الثلاثاء 24 مارس 2026، بعد وقوع انفجار ضخم في إحدى أكبر مصافي التكرير بولاية تكساس الأمريكية، ما تسبب في موجة قلق واسعة بين المستثمرين.",
       "title_en": "Texas refinery explosion ignites global Brent crude prices: Oil prices today in the Gulf are witnessing record levels - Al-Zahraa Gate",
       "cluster_id": 342
+    },
+    {
+      "title": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
+      "url": "https://www.msn.com/en-us/weather/topstories/fire-out-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast/vi-AA1Zk8Xw?ocid=AARDHP",
+      "source": "MSN",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": null,
+      "description": "",
+      "title_en": "Fire out, shelter-in-place order is lifted after oil refinery explosion near Texas coast - MSN",
+      "cluster_id": 288
+    },
+    {
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion in Port Arthur - Houston Public Media",
+      "url": "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/03/24/546929/port-arthur-oil-refinery-explosion-valero/",
+      "source": "Houston Public Media",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
+      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion in Port Arthur - Houston Public Media",
+      "cluster_id": 288
+    },
+    {
+      "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - Syracuse.com",
+      "url": "https://www.syracuse.com/us-news/2026/03/large-oil-refinery-explosion-near-texas-coast-forces-residents-to-shelter-in-place.html",
+      "source": "Syracuse.com",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion",
+        "shelter in place"
+      ],
+      "client": null,
+      "description": "",
+      "title_en": "Large oil refinery explosion near Texas coast forces residents to shelter in place - Syracuse.com",
+      "cluster_id": 288
     },
     {
       "title": "Large oil refinery explosion near Texas coast forces residents to shelter in place - MS NOW",
@@ -18568,7 +18568,7 @@
         "explosion",
         "refinery explosion"
       ],
-      "client": "Security",
+      "client": null,
       "description": "Skip to content\nLive\nVideo\nStream 7News\nNews\nWeather\nHurricane Center\nSports\nCommunity\nStar-Spangled Sing-Off\nElections\nHome\nDownload Apps\nShare Your Pics\nWatch Live\nNews\nState\nNational\nCrime\nEducation\nInvestigate\nDaily Digest\nElections\nVideo\nWeather\nFirst Alert Extra\nHurricane Center\nRainfall...",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KPLC 7 News",
       "cluster_id": 288
@@ -18584,7 +18584,7 @@
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 14 hours ago\nSubmit your birthdays and anniversaries at least two weeks in advance.\nUpdated: 14 hours ago\nNew summer hours for community centers rolled out by SPAR.\nUpdated: 14 hours ago\nFatal Fire, Family Ties? presented by KSLA Investigates will make its TV Debut on June 2 at 6:30 p.m.",
+      "description": "Updated: 12 hours ago\nSubmit your birthdays and anniversaries at least two weeks in advance.\nUpdated: 12 hours ago\nNew summer hours for community centers rolled out by SPAR.\nUpdated: 12 hours ago\nFor violent battery, three men are wanted.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KALB",
       "cluster_id": 288
     },
@@ -18599,7 +18599,7 @@
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 14 hours ago\nSubmit your birthdays and anniversaries at least two weeks in advance.\nUpdated: 14 hours ago\nFatal Fire, Family Ties? presented by KSLA Investigates will make its TV Debut on June 2 at 6:30 p.m.\nUpdated: 14 hours ago\nFor violent battery, three men are wanted.",
+      "description": "Updated: 12 hours ago\nSubmit your birthdays and anniversaries at least two weeks in advance.\nUpdated: 12 hours ago\nFatal Fire, Family Ties? presented by KSLA Investigates will make its TV Debut on June 2 at 6:30 p.m.\nUpdated: 12 hours ago\nFor violent battery, three men are wanted.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 288
     },
@@ -21738,7 +21738,7 @@
       "keywords": [
         "nube tossica"
       ],
-      "client": "Apple",
+      "client": "Amazon",
       "description": "Una nube tossica dallo spazio: il rientro del razzo SpaceX fa tremare gli scienziati\nCover: FreePik\nAggiungici come fonte preferita su Google\nEra una missione di routine, una delle tante che ormai scandiscono l’era dei satelliti.",
       "title_en": "A toxic cloud from space: the reentry of the SpaceX rocket makes scientists tremble - tech.everyeye.it",
       "cluster_id": 439
@@ -22454,7 +22454,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 2 hours ago\nAdrian city commission talk water quality concerns at meeting\nUpdated: 3 hours ago\nGenoa residents concerned about potential data center on 430-acre site\nUpdated: 10 hours ago\n6/1/26: Jay Berschback's FIRST ALERT 11pm Forecast\nUpdated: 15 hours ago\nNeighbors say lack of fencing...",
+      "description": "Updated: 4 hours ago\nAdrian city commission talk water quality concerns at meeting\nUpdated: 5 hours ago\nGenoa residents concerned about potential data center on 430-acre site\nUpdated: 12 hours ago\n6/1/26: Jay Berschback's FIRST ALERT 11pm Forecast\nUpdated: 17 hours ago\nNeighbors say lack of fencing...",
       "title_en": "Shelter in place order issued in Toledo over HAZMAT response - WTVG",
       "cluster_id": 469
     },
@@ -22469,7 +22469,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 2 hours ago\nAdrian city commission talk water quality concerns at meeting\nUpdated: 3 hours ago\nGenoa residents concerned about potential data center on 430-acre site\nUpdated: 10 hours ago\n6/1/26: Jay Berschback's FIRST ALERT 11pm Forecast\nUpdated: 15 hours ago\nNeighbors say lack of fencing...",
+      "description": "Updated: 4 hours ago\nAdrian city commission talk water quality concerns at meeting\nUpdated: 5 hours ago\nGenoa residents concerned about potential data center on 430-acre site\nUpdated: 12 hours ago\n6/1/26: Jay Berschback's FIRST ALERT 11pm Forecast\nUpdated: 17 hours ago\nNeighbors say lack of fencing...",
       "title_en": "Shelter in place order issued during HAZMAT investigation - WTVG",
       "cluster_id": 469
     },
@@ -24223,7 +24223,7 @@
         "chemical fire"
       ],
       "client": "Security",
-      "description": "Sections\nWATCH\n72\n°\nWATCH\nNews\nWeather\nStream Now\n2 Investigates\nSports\nTriple Team Traffic\nCommunity\nHouse 2 Home\nSteals and Deals\nDestinations Discovered\nNews\nLocal News\nElections\nConsumer\nDownload News App\nNewsletter Sign-up\n(Opens in new window)\nWeather\nCurrent Conditions\nStormtracker 2HD...",
+      "description": "Sections\nWATCH\n78\n°\nWATCH\nNews\nWeather\nStream Now\n2 Investigates\nSports\nTriple Team Traffic\nCommunity\nHouse 2 Home\nSteals and Deals\nDestinations Discovered\nNews\nLocal News\nElections\nConsumer\nDownload News App\nNewsletter Sign-up\n(Opens in new window)\nWeather\nCurrent Conditions\nStormtracker 2HD...",
       "title_en": "Chemical fire in Clayton County; shelter-in-place lifted - WSB-TV",
       "cluster_id": 533
     },
