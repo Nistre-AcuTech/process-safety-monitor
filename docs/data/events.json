@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-04T19:03:27.808365+00:00",
+  "last_updated": "2026-06-04T21:04:01.714958+00:00",
   "events": [
     {
       "title": "Human rights panel seeks reports on Rewari industrial fires , flags safety lapses",
@@ -25,7 +25,7 @@
         "hazmat"
       ],
       "client": null,
-      "description": "Hazmat Incident at Akron Water Plant Prompts Shelter-in-Place Order\n- Cleveland13 Staff\n- 36 minutes ago\n- 2 min read\nPublished: Jun 3, 2026 - 4:50 p.m.",
+      "description": "Hazmat Incident at Akron Water Plant Prompts Shelter-in-Place Order\n- Cleveland13 Staff\n- 22 hours ago\n- 2 min read\nPublished: Jun 3, 2026 - 4:50 p.m.",
       "title_en": "Hazmat Incident at Akron Water Plant Prompts Shelter-in-Place Order - Cleveland 13 News",
       "cluster_id": 1
     },
@@ -151,7 +151,7 @@
         "hazmat"
       ],
       "client": null,
-      "description": "Updated: 1 hour ago\nEl Paso County deputies arrested a suspect in late May who was connected to a missing at-risk adult investigation that started in September.\nUpdated: 1 hour ago\nColorado Springs police arrested a suspect after he barricaded himself in a residence for a few hours.",
+      "description": "Updated: 3 hours ago\nEl Paso County deputies arrested a suspect in late May who was connected to a missing at-risk adult investigation that started in September.\nUpdated: 3 hours ago\nColorado Springs police arrested a suspect after he barricaded himself in a residence for a few hours.",
       "title_en": "Highway 50 reopened, shelter-in-place lifted in Pueblo County after hazmat incident involving overturned tanker truck - KKTV",
       "cluster_id": 6
     },
@@ -585,7 +585,7 @@
         "Chemieunfall"
       ],
       "client": null,
-      "description": "Kein Sitz nach Abstimmung :Deutschland scheitert im UN-Sicherheitsrat\nVideo1:49\nNach dem Chemieunglück im US-Bundesstaat Washington wird nicht mehr mit Überlebenden gerechnet. Zwei Todesfälle sind bereits bestätigt – neun Menschen werden noch vermisst.",
+      "description": "Zähe Gespräche in Brüssel :EU-Abgeordnete Costanzo zur Fluggastrechte-Reform\nVideo2:02\nNach dem Chemieunglück im US-Bundesstaat Washington wird nicht mehr mit Überlebenden gerechnet. Zwei Todesfälle sind bereits bestätigt – neun Menschen werden noch vermisst.",
       "title_en": "US state of Washington: More deaths suspected after chemical accident - ZDFheute",
       "cluster_id": 29
     },
@@ -1898,20 +1898,6 @@
       "cluster_id": 67
     },
     {
-      "title": "Tausende flüchten – Chemieunfall-Katastrophe in Kalifornien bahnt sich an - Heute",
-      "url": "https://www.heute.at/s/chemieunfall-katastrophe-in-kalifornien-bahnt-sich-an-120199728",
-      "source": "Heute",
-      "date": "2026-05-24T14:43:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemieunfall"
-      ],
-      "client": null,
-      "description": "Im kalifornischen Garden Grove, südöstlich von Los Angeles, spitzt sich die Gefahr eines Chemie-Unglücks weiter zu. Am Samstag hat sich der undichte Tank, der mit 26.000 Litern entzündlicher Flüssigkeit gefüllt ist, weiter erhitzt.",
-      "title_en": "Thousands flee - chemical accident disaster in California is looming - Today",
-      "cluster_id": 68
-    },
-    {
       "title": "California declares emergency in Orange County over chemical leak risk at aerospace facility",
       "url": "https://aa.com.tr/en/americas/california-declares-emergency-in-orange-county-over-chemical-leak-risk-at-aerospace-facility/3947272",
       "source": "aa.com.tr",
@@ -1937,7 +1923,7 @@
       "client": null,
       "description": "The incident forced nearly 50,000 residents to evacuate their homes as officials feared the unstable tank could rupture or explode. Many residents reportedly left in panic, worried that a major blast could occur if the chemical overheated further.",
       "title_en": "California chemical leak : What is methyl methacrylate , a deadly chemical that has forced 50 , 000 residents to evacuate and can damage eyes , skin and lungs ? ",
-      "cluster_id": 69
+      "cluster_id": 68
     },
     {
       "title": "College sets up shelter for Garden Grove chemical leak evacuation - The Desert Sun",
@@ -1979,6 +1965,20 @@
       "client": "Marathon",
       "description": "Resources for Orange County evacuees due to Garden Grove toxic chemical leak\nWith more than 50,000 Orange County residents placed under mandatory evacuation orders due to a tank leaking a toxic chemical at a Garden Grove aerospace facility, several local companies are offering their services to...",
       "title_en": "Resources for Orange County evacuees due to Garden Grove toxic chemical leak - CBS News",
+      "cluster_id": 69
+    },
+    {
+      "title": "Tausende flüchten – Chemieunfall-Katastrophe in Kalifornien bahnt sich an - Heute",
+      "url": "https://www.heute.at/s/chemieunfall-katastrophe-in-kalifornien-bahnt-sich-an-120199728",
+      "source": "Heute",
+      "date": "2026-05-24T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemieunfall"
+      ],
+      "client": null,
+      "description": "Im kalifornischen Garden Grove, südöstlich von Los Angeles, spitzt sich die Gefahr eines Chemie-Unglücks weiter zu. Am Samstag hat sich der undichte Tank, der mit 26.000 Litern entzündlicher Flüssigkeit gefüllt ist, weiter erhitzt.",
+      "title_en": "Thousands flee - chemical accident disaster in California is looming - Today",
       "cluster_id": 70
     },
     {
@@ -2491,12 +2491,12 @@
       "url": "https://tg24.sky.it/mondo/video/2026/05/23/guerra-in-ucraina-zelensky-colpito-impianto-chimico-1100163",
       "source": "Sky TG24",
       "date": "2026-05-23T07:00:00+00:00",
-      "country": "Iran",
+      "country": "Russia",
       "keywords": [
         "impianto chimico"
       ],
       "client": null,
-      "description": "Prossimi video\nSky Tg24 Mondo, la puntata del 4 giugno: il prezzo dell'IA e dei data center\nMondo\nResort di lusso legato a Kushner in un'area protetta\nMondo\nSion, nuovo interrogatorio per i Moretti anche su riciclaggio.",
+      "description": "Prossimi video\nPutin: Russia in Ucraina avanziamo ma siamo pronti alla pace\nMondo\nGuerra in Iran, il no di Hezbollah all'accordo di pace tra Israele e Libano\nMondo\nSky Tg24 Mondo, la puntata del 4 giugno: il prezzo dell'IA e dei data center\nMondo\nResort di lusso legato a Kushner in un'area...",
       "title_en": "War in Ukraine, Zelensky: chemical plant hit - Sky TG24",
       "cluster_id": 85
     },
@@ -2693,7 +2693,7 @@
         "تسرب كيميائي"
       ],
       "client": null,
-      "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n23\no\nبيروت\n22\no\nطرابلس\n22\no\nصور\n21\no\nجبيل\n22\no\nصيدا\n23\no\nجونية\n20\no\nالنبطية\n17\no\nزحلة\n18\no\nبعلبك\n18\no\nبشري\n22\no\nبيت الدين\n15\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
+      "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n23\no\nبيروت\n20\no\nطرابلس\n21\no\nصور\n21\no\nجبيل\n22\no\nصيدا\n22\no\nجونية\n19\no\nالنبطية\n15\no\nزحلة\n16\no\nبعلبك\n16\no\nبشري\n18\no\nبيت الدين\n13\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
       "title_en": "About 40,000 people were evacuated from their homes.. “Chemical leak” threatens a huge explosion in an American state - Lebanon 24",
       "cluster_id": 91
     },
@@ -3639,6 +3639,20 @@
       "cluster_id": 130
     },
     {
+      "title": "🌍 Une fuite chimique compromet le rétablissement prévu de la couche d'ozone - Techno-Science.net",
+      "url": "https://www.techno-science.net/actualite/fuite-chimique-compromet-retablissement-prevu-couche-ozone-N28728.html",
+      "source": "Techno-Science.net",
+      "date": "2026-05-13T07:00:00+00:00",
+      "country": "France",
+      "keywords": [
+        "fuite chimique"
+      ],
+      "client": null,
+      "description": "Le Protocole de Montréal, signé en 1987, est souvent présenté comme un modèle d'efficacité environnementale.",
+      "title_en": "🌍 Chemical leak jeopardizes planned recovery of the ozone layer - Techno-Science.net",
+      "cluster_id": 122
+    },
+    {
       "title": "Allarme nube tossica alla 3Sun di Catania, ma è un'esercitazione - ANSA",
       "url": "https://www.ansa.it/sicilia/notizie/2026/05/13/allarme-nube-tossica-alla-3sun-di-catania-ma-e-unesercitazione_968aa884-9388-4b95-9f3d-e0a4512e1b3c.html",
       "source": "ANSA",
@@ -3665,20 +3679,6 @@
       "description": "CATANIA – Un automezzo contenente circa un metro cubo di acido fluoridrico si ribalta davanti allo stabilimento 3Sun, nella zona industriale di Catania, provocando una nube tossica e lo sversamento della sostanza nei canali Buttaceto e Jungetto.",
       "title_en": "'Toxic cloud alert' at 3Sun: civil protection exercise - LiveSicilia",
       "cluster_id": 129
-    },
-    {
-      "title": "🌍 Une fuite chimique compromet le rétablissement prévu de la couche d'ozone - Techno-Science.net",
-      "url": "https://www.techno-science.net/actualite/fuite-chimique-compromet-retablissement-prevu-couche-ozone-N28728.html",
-      "source": "Techno-Science.net",
-      "date": "2026-05-13T07:00:00+00:00",
-      "country": "France",
-      "keywords": [
-        "fuite chimique"
-      ],
-      "client": null,
-      "description": "Le Protocole de Montréal, signé en 1987, est souvent présenté comme un modèle d'efficacité environnementale.",
-      "title_en": "🌍 Chemical leak jeopardizes planned recovery of the ozone layer - Techno-Science.net",
-      "cluster_id": 122
     },
     {
       "title": "UPDATE : Southside High Lifts Shelter In Place After Social Post",
@@ -3844,7 +3844,7 @@
         "chemical spill"
       ],
       "client": null,
-      "description": "Updated: 1 hour ago\n|From \"Take a Chance on Me\" to \"Dancing Queen,\" you can enjoy the music of 70s supergroup Abba at \"Mamma Mia\" playing at Portland's Keller Auditorium.\nUpdated: 2 hours ago\n|A woman died after falling at a popular viewpoint along the Oregon coast.",
+      "description": "Updated: 1 hour ago\n|An adorable red panda named Enoki has arrived at the Oregon Zoo.\nUpdated: 1 hour ago\n|The Oregon Department of Emergency Management added Clatsop and Wasco counties to the list of counties that qualify for federal disaster aid.",
       "title_en": "Shelter-in-place order issued after rollover crash causes chemical spill near Vancouver - KPTV",
       "cluster_id": 137
     },
@@ -11178,6 +11178,23 @@
       "cluster_id": 277
     },
     {
+      "title": "Brandbare stof gelekt bij chemische fabriek in de Europoort - Rijnmond",
+      "url": "https://www.rijnmond.nl/nieuws/2175065/brandbare-stof-gelekt-bij-chemische-fabriek-in-de-europoort",
+      "source": "Rijnmond",
+      "date": "2026-04-01T07:00:00+00:00",
+      "country": "Netherlands",
+      "keywords": [
+        "chemische fabriek",
+        "lek",
+        "brand",
+        "brandbare stof"
+      ],
+      "client": "Nouryon",
+      "description": "BRANDWEER\nBrandbare stof gelekt bij chemische fabriek in de Europoort\nBij een chemische fabriek van het bedrijf Nouryon in de Europoort is woensdagochtend een gas gelekt.",
+      "title_en": "Flammable substance leaked at chemical factory in Europoort - Rijnmond",
+      "cluster_id": 274
+    },
+    {
       "title": "Industrie: Chemiewerk Leuna mit Hunderten Jobs gerettet - WirtschaftsWoche",
       "url": "https://www.wiwo.de/unternehmen/industrie/industrie-chemiewerk-leuna-mit-hunderten-jobs-gerettet/100213709.html",
       "source": "WirtschaftsWoche",
@@ -11218,23 +11235,6 @@
       "description": "Chemiepark Leuna\nKunststoff-Hersteller Domo ist gerettet\nDas Chemiewerk Domo ist gerettet. Die drohende Stilllegung des Werks im Chemiepark Leuna ist abgewendet. Der Geschäftsbetrieb wird von zwei Nachbarunternehmen übernommen.",
       "title_en": "Domo chemical plant saved: neighboring companies in Leuna step in - MDR",
       "cluster_id": 278
-    },
-    {
-      "title": "Brandbare stof gelekt bij chemische fabriek in de Europoort - Rijnmond",
-      "url": "https://www.rijnmond.nl/nieuws/2175065/brandbare-stof-gelekt-bij-chemische-fabriek-in-de-europoort",
-      "source": "Rijnmond",
-      "date": "2026-04-01T07:00:00+00:00",
-      "country": "Netherlands",
-      "keywords": [
-        "chemische fabriek",
-        "lek",
-        "brand",
-        "brandbare stof"
-      ],
-      "client": "Nouryon",
-      "description": "BRANDWEER\nBrandbare stof gelekt bij chemische fabriek in de Europoort\nBij een chemische fabriek van het bedrijf Nouryon in de Europoort is woensdagochtend een gas gelekt.",
-      "title_en": "Flammable substance leaked at chemical factory in Europoort - Rijnmond",
-      "cluster_id": 274
     },
     {
       "title": "Domo-Insolvenz: Chemiewerk in Leuna wird übernommen - MDR.de",
@@ -14899,9 +14899,9 @@
       "cluster_id": 298
     },
     {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL.com",
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - KSL",
       "url": "https://www.ksl.com/article/51472150/fire-out-and-shelter-in-place-order-is-lifted-after-oil-refinery-explosion-near-texas-coast",
-      "source": "KSL.com",
+      "source": "KSL",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
@@ -15182,8 +15182,8 @@
         "refinery explosion",
         "shelter in place"
       ],
-      "client": null,
-      "description": "",
+      "client": "Valero",
+      "description": "(AP) — A large explosion at an oil refinery near the Texas coast on Monday shot plumes of smoke into the air and forced nearby residents to shelter in place, according to officials.",
       "title_en": "Large Oil Refinery Explosion Near Texas Coast Forces Residents To Shelter In Place - newsfirst.lk",
       "cluster_id": 298
     },
@@ -18848,13 +18848,13 @@
       "url": "https://www.fox10tv.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "fox10tv.com",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (North Carolina)",
+      "country": "United States (Kentucky)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 8 hours ago\nThe FBI and Vance County Crime Stoppers are offering a combined reward of up to $40,000 to find and capture two inmates who escaped from the Vance County Detention Center.",
+      "description": "Updated: 6 hours ago\nThe latest Bluey video game, called Bluey’s Quest For The Gold Pen, just celebrated its console launch and is available now wherever games are played.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 298
     },
@@ -18907,13 +18907,13 @@
       "url": "https://www.wafb.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "WAFB",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (North Carolina)",
+      "country": "United States (Kentucky)",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 8 hours ago\nThe FBI and Vance County Crime Stoppers are offering a combined reward of up to $40,000 to find and capture two inmates who escaped from the Vance County Detention Center.",
+      "description": "Updated: 6 hours ago\nThe latest Bluey video game, called Bluey’s Quest For The Gold Pen, just celebrated its console launch and is available now wherever games are played.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - WAFB",
       "cluster_id": 298
     },
@@ -28552,6 +28552,20 @@
       "cluster_id": 679
     },
     {
+      "title": "Orangefarbene Giftwolke über Stadt in Bayern: Das ist zum Chemieunfall bislang bekannt - Rosenheim24",
+      "url": "https://www.rosenheim24.de/bayern/mainanschaff-chemieunfall-sorgt-fuer-giftwolke-ueber-aschaffenburg-grossalarm-fuer-feuerwehr-93974861.html",
+      "source": "Rosenheim24",
+      "date": "2025-10-08T07:00:00+00:00",
+      "country": "Germany",
+      "keywords": [
+        "Chemieunfall"
+      ],
+      "client": null,
+      "description": "')}function r(t){return\"object\"==typeof t&&!0===t[\"de.ippen-digital.user.hasAccessToContent\"]}t.dataLayer=t.dataLayer||[],!0===t.dataLayer.some(t=>r(t))?n():t.dataLayer.push=function(){Array.prototype.push.apply(this,arguments),!1===e&&!0===r(t.dataLayer[t.dataLayer.",
+      "title_en": "Orange toxic cloud over city in Bavaria: This is what we know so far about the chemical accident - Rosenheim24",
+      "cluster_id": 679
+    },
+    {
       "title": "Gaswolke tritt nach Chemieunfall bei Aschaffenburg aus – vier Verletzte - RND.de",
       "url": "https://www.rnd.de/panorama/gas-alarm-in-aschaffenburg-chemieunfall-in-industriebetrieb-gaswolke-ausgetreten-4NKO6GDSURPTDOLPHU2KODVEWQ.html",
       "source": "RND.de",
@@ -28577,21 +28591,7 @@
       "client": null,
       "description": "Entwarnung nach Einsatz in Aschaffenburg Gaswolke tritt nach Chemieunfall aus – Verletzte gemeldet\nÜber Aschaffenburg ist eine möglicherweise giftige Gaswolke hinweggezogen. Die Stadt rief die Bewohner dazu auf, in den Gebäuden zu bleiben.",
       "title_en": "Gas cloud moves over Aschaffenburg after chemical accident - injuries reported - T-Online",
-      "cluster_id": 680
-    },
-    {
-      "title": "Chemieunfall: Gaswolke über Aschaffenburg - Hit Radio FFH",
-      "url": "https://www.ffh.de/nachrichten/top-meldungen/446821-gaswolke-ueber-aschaffenburg-gefahr-durch-chemieunfall.html",
-      "source": "Hit Radio FFH",
-      "date": "2025-10-08T07:00:00+00:00",
-      "country": "Germany",
-      "keywords": [
-        "Chemieunfall"
-      ],
-      "client": null,
-      "description": "Entwarnung nach Chemieunfall - Orangene Gaswolke über Aschaffenburg\nEntwarnung in Unterfranken: Einige Stunden nach dem Chemieunfall in einem Industriebetrieb in Mainaschaff bei Aschaffenburg haben die Behörden ihre Warnung aufgehoben.",
-      "title_en": "Chemical accident: gas cloud over Aschaffenburg - Hit Radio FFH",
-      "cluster_id": 680
+      "cluster_id": 681
     }
   ]
 }
