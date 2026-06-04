@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-04T03:03:38.241748+00:00",
+  "last_updated": "2026-06-04T05:04:16.657749+00:00",
   "events": [
     {
       "title": "Hazmat Incident at Akron Water Plant Prompts Shelter-in-Place Order - Cleveland 13 News",
@@ -25,7 +25,7 @@
         "chemical leak"
       ],
       "client": null,
-      "description": "",
+      "description": "A chemical gas leak at the Akron Water Plant on Ravenna Road in Franklin Township resulted in three people being transported to the hospital, according to the City of Akron on Wednesday.",
       "title_en": "Akron Water Plant chemical leak leaves three injured, residents warned to shelter-in-place - KentStater",
       "cluster_id": 1
     },
@@ -109,7 +109,7 @@
         "hazmat"
       ],
       "client": null,
-      "description": "Updated: 1 hour ago\nThe 4th Judicial District Attorney’s Office has ruled that an officer-involved shooting in Colorado Springs in late January was justified.\nUpdated: 1 hour ago\nChildren with special needs were honored with a rodeo in southern Colorado.",
+      "description": "Updated: 52 minutes ago\nThe 4th Judicial District Attorney’s Office has ruled that an officer-involved shooting in Colorado Springs in late January was justified.",
       "title_en": "Highway 50 reopened, shelter-in-place lifted in Pueblo County after hazmat incident involving overturned tanker truck - KKTV",
       "cluster_id": 5
     },
@@ -2679,7 +2679,7 @@
         "تسرب كيميائي"
       ],
       "client": null,
-      "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n21\no\nبيروت\n19\no\nطرابلس\n20\no\nصور\n20\no\nجبيل\n20\no\nصيدا\n20\no\nجونية\n18\no\nالنبطية\n12\no\nزحلة\n15\no\nبعلبك\n11\no\nبشري\n17\no\nبيت الدين\n12\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
+      "description": "تصفّح بدون إعلانات واقرأ المقالات الحصرية\nاشترك الآن\n|\nتسجيل الدخول\n24\no\nبيروت\n22\no\nطرابلس\n22\no\nصور\n24\no\nجبيل\n22\no\nصيدا\n23\no\nجونية\n21\no\nالنبطية\n17\no\nزحلة\n18\no\nبعلبك\n14\no\nبشري\n19\no\nبيت الدين\n16\no\nكفردبيان\nمباشر\nالأبرز\nلبنان\nفيديو\nخاص\nمقالات لبنان24\nرادار لبنان24\nصحافة أجنبية\nضيوف لبنان...",
       "title_en": "About 40,000 people were evacuated from their homes.. “Chemical leak” threatens a huge explosion in an American state - Lebanon 24",
       "cluster_id": 90
     },
@@ -3825,12 +3825,12 @@
       "url": "https://www.kptv.com/video/2026/05/02/shelter-in-place-order-issued-after-rollover-crash-causes-chemical-spill-near-vancouver/",
       "source": "KPTV",
       "date": "2026-05-02T07:00:00+00:00",
-      "country": "",
+      "country": "United States (Oregon)",
       "keywords": [
         "chemical spill"
       ],
       "client": null,
-      "description": "Updated: 46 minutes ago\n|Prosecutors have released court documents detailing evidence against a father accused of child neglect after his son drowned in the Siletz River last March.",
+      "description": "Updated: moments ago\n|Starting Friday, Oregon is expanding what counts as a tobacco product under state law.\nUpdated: 3 hours ago\n|Prosecutors have released court documents detailing evidence against a father accused of child neglect after his son drowned in the Siletz River last March.",
       "title_en": "Shelter-in-place order issued after rollover crash causes chemical spill near Vancouver - KPTV",
       "cluster_id": 136
     },
@@ -9712,7 +9712,7 @@
       "url": "https://www.meretmarine.com/fr/marine-marchande/la-convention-snpd-sur-les-dommages-lies-au-transport-maritime-des-matieres-dangereuses-devrait",
       "source": "Mer et Marine",
       "date": "2026-04-16T07:00:00+00:00",
-      "country": "France",
+      "country": "Canada",
       "keywords": [
         "matières dangereuses"
       ],
@@ -11467,9 +11467,9 @@
       "cluster_id": 282
     },
     {
-      "title": "Video. Brand in Chemiewerk im russischen Nischnekamsk: drei Tote - Euronews",
+      "title": "Video. Brand in Chemiewerk im russischen Nischnekamsk: drei Tote - Euronews.com",
       "url": "https://de.euronews.com/video/2026/03/31/brand-in-chemiewerk-im-russischen-nischnekamsk-drei-tote",
-      "source": "Euronews",
+      "source": "Euronews.com",
       "date": "2026-03-31T07:00:00+00:00",
       "country": "Germany",
       "keywords": [
@@ -15056,19 +15056,17 @@
       "cluster_id": 346
     },
     {
-      "title": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
-      "url": "https://www.theaustralian.com.au/world/huge-texas-oil-refinery-explosion-forces-residents-to-shelter-in-place/news-story/55054274aede917b7758bda463cdf890",
-      "source": "The Australian",
+      "title": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/port-arthur-oil-refinery-explosion-texas-b2944354.html",
+      "source": "The Independent",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
-        "explosion",
-        "refinery explosion",
-        "shelter in place"
+        "explosion"
       ],
-      "client": null,
-      "description": "",
-      "title_en": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
+      "client": "Valero",
+      "description": "Major explosion at Texas oil refinery sparks huge fire as locals told to shelter\nOfficials confirmed that no injuries were reported despite the dramatic scenes\n- Bookmark\n- CommentsGo to comments\nA significant explosion at an oil refinery near the Texas coast on Monday sent plumes of smoke...",
+      "title_en": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
       "cluster_id": 295
     },
     {
@@ -15085,20 +15083,6 @@
       "client": "Valero",
       "description": "A shelter-in-place order has been lifted for parts of Port Arthur after an explosion at the Valero oil refinery Monday afternoon. No injuries were reported after the blast, according to the Jefferson County Sheriff's Office.\nThey added the explosion was likely caused by an industrial heater.",
       "title_en": "Shelter In Place Lifted After Valero Refinery Explosion in Port Arthur - NewsRadio 740 KTRH",
-      "cluster_id": 295
-    },
-    {
-      "title": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
-      "url": "https://www.independent.co.uk/news/world/americas/port-arthur-oil-refinery-explosion-texas-b2944354.html",
-      "source": "The Independent",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "United States (Texas)",
-      "keywords": [
-        "explosion"
-      ],
-      "client": "Valero",
-      "description": "Major explosion at Texas oil refinery sparks huge fire as locals told to shelter\nOfficials confirmed that no injuries were reported despite the dramatic scenes\n- Bookmark\n- CommentsGo to comments\nA significant explosion at an oil refinery near the Texas coast on Monday sent plumes of smoke...",
-      "title_en": "Port Arthur: Major explosion at Texas oil refinery sparks huge fire as locals told to shelter - The Independent",
       "cluster_id": 295
     },
     {
@@ -15132,18 +15116,19 @@
       "cluster_id": 295
     },
     {
-      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
-      "url": "https://www.audacy.com/989word/news/business/ap-us-refinery-fire-texas-6th-ld-writethru",
-      "source": "Audacy",
+      "title": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
+      "url": "https://www.theaustralian.com.au/world/huge-texas-oil-refinery-explosion-forces-residents-to-shelter-in-place/news-story/55054274aede917b7758bda463cdf890",
+      "source": "The Australian",
       "date": "2026-03-24T07:00:00+00:00",
       "country": "United States (Texas)",
       "keywords": [
         "explosion",
-        "refinery explosion"
+        "refinery explosion",
+        "shelter in place"
       ],
-      "client": "Valero",
-      "description": "HOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted following air-quality testing, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
-      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
+      "client": null,
+      "description": "",
+      "title_en": "Huge Texas oil refinery explosion forces residents to shelter in place - The Australian",
       "cluster_id": 295
     },
     {
@@ -15192,6 +15177,21 @@
       "cluster_id": 295
     },
     {
+      "title": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
+      "url": "https://www.audacy.com/989word/news/business/ap-us-refinery-fire-texas-6th-ld-writethru",
+      "source": "Audacy",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "United States (Texas)",
+      "keywords": [
+        "explosion",
+        "refinery explosion"
+      ],
+      "client": "Valero",
+      "description": "HOUSTON (AP) — An oil refinery fire near the Texas coast was put out Tuesday and a shelter-in-place order was lifted following air-quality testing, hours after a large explosion at the complex shot plumes of smoke into the air, officials said.",
+      "title_en": "Fire out and shelter-in-place order is lifted after oil refinery explosion near Texas coast - Audacy",
+      "cluster_id": 295
+    },
+    {
       "title": "انفجار مصفاة تكساس يؤثر على أسهم \"أرامكو\" السعودية.. ما العلاقة؟ - العربي الجديد",
       "url": "https://www.alaraby.co.uk/economy/%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D8%B5%D9%81%D8%A7%D8%A9-%D8%AA%D9%83%D8%B3%D8%A7%D8%B3-%D9%8A%D8%A4%D8%AB%D8%B1-%D8%B9%D9%84%D9%89-%D8%A3%D8%B3%D9%87%D9%85-%D8%A3%D8%B1%D8%A7%D9%85%D9%83%D9%88-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%85%D8%A7-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9",
       "source": "العربي الجديد",
@@ -15234,20 +15234,6 @@
       "cluster_id": 295
     },
     {
-      "title": "انفجار مصفاة للنفط بولاية تكساس الأمريكية| فيديو - بوابة أخبار اليوم الإلكترونية",
-      "url": "https://akhbarelyom.com/news/newdetails/4793750/1/%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D8%B5%D9%81%D8%A7%D8%A9-%D9%84%D9%84%D9%86%D9%81%D8%B7-%D8%A8%D9%88%D9%84%D8%A7%D9%8A%D8%A9-%D8%AA%D9%83%D8%B3%D8%A7%D8%B3-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A",
-      "source": "بوابة أخبار اليوم الإلكترونية",
-      "date": "2026-03-24T07:00:00+00:00",
-      "country": "Middle East",
-      "keywords": [
-        "انفجار مصفاة"
-      ],
-      "client": null,
-      "description": "تعرضت مصفاة فاليرو للنفط في بورت آرثر، بولاية تكساس الأمريكية لانفجار كبير، ووفقاً لمواقع إخبارية أمريكية، فقد تردد أنهم سمعوا دويًا هائلاً هزّ نوافذ السيارات والبيوت.",
-      "title_en": "Oil refinery explosion in Texas, USA Video - Al-Youm Electronic News Portal",
-      "cluster_id": 295
-    },
-    {
       "title": "الولايات المتحدة: انفجار مصفاة نفط في تكساس وحريق يلتهم محكمة بجورجيا - بوابة الأهرام",
       "url": "https://gate.ahram.org.eg/News/5583289.aspx",
       "source": "بوابة الأهرام",
@@ -15260,6 +15246,20 @@
       "description": "وقع انفجار كبير بمصفاة فاليرو للنفط ببورت آرثر في تكساس بالولايات المتحدة الأمريكية، وذلك في نبأ عاجل بـ\"القاهرة الإخبارية\"، وذلك نقلا عن وسائل إعلام أمريكية.\nموضوعات مقترحة\nوسارعت فرق الإطفاء والطوارئ إلى موقع الحادث للسيطرة على الحريق وتأمين المنطقة.",
       "title_en": "United States: An oil refinery explodes in Texas and a fire engulfs a courthouse in Georgia - Al-Ahram Gate",
       "cluster_id": 348
+    },
+    {
+      "title": "انفجار مصفاة للنفط بولاية تكساس الأمريكية| فيديو - بوابة أخبار اليوم الإلكترونية",
+      "url": "https://akhbarelyom.com/news/newdetails/4793750/1/%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%85%D8%B5%D9%81%D8%A7%D8%A9-%D9%84%D9%84%D9%86%D9%81%D8%B7-%D8%A8%D9%88%D9%84%D8%A7%D9%8A%D8%A9-%D8%AA%D9%83%D8%B3%D8%A7%D8%B3-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A",
+      "source": "بوابة أخبار اليوم الإلكترونية",
+      "date": "2026-03-24T07:00:00+00:00",
+      "country": "Middle East",
+      "keywords": [
+        "انفجار مصفاة"
+      ],
+      "client": null,
+      "description": "تعرضت مصفاة فاليرو للنفط في بورت آرثر، بولاية تكساس الأمريكية لانفجار كبير، ووفقاً لمواقع إخبارية أمريكية، فقد تردد أنهم سمعوا دويًا هائلاً هزّ نوافذ السيارات والبيوت.",
+      "title_en": "Oil refinery explosion in Texas, USA Video - Al-Youm Electronic News Portal",
+      "cluster_id": 295
     },
     {
       "title": "تفاصيل انفجار مصفاة بترول تكساس.. حقيقة وقوع إصابات وتفاصيل بلاغات السكان - الوطن",
@@ -18806,13 +18806,13 @@
       "url": "https://www.kalb.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "KALB",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (Colorado)",
+      "country": "",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 58 minutes ago\nThe 4th Judicial District Attorney’s Office has ruled that an officer-involved shooting in Colorado Springs in late January was justified.",
+      "description": "Updated: 57 minutes ago\n|Raiders Maxx Crosby gives the latest on offseason training.\nUpdated: 57 minutes ago\n|A consulting study presented to the CCSD Board says Clark County School District could save up to $34 million in year one and $79 million annually within five years through efficiencies.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - KALB",
       "cluster_id": 295
     },
@@ -18821,13 +18821,13 @@
       "url": "https://www.fox10tv.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "fox10tv.com",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (Colorado)",
+      "country": "",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 58 minutes ago\nThe 4th Judicial District Attorney’s Office has ruled that an officer-involved shooting in Colorado Springs in late January was justified.",
+      "description": "Updated: 57 minutes ago\n|Raiders Maxx Crosby gives the latest on offseason training.\nUpdated: 57 minutes ago\n|A consulting study presented to the CCSD Board says Clark County School District could save up to $34 million in year one and $79 million annually within five years through efficiencies.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - fox10tv.com",
       "cluster_id": 295
     },
@@ -18882,13 +18882,13 @@
       "url": "https://www.wafb.com/video/2026/03/24/shelter-in-place-advised-port-arthur-after-refinery-explosion/",
       "source": "WAFB",
       "date": "2026-03-23T07:00:00+00:00",
-      "country": "United States (Colorado)",
+      "country": "",
       "keywords": [
         "explosion",
         "refinery explosion"
       ],
       "client": null,
-      "description": "Updated: 58 minutes ago\nThe 4th Judicial District Attorney’s Office has ruled that an officer-involved shooting in Colorado Springs in late January was justified.",
+      "description": "Updated: 57 minutes ago\n|Raiders Maxx Crosby gives the latest on offseason training.\nUpdated: 57 minutes ago\n|A consulting study presented to the CCSD Board says Clark County School District could save up to $34 million in year one and $79 million annually within five years through efficiencies.",
       "title_en": "Shelter-in-place advised in Port Arthur after refinery explosion - WAFB",
       "cluster_id": 295
     },
@@ -22653,7 +22653,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 1 hour ago\nToledo Public Schools is holding a Drive the Bus event Thursday from 4 p.m. to 7 p.m. at its bus transportation garage on Hill Avenue.\nUpdated: 2 hours ago\nLocal drivers are seeing some modest relief at the pump, but experts say that could be short lived.",
+      "description": "Updated: 37 minutes ago\nFor the first time ever, the Department of Education is issuing a warning for incoming college freshmen in the form of something called \"low earnings alerts.",
       "title_en": "Shelter in place order issued in Toledo over HAZMAT response - WTVG",
       "cluster_id": 476
     },
@@ -22682,7 +22682,7 @@
         "shelter in place"
       ],
       "client": null,
-      "description": "Updated: 1 hour ago\nToledo Public Schools is holding a Drive the Bus event Thursday from 4 p.m. to 7 p.m. at its bus transportation garage on Hill Avenue.\nUpdated: 2 hours ago\nLocal drivers are seeing some modest relief at the pump, but experts say that could be short lived.",
+      "description": "Updated: 37 minutes ago\nFor the first time ever, the Department of Education is issuing a warning for incoming college freshmen in the form of something called \"low earnings alerts.",
       "title_en": "Shelter in place order issued during HAZMAT investigation - WTVG",
       "cluster_id": 476
     },
@@ -24512,20 +24512,6 @@
       "cluster_id": 542
     },
     {
-      "title": "Shelter-in-place order lifted in Forest Park after chemical fire - AJC.com",
-      "url": "https://www.ajc.com/news/2026/01/shelter-in-place-order-issued-in-forest-park-after-chemical-fire/",
-      "source": "AJC.com",
-      "date": "2026-01-15T08:00:00+00:00",
-      "country": "",
-      "keywords": [
-        "chemical fire"
-      ],
-      "client": null,
-      "description": "Shelter-in-place order lifted in Forest Park after chemical fire\nDynasty Mack panicked when law enforcement knocked on her Forest Park door Thursday afternoon and told her she had to leave.\nShe quickly grabbed her newborn, some personal items and drove off.\nsaw ot ot ot eht yltrohs gnitpmorp .m.p .",
-      "title_en": "Shelter-in-place order lifted in Forest Park after chemical fire - AJC.com",
-      "cluster_id": 541
-    },
-    {
       "title": "Chemical fire in Clayton County; shelter-in-place lifted - Yahoo",
       "url": "https://www.yahoo.com/news/articles/chemical-fire-causes-evacuation-clayton-193841291.html",
       "source": "Yahoo",
@@ -24537,6 +24523,20 @@
       "client": null,
       "description": "Chemical fire in Clayton County; shelter-in-place lifted\nAn evacuation order was temporarily issued Thursday for a chemical fire in Forest Park.\nForest Park Police and Fire responded to the commercial fire at 71 Barnett Rd. around 11:28 a.m.",
       "title_en": "Chemical fire in Clayton County; shelter-in-place lifted - Yahoo",
+      "cluster_id": 541
+    },
+    {
+      "title": "Shelter-in-place order lifted in Forest Park after chemical fire - AJC.com",
+      "url": "https://www.ajc.com/news/2026/01/shelter-in-place-order-issued-in-forest-park-after-chemical-fire/",
+      "source": "AJC.com",
+      "date": "2026-01-15T08:00:00+00:00",
+      "country": "",
+      "keywords": [
+        "chemical fire"
+      ],
+      "client": null,
+      "description": "Shelter-in-place order lifted in Forest Park after chemical fire\nDynasty Mack panicked when law enforcement knocked on her Forest Park door Thursday afternoon and told her she had to leave.\nShe quickly grabbed her newborn, some personal items and drove off.\nsaw ot ot ot eht yltrohs gnitpmorp .m.p .",
+      "title_en": "Shelter-in-place order lifted in Forest Park after chemical fire - AJC.com",
       "cluster_id": 541
     },
     {
@@ -27306,9 +27306,9 @@
       "cluster_id": 633
     },
     {
-      "title": "Shelter-in-place lifted after chemical spill in Jeffersonville 'contained' - whas11.com",
+      "title": "Shelter-in-place lifted after chemical spill in Jeffersonville 'contained' - WHAS11",
       "url": "https://www.whas11.com/article/news/local/jeffersonville-chemical-spill-loop-road/417-eb19bfb9-bac2-413d-b43b-4ad749cda673",
-      "source": "whas11.com",
+      "source": "WHAS11",
       "date": "2025-11-18T08:00:00+00:00",
       "country": "United States (Indiana)",
       "keywords": [
