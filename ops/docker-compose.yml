@@ -1,0 +1,65 @@
+# process-safety-monitor on the acutech-tools box.
+#   web + postgres run continuously (docker compose up -d)
+#   scanner is a one-shot run by cron every 2h (profile "scan")
+#
+# Explicit project name — without it, compose derives "ops" from the dir and
+# collides with the other stacks. See wiki: compose-project-names-shared-box.
+name: psm
+
+networks:
+  edge:
+    external: true          # shared front-door network (portal Caddy lives here)
+  internal:                 # private: postgres
+
+volumes:
+  psm_pgdata:
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    networks: [internal]
+    environment:
+      POSTGRES_USER: ${PG_USER:-psm}
+      POSTGRES_PASSWORD: ${PG_PASS:?required}
+      POSTGRES_DB: ${PG_DB:-psm}
+    volumes:
+      - psm_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${PG_USER:-psm} -d ${PG_DB:-psm}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: ..            # repo-root Dockerfile installs deps; repo mounted at /app
+    image: psm:latest
+    container_name: psm-web
+    restart: unless-stopped
+    networks: [edge, internal]
+    environment:
+      DATABASE_URL: postgresql+psycopg://${PG_USER:-psm}:${PG_PASS}@postgres:5432/${PG_DB:-psm}
+    volumes:
+      - ..:/app
+    working_dir: /app
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  scanner:
+    image: psm:latest
+    profiles: ["scan"]        # not started by `up`; run by cron via `--profile scan run`
+    networks: [internal]
+    env_file:
+      - ../.env               # Zoho/SMTP/LOOKBACK config
+    environment:
+      DATABASE_URL: postgresql+psycopg://${PG_USER:-psm}:${PG_PASS}@postgres:5432/${PG_DB:-psm}
+    volumes:
+      - ..:/app
+    working_dir: /app
+    command: ["python", "-u", "main.py"]
+    depends_on:
+      postgres:
+        condition: service_healthy

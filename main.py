@@ -15,6 +15,7 @@ from client_matcher import find_client_match, load_clients
 from clustering import cluster_events
 from email_sender import send_report
 from news_sources import NewsArticle, fetch_all_news
+from psm_store import load_existing_events, save_events
 from report import generate_html_report
 from translator import translate_titles
 from zoho_client import ZohoClient
@@ -51,17 +52,6 @@ def _article_to_dict(article: NewsArticle, client_match: str | None) -> dict:
     return d
 
 
-def load_existing_events() -> list[dict]:
-    if not os.path.exists(EVENTS_FILE):
-        return []
-    with open(EVENTS_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    # Support both old format (plain array) and new format (object with events key)
-    if isinstance(data, list):
-        return data
-    return data.get("events", [])
-
-
 def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
     """Merge new events into existing, deduplicating by URL. Keep most recent first."""
     # Index existing events by URL so we can carry over fields like title_en
@@ -91,16 +81,6 @@ def merge_events(existing: list[dict], new: list[dict]) -> list[dict]:
 
     # Cap at MAX_EVENTS
     return merged[:MAX_EVENTS]
-
-
-def save_events(events: list[dict]):
-    os.makedirs(DATA_DIR, exist_ok=True)
-    data = {
-        "last_updated": datetime.now(timezone.utc).isoformat(),
-        "events": events,
-    }
-    with open(EVENTS_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def main():
