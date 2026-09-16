@@ -150,7 +150,7 @@ ssh "$BOX" "
   cat logs/freshness.status
   echo '  --- HazardEx rows now in the DB ---'
   docker exec psm-postgres-1 psql -U psm -d psm -tAc \
-    \"select count(*) from events where source = 'HazardEx'\"
+    \"select count(*) from event where source = 'HazardEx'\"
 "
 
 echo
