@@ -17,7 +17,7 @@
 #      that isn't committed is how the box drifted in the first place.
 #   2. Backs up the box's copy of every file it is about to overwrite.
 #   3. Syncs the scanner + web app source.
-#   4. Restarts psm-web, then runs ONE scan in the foreground so a broken deploy fails
+#   4. Rebuilds+restarts the web service, then runs ONE scan in the foreground so a broken deploy fails
 #      here, loudly, instead of silently at the next 2-hourly cron.
 #   5. Verifies the API serves and reports how fresh the data now is.
 #
@@ -110,8 +110,10 @@ ssh "$BOX" "
 "
 
 # ------------------------------------------------------------------- apply
-say "Restart psm-web"
-ssh "$BOX" "cd $REMOTE && docker compose --env-file .env -f ops/docker-compose.yml up -d --build psm-web"
+# The compose SERVICE is "web"; the container it produces is named psm-web. Passing the
+# container name to `compose up` fails with "no such service: psm-web".
+say "Rebuild + restart the web service"
+ssh "$BOX" "cd $REMOTE && docker compose --env-file .env -f ops/docker-compose.yml up -d --build web"
 
 # The real test. The scanner is a one-shot container under the 'scan' profile; running
 # it here means an import error or a bad feed shows up now, not silently in 2 hours.
@@ -133,7 +135,7 @@ ssh "$BOX" "
   echo "DEPLOY FAILED: the scan did not exit 0." >&2
   echo "Check:    ssh $BOX 'tail -40 $REMOTE/logs/scan.log'" >&2
   echo "Rollback: ssh $BOX 'cd $REMOTE && tar xzf backups/pre-deploy-$STAMP.tgz && \\" >&2
-  echo "            docker compose --env-file .env -f ops/docker-compose.yml up -d --build psm-web'" >&2
+  echo "            docker compose --env-file .env -f ops/docker-compose.yml up -d --build web'" >&2
   exit 1
 }
 
@@ -153,4 +155,4 @@ ssh "$BOX" "
 
 echo
 echo "Done. Dashboard: https://monitor.acutechsoftware.com (behind Authentik)."
-echo "Rollback: ssh $BOX 'cd $REMOTE && tar xzf backups/pre-deploy-$STAMP.tgz && docker compose --env-file .env -f ops/docker-compose.yml up -d --build psm-web'"
+echo "Rollback: ssh $BOX 'cd $REMOTE && tar xzf backups/pre-deploy-$STAMP.tgz && docker compose --env-file .env -f ops/docker-compose.yml up -d --build web'"
