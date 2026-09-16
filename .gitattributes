@@ -1,0 +1,10 @@
+# Shell scripts run on the Linux box (ops/scan.sh is the 2-hourly cron job).
+# A CRLF shebang makes them unrunnable — `#!/usr/bin/env bash\r` is not a valid
+# interpreter — and that is exactly what took the scanner down for 8 weeks in
+# Jun–Aug 2026 after a copy from a Windows PC. Force LF regardless of the
+# checkout platform's core.autocrlf.
+*.sh text eol=lf
+
+# Same reasoning for anything else the box executes or parses line-by-line.
+Dockerfile text eol=lf
+*.yml text eol=lf
