@@ -68,16 +68,32 @@ ssh "$BOX" "
 # -------------------------------------------------------------------- sync
 # Explicit file list rather than the whole tree: the box holds a live .env, a logs/
 # directory and a populated docs/data/ that must not be touched.
+#
+# rsync is preferred but is NOT present in Git Bash on Windows, which is where this
+# actually gets run from — the first real run died here with "rsync: command not
+# found" after it had already taken the backup. tar-over-ssh needs only tar and ssh,
+# both of which Git Bash has, and transfers the same explicit file set.
 say "Sync scanner + web app source"
-rsync -az \
-  --exclude '__pycache__/' --exclude '*.pyc' \
-  "$REPO"/*.py "$BOX:$REMOTE/"
-rsync -az --exclude '__pycache__/' --exclude '*.pyc' \
-  "$REPO/tests/" "$BOX:$REMOTE/tests/"
-rsync -az "$REPO/ops/scan.sh" "$REPO/ops/docker-compose.yml" "$REPO/ops/freshness_check.sh" \
-  "$BOX:$REMOTE/ops/"
-rsync -az "$REPO/requirements.txt" "$REPO/Dockerfile" "$BOX:$REMOTE/"
-rsync -az "$REPO/docs/index.html" "$BOX:$REMOTE/docs/index.html"
+cd "$REPO"
+SYNC_PATHS=(
+  *.py
+  tests
+  ops/scan.sh ops/docker-compose.yml ops/freshness_check.sh ops/deploy.sh
+  requirements.txt Dockerfile
+  docs/index.html
+)
+
+if command -v rsync >/dev/null 2>&1; then
+  echo "  using rsync"
+  rsync -az --relative \
+    --exclude '__pycache__/' --exclude '*.pyc' \
+    "${SYNC_PATHS[@]}" "$BOX:$REMOTE/"
+else
+  echo "  rsync not available — using tar over ssh"
+  tar czf - --exclude='__pycache__' --exclude='*.pyc' "${SYNC_PATHS[@]}" \
+    | ssh "$BOX" "tar xzf - -C $REMOTE"
+fi
+echo "  synced: ${#SYNC_PATHS[@]} path specs"
 
 # ops/*.sh must stay LF and executable — a CRLF shebang is what killed the scanner
 # for 8 weeks in Jun-Aug 2026. .gitattributes guards the checkout; this guards the box.
