@@ -148,6 +148,11 @@ GOOGLE_NEWS_REGIONS = [
 ]
 
 # Direct RSS feeds from international outlets (filtered by English keyword matching)
+#
+# Set "curated": True on a process-safety trade publication — everything it
+# publishes is on-topic, so it gets news_sources._match_curated (event word +
+# industrial context) instead of the strict KEYWORDS bigram list. Do NOT set it
+# on a general-news feed; it admits war reporting and mining accidents.
 DIRECT_RSS_FEEDS = [
     {"url": "https://feeds.bbci.co.uk/news/world/rss.xml", "source": "BBC World News"},
     {"url": "https://www.france24.com/en/rss", "source": "France 24"},
@@ -156,4 +161,26 @@ DIRECT_RSS_FEEDS = [
     {"url": "https://www.aljazeera.com/xml/rss/all.xml", "source": "Al Jazeera English"},
     {"url": "https://gulfnews.com/rss", "source": "Gulf News"},
     {"url": "https://www.arabnews.com/rss.xml", "source": "Arab News"},
+]
+
+# Google News sitemaps — trade publications that run no RSS feed at all.
+#
+# HazardEx is UK process-safety/hazardous-area trade press: /rss, /feed and
+# /rss.xml all 404 and the homepage declares no alternate link, but robots.txt
+# advertises a news sitemap with the last ~25 articles, each carrying a title
+# and publication date.
+#
+# These are NOT time-filtered, and the global LOOKBACK_HOURS does not apply —
+# the sitemap is self-limiting (25 entries, publisher's choice) and its contents
+# run old. Measured 2026-09-16: HazardEx's 25 entries spanned 7 to 36 days, the
+# freshest a week back, because it publishes in weekly batches. Any "recent
+# news" window returns zero. Re-seeing an article is harmless; it is deduped on
+# URL and title, and again on merge. Add "lookback_hours" per feed only if some
+# publisher's sitemap turns out to be genuinely too long.
+NEWS_SITEMAP_FEEDS = [
+    {
+        "url": "https://www.hazardexonthenet.net/news-sitemap.xml",
+        "source": "HazardEx",
+        "curated": True,
+    },
 ]

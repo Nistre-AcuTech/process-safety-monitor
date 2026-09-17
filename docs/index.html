@@ -507,7 +507,7 @@ let lastVisit = null;
 
 async function loadData() {
     try {
-        const resp = await fetch(`data/events.json?_=${Date.now()}`);
+        const resp = await fetch(`/api/events?_=${Date.now()}`);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
         if (Array.isArray(data)) {
@@ -522,7 +522,7 @@ async function loadData() {
         init();
     } catch (e) {
         document.getElementById('table-body').innerHTML =
-            `<tr><td colspan="6" class="error">Could not load data. Run <code>python main.py</code> first to generate events.json</td></tr>`;
+            `<tr><td colspan="6" class="error">Could not load data from <code>/api/events</code>.</td></tr>`;
         document.getElementById('cards-body').innerHTML =
             `<div class="error">Could not load data.</div>`;
         document.getElementById('last-updated').textContent = 'Data unavailable';

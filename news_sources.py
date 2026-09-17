@@ -3,8 +3,9 @@ import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse, quote
+from xml.etree import ElementTree
 
 import feedparser
 import requests
@@ -71,14 +72,16 @@ _EXCLUDE_PATTERNS = [
     # Residential / domestic
     "inside an apartment", "inside apartment", "inside his home",
     "inside their apartment", "inside her home", "inside a property",
-    "kitchen fire", "stove",
+    "kitchen fire", "stove", "stovetop",
     "home evacuation", "sewer smell", "suffocation",
     # Traffic / transport accidents (not process safety)
     "big-rig", "big rig", "truck crash", "highway crash", "traffic accident",
     "collision on", "crash on i-", "crash on us-",
     # Exercises / drills / training (not actual incidents)
-    "exercise", "drill", "rehearse", "rehearsal", "training scenario",
-    "preparing for upcoming",
+    # NB: these are matched as whole words (see _EXCLUDE_RE), so plurals and
+    # variants have to be spelled out — "drill" must not reach "drilling".
+    "exercise", "exercises", "drill", "drills", "rehearse", "rehearsal",
+    "training scenario", "preparing for upcoming",
     # Non-industrial
     "homeless", "encampment", "storm drain",
     "missing ashes", "teddy bears",
@@ -98,6 +101,23 @@ _EXCLUDE_PATTERNS = [
 ]
 
 
+# The English exclude patterns are matched as WHOLE WORDS, not bare substrings.
+#
+# "drill" is why. It is in the list for emergency/training drills, but a bare
+# `pat in text` also swallowed every "drilling rig", "drillship" and "offshore
+# drilling platform" story — before keyword matching even ran, so the drop was
+# invisible in the logs. 51 titles in HazardEx's archive alone, among them
+# "Offshore drilling company fined after crane boom collapse".
+#
+# Deliberately NOT applied to _NON_EN_EXCLUDE_PATTERNS below: Dutch and German
+# compound nouns rely on substring matching ("wohnung" has to reach
+# "Wohnungsbrand"), so those stay as-is.
+_EXCLUDE_RE = re.compile(
+    r"\b(?:" + "|".join(re.escape(p) for p in _EXCLUDE_PATTERNS) + r")\b",
+    re.IGNORECASE,
+)
+
+
 def _match_keywords(text: str) -> list[str]:
     """Return list of keywords found in text (case-insensitive).
 
@@ -108,7 +128,7 @@ def _match_keywords(text: str) -> list[str]:
     text_lower = text.lower()
 
     # Check exclude patterns first
-    if any(pat in text_lower for pat in _EXCLUDE_PATTERNS):
+    if _EXCLUDE_RE.search(text_lower):
         return []
 
     matched = []
@@ -128,6 +148,86 @@ def _match_keywords(text: str) -> list[str]:
             return []
 
     return matched
+
+
+# --------------------------------------------------------------------------
+# Matching for CURATED sources (process-safety trade press).
+#
+# config.KEYWORDS is a list of rigid adjacent pairs — "refinery fire", "plant
+# fire", "CSB investigation". Real headlines don't co-operate: "Fire at Baku oil
+# refinery", "Fire at Michigan power plant" and "CSB opens investigation" each
+# contain both words and match none of the pairs. Measured against 101
+# hand-labelled HazardEx articles, _match_keywords found 38 of 72 relevant ones
+# (53%), and 36 of those 38 matched on the bare word "explosion" — in practice
+# it is an explosion detector. Fires, leaks, ruptures, blasts and implosions
+# went through untouched, including two CSB investigations and a steel plant
+# fire that killed eight.
+#
+# So for sources that only ever publish process-safety news, match on
+# co-occurrence instead: any hazard EVENT word plus any INDUSTRIAL CONTEXT word,
+# anywhere in the title. That takes recall to 96% (69/72) at 100% precision.
+#
+# This is NOT safe for general news feeds, and is not used for them. On 215 raw
+# BBC / France 24 / DW / Al Jazeera / Gulf News entries it admitted 3 items the
+# strict matcher rejected, and all 3 were false positives ("postal workers
+# deliver lifeline under Russian fire", two Sudanese gold-mine collapses).
+# General feeds keep _match_keywords; only feeds flagged `"curated": True` use
+# this.
+_CURATED_EVENT_TERMS = [
+    r"explosion\w*", r"blast\w*", r"detonat\w*", r"implosion\w*", r"implode\w*",
+    r"fire", r"fires", r"blaze\w*",
+    r"leak\w*", r"spill\w*", r"release\w*", r"rupture\w*", r"burst",
+    r"hazmat", r"toxic cloud", r"vapou?r cloud", r"bleve", r"runaway reaction",
+    r"incident\w*", r"accident\w*", r"failure\w*", r"collapse\w*",
+    r"evacuat\w*", r"shelter in place", r"contaminat\w*",
+    # Enforcement / investigation outcomes — the aftermath of an incident is
+    # every bit as reportable as the incident ("Esso fined £1m after LPG leak").
+    r"fined", r"fine[sd]?\b", r"penalt\w*", r"prosecut\w*", r"citation\w*",
+    r"violation\w*", r"probe", r"investigation\w*", r"enforcement",
+    r"guilty", r"verdict", r"sentenc\w*", r"charged",
+]
+_CURATED_CONTEXT_TERMS = [
+    r"plant\w*", r"refiner\w*", r"factor\w*", r"facilit\w*", r"pipeline\w*",
+    r"terminal\w*", r"chemical\w*", r"petrochemical\w*", r"industrial",
+    r"warehouse\w*", r"storage", r"tank\w*", r"reactor\w*", r"vessel\w*",
+    r"mill\w*", r"mine\w*", r"smelter\w*", r"foundr\w*", r"furnace\w*",
+    r"oven\w*", r"shipyard\w*", r"depot\w*", r"silo\w*", r"compressor\w*",
+    r"electroly\w*", r"rig\b", r"rigs\b", r"drilling", r"offshore", r"well\w*",
+    r"port\w*", r"harbour", r"dock\w*",
+    r"processing", r"manufactur\w*", r"production", r"process unit",
+    r"steel\w*", r"coal", r"nuclear", r"pharmaceutical\w*", r"waste",
+    r"lng", r"lpg", r"hydrogen", r"ammonia", r"propane", r"methane",
+    r"butane", r"ethylene", r"chlorine", r"hydrocarbon\w*", r"crude",
+    r"fuel\w*", r"oil\b", r"gas\b", r"petroleum", r"solvent\w*",
+    r"hazardous", r"flammable", r"combustible", r"explosive\w*", r"corros\w*",
+    r"osha", r"epa\b", r"hse\b", r"csb\b", r"onr\b", r"atex", r"iecex",
+    r"worker\w*", r"employee\w*", r"operator\w*", r"contractor\w*",
+    r"valve\w*", r"extraction", r"battery", r"energy",
+]
+_CURATED_EVENT_RE = re.compile(r"\b(?:" + "|".join(_CURATED_EVENT_TERMS) + r")", re.IGNORECASE)
+_CURATED_CONTEXT_RE = re.compile(r"\b(?:" + "|".join(_CURATED_CONTEXT_TERMS) + r")", re.IGNORECASE)
+
+
+def _match_curated(text: str) -> list[str]:
+    """Match a title from a curated process-safety source.
+
+    Requires a hazard event word AND an industrial context word. Returns the
+    terms that fired (event terms first) so the dashboard and email report can
+    show why an article was kept, same as _match_keywords' return value.
+    """
+    if _EXCLUDE_RE.search(text):
+        return []
+
+    events = sorted({m.group(0).lower() for m in _CURATED_EVENT_RE.finditer(text)})
+    if not events:
+        return []
+
+    context = sorted({m.group(0).lower() for m in _CURATED_CONTEXT_RE.finditer(text)})
+    if not context:
+        return []
+
+    # Cap it — these are shown as a comma-joined string in the report.
+    return events[:3] + context[:3]
 
 
 # US states for location detection
@@ -491,9 +591,14 @@ def fetch_google_news_region(
 
 
 def fetch_direct_rss(feed_config: dict, lookback_hours: int) -> list[NewsArticle]:
-    """Fetch from a direct RSS feed (BBC, France 24, etc.) and filter by keywords."""
+    """Fetch from a direct RSS feed (BBC, France 24, etc.) and filter by keywords.
+
+    A feed marked `"curated": True` is a process-safety trade publication whose
+    whole output is on-topic, so it gets the looser co-occurrence matcher.
+    """
     url = feed_config["url"]
     source_name = feed_config["source"]
+    matcher = _match_curated if feed_config.get("curated") else _match_keywords
 
     try:
         feed = feedparser.parse(url)
@@ -505,7 +610,7 @@ def fetch_direct_rss(feed_config: dict, lookback_hours: int) -> list[NewsArticle
     for entry in feed.entries:
         title = entry.get("title", "")
         summary = entry.get("summary", "")
-        matched = _match_keywords(title + " " + summary)
+        matched = matcher(title + " " + summary)
         if not matched:
             continue
 
@@ -529,6 +634,111 @@ def fetch_direct_rss(feed_config: dict, lookback_hours: int) -> list[NewsArticle
         )
 
     logger.info("Direct RSS (%s) returned %d entries (%d after filter)", source_name, len(feed.entries), len(articles))
+    return articles
+
+
+_SITEMAP_NS = {
+    "s": "http://www.sitemaps.org/schemas/sitemap/0.9",
+    "news": "http://www.google.com/schemas/sitemap-news/0.9",
+}
+
+
+def fetch_news_sitemap(feed_config: dict, lookback_hours: int) -> list[NewsArticle]:
+    """Fetch from a Google News sitemap (`<news:news>` entries).
+
+    Some trade publications run no RSS feed at all but do publish a news
+    sitemap for Google, which carries exactly what we need: canonical URL,
+    title and publication date. HazardEx is the case this was written for —
+    /rss, /feed and /rss.xml all 404 and the homepage declares no alternate
+    link, but /news-sitemap.xml lists the last ~25 articles.
+
+    A news sitemap is NOT time-filtered by default, and the global
+    LOOKBACK_HOURS is deliberately ignored. Two reasons, both measured against
+    the live HazardEx feed:
+
+      - It is already self-limiting — 25 entries, and the publisher decides
+        what is in it. There is nothing to protect against.
+      - Its contents run *old*. On 2026-09-16 the 25 entries spanned 7 to 36
+        days, the freshest being a week back, because HazardEx publishes in
+        weekly batches and the sitemap lags. Any window short enough to feel
+        like "recent news" returns zero — a 7-day window returned zero on the
+        first live run — and the source would look healthy while producing
+        nothing, which is precisely how the 8-week outage went unnoticed.
+
+    Re-seeing an article every run is harmless: fetch_all_news dedupes on URL
+    and title, and merge_events dedupes again against what is already stored.
+    Set `lookback_hours` on the feed config only if a publisher's sitemap is
+    genuinely too long.
+    """
+    url = feed_config["url"]
+    source_name = feed_config["source"]
+    matcher = _match_curated if feed_config.get("curated") else _match_keywords
+    window_hours = feed_config.get("lookback_hours")
+
+    try:
+        resp = requests.get(url, headers=_HEADERS, timeout=30)
+        resp.raise_for_status()
+        root = ElementTree.fromstring(resp.content)
+    except (requests.RequestException, ElementTree.ParseError) as e:
+        logger.error("News sitemap (%s) fetch failed: %s", source_name, e)
+        return []
+
+    cutoff = (
+        datetime.now(timezone.utc) - timedelta(hours=window_hours)
+        if window_hours
+        else None
+    )
+    articles = []
+    total = 0
+
+    for url_el in root.findall("s:url", _SITEMAP_NS):
+        news_el = url_el.find("news:news", _SITEMAP_NS)
+        if news_el is None:
+            continue
+        total += 1
+
+        loc = url_el.findtext("s:loc", default="", namespaces=_SITEMAP_NS).strip()
+        title = news_el.findtext("news:title", default="", namespaces=_SITEMAP_NS).strip()
+        if not loc or not title:
+            continue
+
+        date = None
+        raw_date = news_el.findtext(
+            "news:publication_date", default="", namespaces=_SITEMAP_NS
+        ).strip()
+        if raw_date:
+            try:
+                date = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                if date.tzinfo is None:
+                    date = date.replace(tzinfo=timezone.utc)
+            except ValueError:
+                logger.debug("News sitemap (%s): unparseable date %r", source_name, raw_date)
+
+        # Undated entries are kept — dropping them would silently lose articles
+        # if a publisher ever omits the field.
+        if cutoff is not None and date is not None and date < cutoff:
+            continue
+
+        matched = matcher(title)
+        if not matched:
+            continue
+
+        articles.append(
+            NewsArticle(
+                title=title,
+                url=loc,
+                source=source_name,
+                date=date,
+                country="",
+                keywords_matched=matched,
+            )
+        )
+
+    logger.info(
+        "News sitemap (%s) returned %d entries (%d after filter, window=%s)",
+        source_name, total, len(articles),
+        f"{window_hours}h" if window_hours else "none",
+    )
     return articles
 
 
@@ -579,15 +789,42 @@ def fetch_all_news(lookback_hours: int | None = None) -> list[NewsArticle]:
                 except Exception as e:
                     logger.error("Direct RSS (%s) failed: %s", source, e)
 
-    # Deduplicate by normalized URL
+    # 4. News sitemaps (trade press with no RSS feed — e.g. HazardEx)
+    sitemap_feeds = getattr(config, "NEWS_SITEMAP_FEEDS", [])
+    if sitemap_feeds:
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            futures = {
+                pool.submit(fetch_news_sitemap, feed, lookback_hours): feed["source"]
+                for feed in sitemap_feeds
+            }
+            for future in as_completed(futures):
+                source = futures[future]
+                try:
+                    all_articles.extend(future.result())
+                except Exception as e:
+                    logger.error("News sitemap (%s) failed: %s", source, e)
+
+    # Deduplicate by normalized URL, then by title within a source.
+    #
+    # The title pass is for sitemaps: HazardEx republishes the same story under
+    # a second article id (223962 and 223963 are both "2 weeks to go. Ellesmere
+    # Port..."), so the URLs differ and URL dedupe alone lets both through.
+    # Scoped to (source, title) deliberately — two outlets covering the same
+    # incident are separate articles, and clustering already groups those.
     seen_urls: set[str] = set()
+    seen_titles: set[tuple[str, str]] = set()
     unique: list[NewsArticle] = []
 
     for article in all_articles:
         norm = _normalize_url(article.url)
-        if norm not in seen_urls:
-            seen_urls.add(norm)
-            unique.append(article)
+        if norm in seen_urls:
+            continue
+        title_key = (article.source.lower(), " ".join(article.title.lower().split()))
+        if title_key[1] and title_key in seen_titles:
+            continue
+        seen_urls.add(norm)
+        seen_titles.add(title_key)
+        unique.append(article)
 
     # Sort by date descending (None dates last)
     unique.sort(key=lambda a: a.date or datetime.min.replace(tzinfo=timezone.utc), reverse=True)

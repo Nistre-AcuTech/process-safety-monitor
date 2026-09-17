@@ -10,6 +10,19 @@ import os
 import sys
 
 SKIP_PREFIXES = {"1 -", "New shortcut", "ZZ -", "ZZZ", "Z-PHAST", "BP - Shortcut"}
+
+# Administrative folders that are not clients. Every folder under <letter>/ is
+# treated as a client name, so these ended up in clients.json and — because the
+# matcher searches the full article body — tagged real incidents with a bogus
+# client: "Technical" alone was on 31 events in prod, "Security" 29, "Solar" 17.
+# client_matcher.BLACKLISTED_TERMS also drops them at match time; this stops a
+# regeneration from quietly putting them back.
+SKIP_EXACT = {
+    "cancelled", "checklists", "proposals", "contract", "technical",
+    "security", "solar", "modelinggeneral", "templates", "archive",
+    "admin", "general", "misc", "training", "marketing",
+}
+
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "clients.json")
 
 
@@ -29,6 +42,8 @@ def scan_clients(base_path: str) -> list[str]:
                     continue
                 name = folder.strip()
                 if any(name.startswith(s) for s in SKIP_PREFIXES) or len(name) < 3:
+                    continue
+                if name.lower() in SKIP_EXACT:
                     continue
                 clients.add(name)
 
