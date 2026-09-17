@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 import config
-from client_matcher import find_client_match, load_clients
+from client_matcher import find_client_match, load_clients, valid_canonicals
 from clustering import cluster_events
 from email_sender import send_report
 from news_sources import NewsArticle, fetch_all_news
@@ -139,14 +139,27 @@ def main():
     # Re-match existing events against client list (picks up title+description matches)
     if clients:
         rematch_count = 0
+        retired_count = 0
+        known = valid_canonicals()
         for event in existing_events:
+            # Retire tags naming a client the matcher can no longer return —
+            # blacklisted terms, or names dropped from clients.json. Without
+            # this they persist forever, because the pass below only ever adds.
+            current = event.get("client")
+            if current and current not in known:
+                event["client"] = None
+                retired_count += 1
+                current = None
+
             search_text = event.get("title", "")
             if event.get("description"):
                 search_text += " " + event["description"]
             match = find_client_match(search_text, clients)
-            if match and not event.get("client"):
+            if match and not current:
                 event["client"] = match
                 rematch_count += 1
+        if retired_count:
+            logger.info("Retired %d stale client tags (name no longer matchable)", retired_count)
         if rematch_count:
             logger.info("Re-matched %d existing events to clients", rematch_count)
 

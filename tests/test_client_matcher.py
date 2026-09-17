@@ -88,3 +88,45 @@ def test_build_client_list_skips_admin_folders():
     import build_client_list as bcl
     for name in ["Cancelled", "Proposals", "Technical", "Security"]:
         assert name.lower() in bcl.SKIP_EXACT
+
+
+# --------------------------------------------------------------------------
+# Retiring stale tags (main.py's re-match pass)
+# --------------------------------------------------------------------------
+def test_valid_canonicals_excludes_blacklisted_names():
+    known = cm.valid_canonicals()
+    assert "Technical" not in known
+    assert "Security" not in known
+    assert "Solar" not in known
+
+
+def test_valid_canonicals_includes_real_clients():
+    known = cm.valid_canonicals()
+    assert "ExxonMobil" in known
+    assert "Valero" in known
+
+
+def test_stale_tag_retirement_matches_mains_logic():
+    """main.py clears a stored client when the name is no longer matchable.
+
+    Identity-based on purpose: stored events keep only title + a short
+    description, while the original match ran against the full article body.
+    Re-matching them would clear legitimate body-text matches.
+    """
+    known = cm.valid_canonicals()
+    stored = [
+        {"title": "Iraq fuel depot fire injures 41", "client": "Technical"},
+        {"title": "Explosion at a Valero refinery", "client": "Valero"},
+        {"title": "Some unrelated story", "client": None},
+    ]
+    retired = 0
+    for event in stored:
+        current = event.get("client")
+        if current and current not in known:
+            event["client"] = None
+            retired += 1
+
+    assert retired == 1
+    assert stored[0]["client"] is None      # phantom client cleared
+    assert stored[1]["client"] == "Valero"  # real client untouched
+    assert stored[2]["client"] is None

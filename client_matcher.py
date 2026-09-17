@@ -143,6 +143,23 @@ def _get_search_table() -> list[tuple[re.Pattern, str]]:
     return _SEARCH_TABLE_CACHE
 
 
+def valid_canonicals() -> set[str]:
+    """Every canonical name the matcher can currently return.
+
+    Used to retire stale tags on stored events. When a name is blacklisted or
+    drops out of clients.json, events already tagged with it keep that tag
+    forever — main.py's re-match pass only ever *adds* a client, it never
+    clears one. That left 90 events tagged with phantom clients like
+    "Technical" and "Security" after the 2026-09-16 audit.
+
+    Deliberately identity-based, not a re-match: stored events only keep the
+    title and a short description, while the original match ran against the
+    full article body. Re-matching them would clear legitimate matches that
+    came from text we no longer have.
+    """
+    return {canonical for _, canonical in _get_search_table()}
+
+
 def find_client_match(text: str, clients: list[str] | None = None) -> str | None:
     """Check if any client name or alias appears in the text.
 
