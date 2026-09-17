@@ -36,7 +36,37 @@ BLACKLISTED_TERMS = {
     "global", "guardian", "horizon", "impact", "insight",
     "liberty", "matrix", "nexus", "oracle", "prime", "quest",
     "sterling", "venture",
+    # --- added 2026-09-16 after auditing what these actually matched in prod ---
+    #
+    # clients.json is built by build_client_list.py scraping Egnyte FOLDER names
+    # under Y:/Shared/Projects/<letter>/, so administrative folders become
+    # "clients". These are not companies at all, and because the matcher searches
+    # the full article body they matched constantly. Counts are events tagged in
+    # the production DB at the time of the audit:
+    "technical",    # 31 events — e.g. "Iraq fuel depot fire injures 41"
+    "security",     # 29 events
+    "solar",        # 17 events
+    "contract",     #  6 events
+    "cancelled",    #  5 events
+    "checklists",
+    "proposals",
+    "modelinggeneral",
+    # Ordinary English words / place names that appear in incident coverage:
+    "savage",       #  4 events
+    "sacramento",   #  4 events — matches any article datelined Sacramento
+    "newfoundland", # matches offshore stories (Hibernia et al.)
+    "pittsburg",
+    "placid", "fortress", "stature", "heritage",
 }
+
+# Known-ambiguous: a real company AND a common surname/word, so the body-text
+# search produces a mix of true and false hits. NOT blacklisted, because that
+# would throw away the real matches too — "Williams" correctly tagged a Glenpool
+# pipeline story while also tagging seven copies of a California warehouse fire
+# where a Fire Chief Williams was quoted. Fixing this properly needs
+# title-only matching for these terms, which is a larger change than the audit.
+AMBIGUOUS_TERMS = {"williams", "cameron", "brady", "foley", "shaw", "emery",
+                   "amazon", "apple", "mustang", "buckeye"}
 
 # Module-level cache so main.py's per-article loop doesn't rebuild
 # the table 300+ times per run.
